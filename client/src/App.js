@@ -64,9 +64,12 @@ import { UserContext } from './context/UserContext';
 
 function App() {
 
-  const currentPath = window.location.pathname;
+  //const currentPath = window.location.pathname;
 
   const history = useHistory();
+
+  const currentPath = history.location.pathname;
+
   const [locationPath, setLocationPath] = useState('/');
 
   useEffect(() => {
@@ -97,9 +100,9 @@ function App() {
           <Route exact path="/search" component={Search} />
 
 
-          <Route exact path="/backoffice" component={Login} />
-          <Route exact path="/backoffice-password" component={ForgotPassword} />
-          <ProtectedRoute exact path="/backoffice/intro" component={IntroPage} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/login-password" component={ForgotPassword} />
+          <ProtectedRoute exact path="/backoffice" component={IntroPage} />
           <ProtectedRoute exact path="/backoffice/homepage" component={HomepageBackoffice} />
 
           <ProtectedRoute exact path="/backoffice/journal/painel" component={JournalPainel} />
@@ -151,7 +154,7 @@ function App() {
 
 
         </Switch>
-        {!currentPath.includes('backoffice')
+        {!currentPath.includes('backoffice') && !currentPath.includes('login')
           && (
             <div>
               <Header />
@@ -159,7 +162,7 @@ function App() {
               <Footer />
             </div>
           )}
-        {currentPath.includes('backoffice/') && (
+        { !currentPath.includes('login') && currentPath.includes('backoffice') && (
           <div>
             <BackSidebar />
           </div>

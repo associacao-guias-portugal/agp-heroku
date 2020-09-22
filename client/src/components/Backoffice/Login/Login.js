@@ -27,7 +27,7 @@ const Login = (props) => {
         setAuth(true);
         setFlash(res.data.message);
         setMessageStatus('success');
-        window.setTimeout(() => (props.history.push({ pathname: '/backoffice/intro' })), 1500);
+        window.setTimeout(() => (props.history.push({ pathname: '/backoffice' })), 1500);
       })
       .catch((err) => {
         setMessageStatus('error');

@@ -236,6 +236,9 @@ class HistoriaDoGuidismoTimelineTwo extends Component {
                      'rgb(247,218,100)', 'rgb(251,160,38)', 'rgb(235,107,86)', 'rgb(226,80,65)',
                     'rgb(163,143,132)']
                   }, 
+                  fontSize: {
+                    options: ['8','9','10','11','12','14','16','18','20','22','24','28','30','32','40','52']
+                  }
                 }}
               />
             </div>
@@ -274,6 +277,9 @@ class HistoriaDoGuidismoTimelineTwo extends Component {
                      'rgb(247,218,100)', 'rgb(251,160,38)', 'rgb(235,107,86)', 'rgb(226,80,65)',
                     'rgb(163,143,132)']
                   }, 
+                  fontSize: {
+                    options: ['8','9','10','11','12','14','16','18','20','22','24','28','30','32','40','52']
+                  }
                 }}
               />
             </div>

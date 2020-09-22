@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './BackSidebar.css';
 import brasaoLogo from '../../../assets/logo/brasao_RGB.png';
 import Cookies from 'js-cookie';
@@ -13,7 +13,7 @@ const BackSidebar = (props) => {
   return (
     <div className="BackSidebar">
       <div className="menu-bar">
-        <Link to="/backoffice/intro">
+        <Link to="/backoffice">
           <img className="brasao-logo" src={brasaoLogo} alt="Logo" />
         </Link>
         <Nav fixed="left">
@@ -39,7 +39,7 @@ const BackSidebar = (props) => {
         className="logout-button"
         onClick={() => {
           Cookies.remove("token")
-          window.location.href = "/backoffice"
+          window.location.href = "/"
         }}
       >
         LOGOUT
@@ -48,4 +48,4 @@ const BackSidebar = (props) => {
   );
 };
 
-export default BackSidebar;
+export default withRouter(BackSidebar);

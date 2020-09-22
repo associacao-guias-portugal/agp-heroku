@@ -25,7 +25,7 @@ const Search = () => {
       <div class="gcse-search"></div>
 
       <script async src="https://cse.google.com/cse.js?cx=830615148521d9b86" />
-      {/* <div class="gcse-searchresults-only" /> */}
+      <div class="gcse-searchresults-only" />
 
     </div>
   );
