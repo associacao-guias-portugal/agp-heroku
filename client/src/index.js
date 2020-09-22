@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import UserContextProvider from './context/UserContext';
@@ -17,11 +17,11 @@ axios.defaults.headers.common = { 'Authorization': `Bearer ${Cookies.get('token'
 
 
 ReactDOM.render(
-  <Router>
+  <HashRouter>
     <UserContextProvider>
       <App />
     </UserContextProvider>
-  </Router>,
+  </HashRouter>,
   document.getElementById('root'),
 );
 
