@@ -1,0 +1,208 @@
+.Palavra-Aos-Pais {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 170px;
+}
+
+.palavra-pais-banner {
+  height: 300px;
+  width: 100%;
+}
+
+.palavra-pais-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 10% 60%;
+}
+
+.FilhaGuia {
+  padding-top: 50px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.FilhaGuiaText {
+  display: block;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.PalavraAosPais2-section-1,
+.PalavraAosPais2-section-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+.PalavraAosPais2-section-2 {
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.PalavraAosPais2-side-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: white !important;
+  padding: 70px 100px 70px 100px;
+}
+
+.PalavraAosPais2-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.PalavraAosPais2-title {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.PalavraAosPais2-side-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+.TenhoFilhaGuia {
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.FilhaGuia2 {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.FilhaGuiaText2 {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.FilhaGuiaCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.CardFilhaGuia {
+  border: transparent !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.075);
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.TextFilhaGuiaTestimony {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 0px;
+  height: 240px;
+}
+
+.TextFilhaGuiaNameParents {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.TextCardFilhaGuiaRelatives {
+  font-size: 14px;
+  color: #3b99e0;
+  font-weight: 500;
+}
+
+.PalavraPais-button-section {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 20px auto;
+}
+
+.ser-guia-button {
+  border-style: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 6px 12px;
+  outline: none !important;
+}
+
+.ser-guia-button:hover {
+  font-weight: 700;
+}
+
+.PalavraPais-button {
+  background-color: #154a7f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .palavra-pais-banner {
+    height: 180px;
+  }
+  .PalavraAosPais2-section-1,
+  .PalavraAosPais2-section-2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .PalavraAosPais2-side-img {
+    width: 100%;
+    height: 180px;
+  }
+  .PalavraAosPais2-side-text {
+    width: 100%;
+    padding: 50px 50px 50px 50px;
+    font-size: 14px;
+  }
+  .PalavraAosPais2-title {
+    font-size: 18px;
+  }
+
+  .FilhaGuia {
+    margin: 0px 30px 20px 30px;
+  }
+  .FilhaGuiaText {
+    margin-bottom: 0px;
+    margin: 0px 40px 0px 40px;
+  }
+  .FilhaGuia2 {
+    font-size: 20px;
+  }
+  .FilhaGuiaText2 {
+    font-size: 18px;
+  }
+  .TextFilhaGuiaTestimony {
+    font-size: 13px;
+    height: 180px;
+  }
+
+  .TextFilhaGuiaNameParents {
+    font-size: 15px;
+  }
+
+  .TextCardFilhaGuiaRelatives {
+    font-size: 13px;
+  }
+
+  .guia-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ser-guia-button {
+    font-size: 18px;
+  }
+}

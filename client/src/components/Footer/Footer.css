@@ -1,0 +1,147 @@
+.footer-wrapper {
+  font-size: 16px;
+  margin-top: 30px;
+  color: #ccc;
+  background-color: #07416a;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.footer-container {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  align-items: baseline;
+  vertical-align: none;
+  justify-content: space-around;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer li::before {
+  content: ">";
+  color: #007bff;
+  display: inline-flex;
+  width: 2px;
+  position: absolute;
+  border-radius: 2px;
+}
+
+footer h5 {
+  margin-left: 0px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+footer h5 a {
+  color: #fff;
+  margin-left: 0px;
+}
+
+.Dados {
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none !important;
+  margin-left: 20px;
+}
+
+.address_footer {
+  display: block;
+  width: 55%;
+}
+
+footer .footerMorada {
+  margin-left: 20px;
+}
+
+.footer-contactos {
+  margin-left: 20px;
+}
+
+.footer-contactos a {
+  margin: 0px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-copyright {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  background-color: #222425;
+}
+
+.footer-copyright p {
+  color: #ccc;
+  margin: 10px;
+}
+
+.footer-social a {
+  text-decoration: none;
+  margin: 0px;
+}
+
+.footer-social-icon {
+  width: 28px;
+  height: 28px;
+  margin: 10px 5px 10px 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    align-items: center !important;
+  }
+  footer h5 {
+    font-size: 15px;
+    text-align: center !important;
+  }
+
+  .col-sm-3 {
+    font-size: 14px;
+    display: block;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  a {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  a.address_footer {
+    text-align: center !important;
+    margin: 0 !important;
+    width: auto;
+  }
+
+  span.footer-contactos {
+    margin: 0 !important;
+  }
+
+  .Dados {
+    margin-top: 20px;
+  }
+  .footer-copyright p {
+    font-size: 14px;
+  }
+
+  footer li::before {
+    content: none;
+  }
+}

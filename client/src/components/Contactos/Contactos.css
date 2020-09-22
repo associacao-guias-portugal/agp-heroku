@@ -1,0 +1,15 @@
+.Contactos {
+  margin-top: 143px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f6f6f6 !important;
+}
+
+@media(max-width: 400px) {
+  .Contactos {
+    margin-top: 123px;
+  }
+}

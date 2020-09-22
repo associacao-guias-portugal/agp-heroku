@@ -1,0 +1,83 @@
+.app-main-title {
+  text-align: center;
+  color: #1AA3DB;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.app-second-title {
+  text-align: center;
+  color: #1AA3DB;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.app-third-title {
+  text-align: center;
+  color: rgb(26, 163, 219);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.app-main-text {
+  text-align: center;
+  color: rgb(0, 73, 130) !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.app-main-text-links {
+  text-align: center;
+  /* color: rgb(0, 73, 130); */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.app-second-text {
+  text-align: center;
+  color: #004982;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.app-blue-banner-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.app-blue-banner-text {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media(max-width: 768px) {
+  .app-main-title,
+  .app-second-title {
+    font-size: 20px;
+  }
+  .app-main-text {
+    font-size: 14px;
+  }
+  .app-second-text {
+    font-size: 16px;
+  }
+  .app-blue-banner-title {
+    font-size: 20px;
+  }
+  .app-blue-banner-text {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,115 @@
+.Noticias {
+    margin-top: 143px;
+    padding: 0px 20px 0px 20px;
+    background-color: #f6f6f6 !important;
+}
+
+.NoticiasTitle {
+    padding-top: 50px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.MapNoticias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.CardNoticias{
+    border: transparent !important;
+    margin-bottom: 70px;
+    margin: 15px 15px 50px 15px;
+    width: 350px;
+    background-color: transparent !important;
+}
+
+.TitleCardNoticias {
+    min-height: 48px !important;
+    font-family: 'Poppins' !important;
+    font-size: 20px !important;
+    margin-left: 3px !important;
+    margin-top: 0 !important;
+    font-weight: 600 !important;
+    color: #004982 !important;
+    margin-bottom: 20px !important;
+}
+
+.ImgCardNoticias{
+    height: 225px;
+    width: 100%;
+    border-radius: 5px;
+} 
+
+.DataCardNoticias{
+    text-align: right !important;
+    font-size: 14px !important;
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    font-weight: 400 !important;
+    font-family: 'Poppins' !important;
+}
+
+.TextCardNoticias {
+    font-size: 16px !important;
+    margin-top: 40px !important;
+    margin-left: 10px !important;
+    margin-right: 5px !important;
+    font-weight: 400 !important;
+    font-family: 'Poppins' !important;
+    line-height: 1.5 !important;
+    min-height: 73px !important;
+    font-style: italic;
+}
+
+.ButtonCardNoticias {
+    height: 34px;
+    margin: 0px auto 10px 10px;
+    font-size: 14px;
+    background-color: #154A7F;
+    border-radius: 30px;
+    border: solid 1px #154A7F;
+}
+
+.ButtonCardNoticias a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ButtonCardNoticias:hover {
+    background-color: #154A7F;
+    opacity:0.95;
+    font-weight: 700;
+}
+
+@media(max-width:768px) {
+    .TitleCardNoticias {
+        font-size: 18px !important;
+    }
+    .TextCardNoticias {
+        font-size: 14px !important;
+        margin-top: 20px !important;
+    }
+    .ImgCardNoticias{
+        height: 200px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 5px;
+    } 
+    .NoticiasTitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .CardNoticias {
+        width: 300px !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .Noticias {
+      margin-top: 123px;
+    }
+  }

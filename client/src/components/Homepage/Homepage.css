@@ -1,0 +1,328 @@
+.Homepage {
+  margin-top: 143px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f6f6f6 !important;
+}
+
+.home-video-section {
+  background-color: white;
+  padding-bottom: 40px;
+  min-height: 400px;
+}
+
+.home-video {
+  width: 70%;
+  margin: 0px auto 40px auto;
+}
+
+.home-ramos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  margin: 40px 0px 100px 0px;
+}
+
+.home-modelo-title {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.home-ramos-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 920px; 
+}
+
+.home-ramos-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 430px;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif !important;
+  position: relative;
+}
+
+.home-ramos-card-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-ramos-card-info:hover {
+  color: #154A7F;
+  font-weight: 500;
+  display: flex;
+}
+
+.home-ramos-card-info .home-ramos-card-logo,
+.home-ramos-card-info .home-ramos-card-moinho,
+.home-ramos-card-info .home-ramos-card-title,
+.home-ramos-card-info .home-ramos-card-text {
+  display: none;
+}
+
+.home-ramos-card-info:hover .home-ramos-card-logo,
+.home-ramos-card-info:hover .home-ramos-card-moinho,
+.home-ramos-card-info:hover .home-ramos-card-title,
+.home-ramos-card-info:hover .home-ramos-card-text {
+  display: flex;
+  line-height: 1.5;  
+  font-size: 18px;
+}
+
+.home-ramos-card-info:hover .home-ramos-card-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.home-ramos-card-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.home-ramos-card-moinho {
+  width: 130px;
+  height: 150px;
+}
+
+
+.avezinha-card:hover {
+  background-color: rgba(252, 230, 20, 0.6); 
+  color: #154A7F;
+}
+.aventura-card:hover {
+  background-color: rgba(39, 122, 74, 0.6);
+  color: white;
+}
+.caravela-card:hover {
+  background-color: rgba(210, 113, 35, 0.6);
+  color: white;
+}
+.moinho-card:hover {
+  background-color: rgba(0, 51, 161, 0.5);
+  color: white;
+}
+
+.home-ramos-img {
+  width: 430px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.home-modelo-title {
+  color: #154A7F;
+  font-size: 25px;
+}
+
+.home-section-palavras, .home-section-jornal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.home-section-jornal {
+  flex-wrap: wrap-reverse;
+}
+
+.home-section-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: white !important;
+  padding: 100px 0px 80px 0px;
+}
+
+.home-section-center {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.homepage-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+.home-section-title {
+  color: #154A7F;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.home-section-subtitle {
+  color: #1AA3DB !important;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.home-section-text {
+  margin-bottom:10px;
+  font-size: 16px;
+}
+
+.home-noticias {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px 20px 50px 20px;
+  background-color: #1AA3DB;
+  color: white;
+  margin-top: 30px;
+}
+
+.home-noticia-card {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.home-noticia-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.home-noticia-text {
+  color: rgba(255,255,255,0.6);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.home-button {
+  text-align: center;
+  box-shadow: 5px 5px 25px grey;
+  background-color: #004982;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  border: 1px solid transparent;
+  outline: none !important;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif !important;
+  margin: 20px auto 10px 0px;
+}
+
+.home-button:hover {
+  font-weight: bold;
+  background-color: #004982 !important;
+  opacity: 0.7;
+}
+
+
+@media(max-width: 768px) {
+  .home-video-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 300px;
+  }
+  .home-video {
+    width: 90%;
+    height: 70%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .home-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home-ramos-card, .home-ramos-card .home-ramos-img {
+    width: 320px;
+  }
+  .home-ramos-card-info .home-ramos-card-logo,
+  .home-ramos-card-info .home-ramos-card-moinho,
+  .home-ramos-card-info .home-ramos-card-title,
+  .home-ramos-card-info .home-ramos-card-text {
+    display: flex;
+    line-height: 1.5;  
+    font-size: 18px;
+  }
+  .home-ramos-card-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .home-ramos-card-moinho {
+    width: 85px;
+    height: 100px;
+  }
+  .home-ramos-card-info .home-ramos-card-title {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .avezinha-card {
+    background-color: rgba(252, 230, 20, 0.4); 
+    color: #154A7F;
+  }
+  .aventura-card {
+    background-color: rgba(39, 122, 74, 0.5);
+    color: white;
+  }
+  .caravela-card {
+    background-color: rgba(210, 113, 35, 0.5);
+    color: white;
+  }
+  .moinho-card {
+    color: white;
+    background-color: rgba(0, 51, 161, 0.5);
+  }
+  .home-section-side {
+    padding: 50px 0px;
+    width: 100%;
+  }
+  .home-section-center {
+    width: 320px;
+  }
+  .home-section-title {
+    font-size: 24px;
+  }
+  .home-section-subtitle {
+    font-size: 18px;
+  }
+ .homepage-image {
+    width: 100%;
+    height: 230px;
+  }
+  .home-noticia-card {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .home-noticia-title {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 400px) {
+  .Homepage {
+    margin-top: 123px;
+  }
+  .home-ramos-card, .home-ramos-card .home-ramos-img {
+    width: 290px;
+  }
+  .home-section-center {
+    width: 250px;
+  }
+}

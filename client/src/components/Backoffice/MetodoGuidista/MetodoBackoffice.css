@@ -1,0 +1,155 @@
+.MetodoBackoffice, 
+.MetodoProjetoBack,
+.MetodoAtividadeBack,
+.MetodoFerramentaBack,
+.MetodoConstantesBack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #F6F6F6;
+  padding-left: 100px;
+}
+
+.back-metodo-title {
+  text-align: center;
+  color: #013e5a;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 60px 0px 20px 0px;
+}
+
+.back-metodo-subtitle {
+  text-align: center;
+  color: #1AA3DB;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 10px 0px 10px 0px;
+}
+
+.back-metodo-section {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 20px auto 20px auto;
+  padding-left: 100px;
+  width: 100%;
+}
+
+.back-metodo-section form {
+  width: 70%;
+}
+
+.back-metodo-label {
+  color: #013e5a;
+  font-size: 16px;
+  width: 210px;
+  margin: 10px 10px 10px 0px;
+  font-weight: 500;
+}
+
+.constantes-label {
+  width: 300px;
+}
+
+.back-metodo-label-title {
+  color: #1AA3DB;
+  font-size: 20px;
+  width: 100%;
+  margin: 20px 0px 10px 0px;
+  font-weight: 500;
+}
+
+.back-metodo-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.back-metodo-input-textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.back-metodo-input-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.back-metodo-input input, 
+.back-metodo-input-textarea textarea {
+  font-size: 14px;
+  width: 100%;
+  color: grey;
+  padding: 3px 8px;
+  border: solid 1px rgb(198, 198, 198);
+  border-radius: 5px !important;
+}
+
+.back-metodo-input input:valid,
+.back-metodo-input-textarea textarea:valid {
+  color: black;
+}
+
+.back-metodo-editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.back-metodo-editor-input {
+  background-color:#fff;
+  border: solid 1px rgb(198, 198, 198);
+  border-radius: 5px !important;
+  position:relative;
+  height: 400px;
+  width: 100%;
+}
+
+.back-metodo-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.metodo-new-button {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 10px 0px;
+  padding: 5px 20px;
+  font-size: 14px;
+  width: 130px;
+}
+
+.back-metodo-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+}
+
+.metodo-bottom-margin {
+  margin-bottom: 30px;
+}
+.metodo-seccao-margin {
+  margin-bottom: 40px;
+}
+
+.input-projeto-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 20px 0px;
+}
+.projeto-checkbox {
+  margin-top: 6px;
+}

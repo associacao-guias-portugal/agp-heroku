@@ -1,0 +1,229 @@
+.RamosDirigente {
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ramos-photos-banner {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ramos-image {
+  display: flex;
+  width: 33%;
+  max-height: 300px;
+}
+
+.ramos-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ramos-image-margin {
+  margin: 0px 10px 0px 10px
+}
+
+/* .ramos-banner {
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline-flex;
+} */
+/* 
+.ramos-photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.ramo-avezinha-photo-1 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Avezinha_1.jpg');
+  margin-right: 10px;
+}
+.ramo-avezinha-photo-2 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Avezinha_2.jpg');
+  margin-right: 10px;
+}
+.ramo-avezinha-photo-3 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Avezinha_3.jpg');
+}
+
+.ramo-aventura-photo-1 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Aventura_1.jpg');
+  margin-right: 10px;
+}
+.ramo-aventura-photo-2 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Aventura_2.jpg');
+  margin-right: 10px;
+}
+.ramo-aventura-photo-3 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Aventura_3.jpg');
+}
+
+.ramo-caravela-photo-1 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Caravela_1.jpg');
+  margin-right: 10px;
+}
+.ramo-caravela-photo-2 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Caravela_2.jpg');
+  margin-right: 10px;
+}
+.ramo-caravela-photo-3 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Caravela_3.jpg');
+}
+
+.ramo-moinho-photo-1 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Moinho_1.jpg');
+  margin-right: 10px;
+}
+.ramo-moinho-photo-2 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Moinho_2.jpg');
+  margin-right: 10px;
+}
+.ramo-moinho-photo-3 {
+  background-image: url('../../assets/images/RamosDirigente/Ramo_Moinho_3.jpg');
+}
+
+.dirigente-photo-1 {
+  background-image: url('../../assets/images/RamosDirigente/Dirigente_1.jpg');
+  margin-right: 10px;
+}
+.dirigente-photo-2 {
+  background-image: url('../../assets/images/RamosDirigente/Dirigente_2.jpg');
+  margin-right: 10px;
+}
+.dirigente-photo-3 {
+  background-image: url('../../assets/images/RamosDirigente/Dirigente_3.jpg');
+} */
+
+.ramos-sentence {
+  height: auto;
+  width: 90%;
+  margin: -10px 50px 20px 20px;
+}
+
+.banner-sentence {
+  height: auto;
+  width: 100%;
+}
+
+.ramos-section {
+  padding: 70px 50px 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ramo-avezinha {
+  background-color: #FCE614;
+  color: #154A7F;
+}
+.ramo-aventura {
+  background-color: #277A4A;
+  color: white;
+}
+.ramo-caravela {
+  background-color: #D27123;
+  color: white;
+}
+.ramo-moinho {
+  background-color: #0033a1;
+  color: white;
+}
+.dirigente {
+  background-color: #AD2518;
+  color: white;
+}
+
+.ramos-text {
+  width: 100%;
+  opacity: 0.8;
+  column-count: 2;
+  margin: 0px 30px;
+  background-color: transparent !important;
+}
+
+.ramos-text p {
+  margin: 0px 60px 16px 60px;
+  font-size: 16px !important;
+  font-family: 'Poppins' !important;
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.ramos-text p span {
+  font-family: 'Poppins' !important;
+  font-size: 16px !important;
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.ramos-buttons-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.ramos-button {
+  border-style: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 6px 12px;
+  outline: none !important;
+  margin-top: 40px;
+}
+
+.blue-border {
+  border: 1px solid #154A7F !important;
+}
+
+.white-border {
+  border: 1px solid white !important;
+}
+
+.ramos-button:hover {
+  font-weight: 700;
+  background-color: white;
+  opacity: 0.7;
+  color: #154A7F;
+}
+
+.ramos-bold {
+  font-weight: 600;
+}
+
+@media(max-width: 768px) {
+  .ramos-image {
+    min-height: 130px;
+  }
+  .ramos-image img {
+    height: 130px;
+  }
+  .ramos-text {
+    column-count: 1;
+    margin: 0px 10px;
+    font-size: 13px !important;
+  }
+  .ramos-text p, .ramos-text p span {
+    font-size: 13px !important;
+  }
+  .ramos-section {
+    padding: 50px 50px 50px 50px;
+  }
+  .ramos-text p {
+    margin: 0px 0px 16px 0px;
+  }
+  .ramos-side {
+    width: 85%;
+  }
+  .ramos-button {
+    font-size: 16px;
+  }
+}

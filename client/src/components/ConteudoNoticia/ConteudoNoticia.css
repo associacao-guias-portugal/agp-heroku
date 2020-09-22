@@ -1,0 +1,125 @@
+.ConteudoNoticia {
+  background-color: #f6f6f6;
+  font-family: "Poppins" !important;
+  padding-top: 170px;
+  padding-bottom: 5px;
+}
+
+.CardConteudoNoticia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.075);
+  border-style: none;
+  margin-bottom: 70px;
+  background-color: #fff;
+  padding: 70px 70px 50px 70px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.CardConteudoNoticia2 {
+  height: 100%;
+  width: 100%;
+}
+
+.TitleCardConteudoNoticia h3 {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #1aa3db;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.ImgCardConteudoNoticia {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ImagemConteudo {
+  height: 100%;
+  width: 100%;
+}
+
+.TextCardNoticias {
+  /* text-align: justify; */
+  margin: 30px;
+}
+
+.noticias-main-text {
+  font-style: normal;
+}
+
+.TextCardNoticias img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+  .CardConteudoNoticia {
+    padding: 20px 20px 20px 20px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .TitleCardConteudoNoticia h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .TextCardNoticias {
+    font-size: 15px;
+    text-align: justify;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .CardConteudoNoticia {
+    padding: 20px 20px 20px 20px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .TitleCardConteudoNoticia h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .TextCardNoticias {
+    font-size: 12px;
+    text-align: justify;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .CardConteudoNoticia {
+    padding: 20px 20px 20px 20px;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  .TitleCardConteudoNoticia h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .TextCardNoticias {
+    font-size: 12px;
+    text-align: justify;
+    margin: 10px;
+  }
+}

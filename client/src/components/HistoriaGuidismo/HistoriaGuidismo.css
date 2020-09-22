@@ -1,0 +1,113 @@
+.HistoriaGuidismo {
+  background-color: transparent;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.HistoriaGuidismo-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 170px;
+  background-position: 50% 20%;
+  height: 300px;
+  width: 100%;
+}
+
+.ComoTudoComecou {
+  padding-top: 50px;
+  display: block;
+}
+
+.MovimentoGuidista {
+  display: block;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.HistoriaFundadores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Fundadores {
+  line-height: 1.3;
+  width: 30%;
+}
+
+.Timeline {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.GuiasPorque {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.GuiasPorqueTitle {
+  text-transform: capitalize;
+  margin: 0px 0px 30px 0px;
+}
+
+.GuiasPorqueText {
+  text-align: left;
+}
+
+.GuiasPorqueTextDiv {
+  width: 80%;
+  display: block;
+  justify-content: center;
+  margin-top: 0;
+  column-count: 2;
+  column-gap: 40px;
+  color: #004982;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+@media(max-width: 768px) {
+  .HistoriaGuidismo-banner {
+    height: 180px;
+  }
+  .MovimentoGuidista {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .Fundadores {
+    margin-bottom: 0px;
+    width: 65%;
+  }
+
+  .GuiasPorque {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .GuiasPorqueTitle {
+    margin-top: 10px;
+  }
+  .GuiasPorqueTextDiv {
+    column-count: 1;
+    text-align: center;
+  }
+
+}

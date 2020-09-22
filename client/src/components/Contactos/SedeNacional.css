@@ -1,0 +1,74 @@
+.SedeNacional {
+  background-color: #1AA3DB;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px 20px 10px 20px;
+  margin-top: 30px;
+}
+
+.sede-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px 10px 30px 10px;
+}
+
+.contactos-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0px 30px 0px 0px;
+}
+
+.contactos-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.contactos-text {
+  width: 280px;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+}
+
+.sede-text-bold {
+  font-weight: 600;
+}
+
+.sede-text-bold-address{
+  font-weight: 600;
+  width: 80%;
+
+}
+
+.sede-title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sede-margin {
+  margin-bottom: 20px;
+}
+
+@media(max-width:768px) {
+  .SedeNacional {
+    flex-direction: column;
+  }
+  .contactos-text {
+    width: 260px
+  }
+  .contactos-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px 0px 0px;
+  }
+  .sede-margin {
+    margin-bottom: 15px;
+  }
+}

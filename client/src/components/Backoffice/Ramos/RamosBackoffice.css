@@ -1,0 +1,132 @@
+.BackRamos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #F6F6F6;
+  padding-left: 100px;
+}
+
+.back-ramos-title {
+  text-align: center;
+  color: #013e5a;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 60px 0px 20px 0px;
+}
+
+.back-ramos-section {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 20px auto;
+  padding-left: 100px;
+  width: 100%;
+}
+
+.back-ramos-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 70%;
+}
+
+.back-ramos-select-title {
+  color: #1AA3DB;
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.back-ramos-select-label {
+  color: #013e5a;
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.back-ramos-label {
+  color: #013e5a;
+  font-size: 16px;
+  width: 210px;
+  margin: 10px 10px 10px 0px;
+  font-weight: 500;
+}
+
+.back-ramos-select select {
+  padding: 2px 8px;
+  font-size: 16px;
+  min-width: 300px;
+  width: 350px;
+  border: solid 1px rgb(198, 198, 198); 
+  border-radius: 5px !important;
+}
+
+.back-ramos-select-info {
+  width: 70%;
+}
+
+.back-ramos-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.back-ramos-input input {
+  font-size: 14px;
+  width: 100%;
+  color: grey;
+  padding: 3px 8px;
+  border: solid 1px rgb(198, 198, 198);
+  border-radius: 5px !important;
+}
+
+.back-ramos-input input:valid {
+  color: black;
+}
+
+.back-ramos-editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.back-ramos-editor-input {
+  background-color:#fff;
+  border: solid 1px rgb(198, 198, 198);
+  border-radius: 5px !important;
+  position:relative;
+  height: 450px;
+  width: 100%;
+}
+
+.back-ramos-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+
+@media(max-width: 768px) {
+  .back-ramos-section {
+    margin: 20px auto;
+  }
+  .back-ramos-select {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .back-ramos-select-label {
+    font-size: 16px;
+  }
+  .back-ramos-select select {
+    font-size: 14px;
+    width: 80px;
+  }
+}

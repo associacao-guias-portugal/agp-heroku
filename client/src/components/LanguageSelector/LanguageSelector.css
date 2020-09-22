@@ -1,0 +1,26 @@
+.language-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  margin-left: 20px;
+  width: 174px;
+}
+
+.language-selector input {
+  cursor: pointer;
+}
+
+.lang-icon {
+  width: 22px;
+  height: 25px;
+  margin: 0px 10px 0px 5px;
+}
+
+@media(max-width: 768px) {
+  .language-selector {
+    margin-left: 0px;
+    width: 100px;
+    justify-content: flex-start;
+  }
+}

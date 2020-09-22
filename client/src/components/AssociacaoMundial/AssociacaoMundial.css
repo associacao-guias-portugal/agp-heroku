@@ -1,0 +1,277 @@
+.AssociacaoMundial {
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.world-girls-banner {
+
+  height: 100px;
+  width: 100%;
+  margin-top:170px;
+}
+
+.world-girls-banner img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.world-association {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+.world-logo {
+  width: 35%;
+  height: auto;
+}
+
+.world-text {
+  max-width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 55px;
+}
+
+.voice-sentence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 70px 0px;
+  background-color: #1AA3DB;
+}
+
+.world-objectives {
+  background-color: #f6f6f6;
+  padding: 50px 100px 50px 100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.objectives-side {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.objectives-side ul {
+  padding: 0px !important;
+}
+
+.objectives-title {
+  color: #1AA3DB;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.objectives-text li {
+  font-size: 16px;
+  margin: 18px;
+}
+.centers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.centers-side {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.centers-left {
+  padding: 30px 65px 50px 65px;
+  width: 600px;
+}
+
+
+.centers-title {
+  margin: 20px 0px 20px 0px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.centers-text {
+  font-size: 16px;
+  font-family: 'Poppins' !important;
+}
+
+.centers-side ul {
+  padding-left: 5px;
+}
+
+.centers-side li {
+  margin: 18px;
+  height: 13px;
+  font-size: 16px;
+}
+
+.world-centers {
+  width: 100%;
+  height: 100%;
+}
+
+.thought-section {
+  padding: 50px 0px;
+  background-color:#1AA3DB;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.right-section, .left-section {
+  width: 37%;
+  margin: 0px 50px;
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  
+}
+
+.clover, .piggy {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.penny-title {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.penny-text {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+}
+
+.associacao-button-section {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 20px auto;
+}
+
+.ser-guia-button {
+  border-style: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 6px 12px;
+  outline: none !important;
+}
+
+.ser-guia-button:hover {
+  font-weight: 700;
+}
+
+.associacao-button {
+  background-color: #154A7F;
+  color: white
+}
+
+
+@media(max-width: 768px) {
+  .world-girls-banner {
+    height: 100px;
+    width: 100%;
+  }
+
+  .world-girls-banner img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 10% 60%;
+  }
+
+  .world-association {
+    margin: 20px 0px 40px 0px;
+  }
+  .world-logo {
+    width: 50%;
+    height: auto;
+  }
+  .voice-sentence {
+    padding: 40px 0px;
+  }
+  .world-objectives {
+    background-color: #f6f6f6;
+    padding: 50px 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .objectives-side {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .objectives-title, .centers-title {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 28px;
+  }
+  .objectives-text li {
+    font-size: 14px;
+    margin: 10px 15px;
+  }
+
+  .centers {
+    flex-direction: column;
+  }
+  .centers-side {
+    width: 100%;
+  }
+  .centers-text {
+    font-size: 14px;
+  }
+  .centers-left {
+    padding: 30px 55px;
+    width: 100%;
+  }
+  .right-section, .left-section {
+    width: 100%;
+    margin: 0px 50px 0px 25px;
+  }
+  .left-section {
+    margin-bottom: 30px;
+  }
+  .clover-section {
+    margin-right: 0px;
+  }
+  .penny-title {
+    font-size: 15px;
+  }
+  .ser-guia-button {
+    font-size: 18px;
+  }
+  .penny-text {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 321px) {
+  .centers-left {
+    padding: 30px 40px;
+    width: 100%;
+  }
+}

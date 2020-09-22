@@ -1,0 +1,94 @@
+.RecursosBack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #F6F6F6;
+  padding: 0px 0px 80px 100px;
+}
+
+.back-recurso-title {
+  text-align: center;
+  color: #013e5a;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 60px 0px 40px 0px;
+}
+
+.recursos-section-title {
+  color: #1AA3DB;
+  font-size: 20px;
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  font-weight: 500;
+}
+
+
+.back-recurso-section {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0px auto 0px auto;
+  padding-left: 100px;
+  width: 100%;
+}
+
+.back-recurso-section form {
+  width: 70%;
+}
+
+.back-new-recursos-section {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 20px auto 20px auto;
+  padding-left: 100px;
+  width: 70%;
+}
+
+
+
+.back-recursos-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.recursos-button {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 10px 0px 20px 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #013e5a;
+  border: 1px solid #013e5a;
+  outline: none;
+  border-style: none;
+  font-weight: 500;
+}
+
+.recursos-delete-button {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 10px 5px 20px 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(210, 210, 210);
+  border-style: none;
+  outline: none;
+  font-weight: 500;
+}
+
+.recursos-delete-button:hover {
+  background-color: rgb(213, 6, 6);
+}
+
+.recursos-divide {
+  color: black;
+  width: 100%;
+  margin: 50px auto 0px auto;
+}
+
