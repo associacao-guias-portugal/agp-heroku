@@ -75,7 +75,7 @@ const Login = (props) => {
             </div>
           </form>
           <div className="login-forgot">
-            <Link to="/backoffice-password">Forgot your password?</Link>
+            <Link to="/login-password">Forgot your password?</Link>
           </div>
         </div>
       </div>

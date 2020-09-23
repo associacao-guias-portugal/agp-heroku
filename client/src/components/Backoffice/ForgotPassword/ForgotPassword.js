@@ -106,7 +106,7 @@ const ForgotPassword = () => {
             <div className="forgot-success">
               <div className="forgot-title">Password alterada com sucesso.</div>
               <div className="forgot-button-section">
-                <Link to="/backoffice">
+                <Link to="/login">
                   <button className="login-button">Voltar ao Login</button>
                 </Link>
               </div>
