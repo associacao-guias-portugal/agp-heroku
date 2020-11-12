@@ -118,7 +118,6 @@ class MetodoConstantesBack extends React.Component {
                 value={image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem"
-                maxLength="500"
                 required
               />
             </div>

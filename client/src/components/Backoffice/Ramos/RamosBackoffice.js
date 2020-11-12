@@ -166,7 +166,6 @@ class RamosBackoffice extends React.Component {
                     value={image_1}
                     onChange={this.handleInfoChange}
                     placeholder="Link da primeira imagem da série de três"
-                    maxLength="500"
                     required
                   />
                 </div>
@@ -178,7 +177,6 @@ class RamosBackoffice extends React.Component {
                     value={image_2}
                     onChange={this.handleInfoChange}
                     placeholder="Link da segunda imagem da série de três"
-                    maxLength="500"
                     required
                   />
                 </div>
@@ -190,7 +188,6 @@ class RamosBackoffice extends React.Component {
                     value={image_3}
                     onChange={this.handleInfoChange}
                     placeholder="Link da terceira imagem da série de três"
-                    maxLength="500"
                     required
                   />
                 </div>
@@ -202,7 +199,6 @@ class RamosBackoffice extends React.Component {
                     value={pt_banner}
                     onChange={this.handleInfoChange}
                     placeholder="Link da imagem com frase do respectivo Ramo/Dirigente"
-                    maxLength="500"
                     required
                   />
                 </div>
@@ -214,7 +210,6 @@ class RamosBackoffice extends React.Component {
                     value={en_banner}
                     onChange={this.handleInfoChange}
                     placeholder="Link da imagem com frase do respectivo Ramo/Dirigente"
-                    maxLength="500"
                     required
                   />
                 </div>

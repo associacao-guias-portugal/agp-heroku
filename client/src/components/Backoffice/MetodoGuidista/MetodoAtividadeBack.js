@@ -148,7 +148,6 @@ class MetodoAtividadeBack extends React.Component {
                 value={image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem do conteúdo da Ferramenta"
-                maxLength="500"
                 required
               />
             </div>
