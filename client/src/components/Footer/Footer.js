@@ -65,7 +65,7 @@ const Footer = () => {
             </li>
             <li>
               <span className="footer-contactos">
-                <a href="mailto:publicacoes@guiasdeportugal.org">{resultsContato.email}</a>
+                <a href="mailto:geral@guiasdeportugal.org">{resultsContato.email}</a>
               </span>
             </li>
           </ul>
