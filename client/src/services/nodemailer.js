@@ -12,7 +12,7 @@ const smtpTransporter = nodemailer.createTransport({
 const sendNodemailer = (data) => {
   const mailOptions = {
     from: `${data.nome} <agp.formulario.contacto@gmail.com>`,
-    to: 'a.g.p@netcabo.pt',
+    to: 'publicacoes@guiasdeportugal.org',
     replyTo: `${data.email}`,
     subject: `Contactos Site - ${data.assunto}`,
     text: `${data.mensagem}`,

@@ -170,7 +170,6 @@ class MetodoFerramentaBack extends React.Component {
                 value={icon}
                 onChange={this.handleChange}
                 placeholder="Link da imagem do ícone da Ferramenta"
-                maxLength="500"
                 required
               />
             </div>
@@ -182,7 +181,6 @@ class MetodoFerramentaBack extends React.Component {
                 value={image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem do conteúdo da Ferramenta"
-                maxLength="500"
                 required
               />
             </div>

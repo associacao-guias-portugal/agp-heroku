@@ -351,7 +351,6 @@ class MetodoBackoffice extends React.Component {
                 value={banner}
                 onChange={this.handleChange}
                 placeholder="Link da imagem do banner"
-                maxLength="500"
                 required
               />
             </div>

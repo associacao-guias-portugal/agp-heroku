@@ -207,6 +207,9 @@
 }
 
 @media(max-width: 768px) {
+    .associacao {
+        padding: 0px;
+    }
     .fotosHistoria-texto {
         padding: 20px 40px;
         text-align: left !important;

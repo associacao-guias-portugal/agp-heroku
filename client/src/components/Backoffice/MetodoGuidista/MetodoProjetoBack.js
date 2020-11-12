@@ -243,7 +243,6 @@ class MetodoProjetoBack extends React.Component {
                 value={thumbnail}
                 onChange={this.handleChange}
                 placeholder="Link da imagem a mostrar na timeline"
-                maxLength="500"
                 required
               />
             </div>
@@ -279,7 +278,6 @@ class MetodoProjetoBack extends React.Component {
                 value={image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem para o conteúdo do Projeto"
-                maxLength="500"
               />
             </div>
             <div className="back-metodo-editor">

@@ -15,7 +15,7 @@ const sendNodemailer = (req, res, next) => {
   const data = req.body;
   const mailOptions = {
     from: `${data.nome} <${process.env.DB_EMAIL}>`,
-    to: 'a.g.p@netcabo.pt',
+    to: 'publicacoes@guiasdeportugal.org',
     replyTo: `${data.email}`,
     subject: `Contactos Site - ${data.assunto}`,
     text: `${data.mensagem}`,
