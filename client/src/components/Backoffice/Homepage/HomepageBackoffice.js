@@ -143,7 +143,6 @@ class HomepageBackoffice extends React.Component {
                 value={teaser}
                 onChange={this.handleChange}
                 placeholder="Link do video/teaser"
-                maxLength="500"
                 required
               />
             </div>
@@ -180,7 +179,6 @@ class HomepageBackoffice extends React.Component {
                 value={ramo1_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Ramo Avezinha"
-                maxLength="500"
                 required
               />
             </div>
@@ -192,7 +190,6 @@ class HomepageBackoffice extends React.Component {
                 value={ramo2_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Ramo Aventura"
-                maxLength="500"
                 required
               />
             </div>
@@ -204,7 +201,6 @@ class HomepageBackoffice extends React.Component {
                 value={ramo3_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Ramo Caravela"
-                maxLength="500"
                 required
               />
             </div>
@@ -216,7 +212,6 @@ class HomepageBackoffice extends React.Component {
                 value={ramo4_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Ramo Moinho"
-                maxLength="500"
                 required
               />
             </div>
@@ -301,7 +296,6 @@ class HomepageBackoffice extends React.Component {
                 value={pais_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Palavra aos Pais"
-                maxLength="500"
                 required
               />
             </div>
@@ -349,7 +343,6 @@ class HomepageBackoffice extends React.Component {
                 value={jornal_image}
                 onChange={this.handleChange}
                 placeholder="Link da imagem Jornal"
-                maxLength="500"
                 required
               />
             </div>

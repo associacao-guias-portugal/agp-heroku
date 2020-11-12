@@ -16,27 +16,27 @@ INSERT INTO `users` (email, password) VALUES
 -- DROP TABLE IF EXISTS `homepage`;
 
 CREATE TABLE `homepage` (
-  `teaser` VARCHAR(500) NOT NULL,
+  `teaser` TEXT NOT NULL,
   `journal_edition`	INT NOT NULL,
   `article_1`	INT NOT NULL,
   `article_2`	INT NOT NULL,
   `article_3`	INT NOT NULL,
   `pt_modelo_title`	VARCHAR(60) NOT NULL,
   `en_modelo_title`	VARCHAR(60) NOT NULL,
-  `ramo1_image` VARCHAR(500) NOT NULL,
-  `ramo2_image` VARCHAR(500) NOT NULL,
-  `ramo3_image` VARCHAR(500) NOT NULL,
-  `ramo4_image` VARCHAR(500) NOT NULL,
+  `ramo1_image` TEXT NOT NULL,
+  `ramo2_image` TEXT NOT NULL,
+  `ramo3_image` TEXT NOT NULL,
+  `ramo4_image` TEXT NOT NULL,
   `pt_pais_title`	VARCHAR(60) NOT NULL,
   `en_pais_title`	VARCHAR(60) NOT NULL,
   `pt_pais_subtitle`	VARCHAR(60) NOT NULL,
   `en_pais_subtitle`	VARCHAR(60) NOT NULL,
   `pt_pais_intro`	VARCHAR(200) NOT NULL,
   `en_pais_intro`	VARCHAR(200) NOT NULL,
-  `pais_image` VARCHAR(500) NOT NULL,
+  `pais_image` TEXT NOT NULL,
   `pt_jornal_title`	VARCHAR(60) NOT NULL,
   `en_jornal_title`	VARCHAR(60) NOT NULL,
-  `jornal_image` VARCHAR(500) NOT NULL
+  `jornal_image` TEXT NOT NULL
 );
 
 INSERT INTO `homepage` (teaser, journal_edition, article_1, article_2, article_3, pt_modelo_title, en_modelo_title, ramo1_image, ramo2_image, ramo3_image, ramo4_image, pt_pais_title, en_pais_title, pt_pais_subtitle, en_pais_subtitle, pt_pais_intro, en_pais_intro, pais_image, pt_jornal_title, en_jornal_title, jornal_image)
@@ -67,8 +67,8 @@ CREATE TABLE `news`(
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `pt_title` VARCHAR(80) NOT NULL,
   `en_title` VARCHAR(80) NOT NULL,
-  `thumbnail` VARCHAR(1000) NOT NULL,
-  `image` VARCHAR(1000) NOT NULL,
+  `thumbnail` TEXT NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_intro_text` VARCHAR(100) NOT NULL,
   `en_intro_text` VARCHAR(100) NOT NULL,
   `pt_date` VARCHAR(8) NOT NULL,
@@ -99,9 +99,9 @@ INSERT INTO `news` (pt_title, en_title, thumbnail, image, pt_intro_text, en_intr
     `edition`	VARCHAR(10) NOT NULL,
     `pt_title`	VARCHAR(60) NOT NULL,
     `en_title`	VARCHAR(60) NOT NULL,
-    `thumbnail`	VARCHAR(200) NOT NULL,
-    `pdf_link` VARCHAR(200) NOT NULL,
-    `pdf_link_en`	VARCHAR(200) NOT NULL,
+    `thumbnail`	TEXT NOT NULL,
+    `pdf_link` TEXT NOT NULL,
+    `pdf_link_en`	TEXT NOT NULL,
     `year` VARCHAR(20) NOT NULL,
     `pt_intro_text_1`	VARCHAR(250),
     `pt_intro_text_2`	VARCHAR(250),
@@ -391,7 +391,7 @@ CREATE TABLE `store` (
   `category_en` VARCHAR(60) NOT NULL,
   `pt_description`	VARCHAR(60) NOT NULL,
   `en_description`	VARCHAR(60) NOT NULL,
-  `thumbnail`	VARCHAR(100) NOT NULL,
+  `thumbnail`	TEXT NOT NULL,
   `price`	VARCHAR(25) NOT NULL,
   `publish`	BOOL NOT NULL,
   PRIMARY KEY (`id`)
@@ -430,7 +430,7 @@ CREATE TABLE `Association_Sections` (
   `section_id` INTEGER NOT NULL AUTO_INCREMENT,
   `section_text_pt` MEDIUMTEXT NOT NULL,
   `section_text_en` MEDIUMTEXT,
-  `section_thumbnail` VARCHAR(100) NOT NULL,
+  `section_thumbnail` TEXT NOT NULL,
   `position` INTEGER NOT NULL,
   `publish`BOOL NOT NULL,
   PRIMARY KEY (`section_id`)
@@ -616,7 +616,7 @@ TRUE
 -- DROP TABLE IF EXISTS `Association_Header`;
 
 CREATE TABLE `Association_Header` (
-  `banner` VARCHAR(100) NOT NULL,
+  `banner` TEXT NOT NULL,
   `title_pt` VARCHAR(100) NOT NULL,
   `title_en` VARCHAR(100),
   `text1_pt` MEDIUMTEXT NOT NULL,
@@ -645,11 +645,11 @@ INSERT INTO `Association_Header` ( banner, title_pt, title_en, text1_pt, text1_e
 
 CREATE TABLE `ramos` (
   `type`	VARCHAR(15) NOT NULL,
-  `image_1` VARCHAR(500) NOT NULL,
-  `image_2` VARCHAR(500) NOT NULL,
-  `image_3` VARCHAR(500) NOT NULL,
-  `pt_banner` VARCHAR(500) NOT NULL,
-  `en_banner` VARCHAR(500) NOT NULL,
+  `image_1` TEXT NOT NULL,
+  `image_2` TEXT NOT NULL,
+  `image_3` TEXT NOT NULL,
+  `pt_banner` TEXT NOT NULL,
+  `en_banner` TEXT NOT NULL,
   `pt_content` LONGTEXT NOT NULL,
   `en_content` LONGTEXT NOT NULL,
   PRIMARY KEY (`type`)
@@ -668,7 +668,7 @@ INSERT INTO `ramos` (type, image_1, image_2, image_3, pt_banner, en_banner, pt_c
 
 CREATE TABLE `metodo_guidista` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `banner` VARCHAR(500) NOT NULL,
+  `banner` TEXT NOT NULL,
   `pt_main_title` VARCHAR(40) NOT NULL,
   `en_main_title` VARCHAR(40) NOT NULL,
   `pt_main_intro` VARCHAR(300) NOT NULL,
@@ -719,7 +719,7 @@ INSERT INTO `metodo_guidista` (banner, pt_main_title, en_main_title, pt_main_int
 
 CREATE TABLE `metodo_constantes` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_title` VARCHAR(20) NOT NULL,
   `en_title` VARCHAR(20) NOT NULL,
   `pt_legenda1` VARCHAR(100) NOT NULL,
@@ -746,10 +746,10 @@ CREATE TABLE `metodo_ferramentas` (
   `pt_title` VARCHAR(50) NOT NULL,
   `en_title` VARCHAR(50) NOT NULL,
   `icon` VARCHAR(500) NOT NULL,
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_content` LONGTEXT NOT NULL,
   `en_content` LONGTEXT NOT NULL,
-  `link` VARCHAR(100) NOT NULL,
+  `link` TEXT NOT NULL,
   PRIMARY KEY(`id`)
 );
 
@@ -776,11 +776,11 @@ CREATE TABLE `metodo_projetos` (
   `en_title` VARCHAR(100) NOT NULL,
   `pt_intro` VARCHAR(500) NOT NULL,
   `en_intro` VARCHAR(500) NOT NULL,
-  `thumbnail` VARCHAR(500) NOT NULL,
-  `image` VARCHAR(500),
+  `thumbnail` TEXT NOT NULL,
+  `image` TEXT,
   `pt_content` LONGTEXT,
   `en_content` LONGTEXT,
-  `link` VARCHAR(100) NOT NULL,
+  `link` TEXT NOT NULL,
   `publish`	BOOL NOT NULL,
   PRIMARY KEY(`id`)
 );
@@ -805,7 +805,7 @@ CREATE TABLE `metodo_atividades` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `pt_title` VARCHAR(30) NOT NULL,
   `en_title` VARCHAR(30) NOT NULL,
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_content` LONGTEXT NOT NULL,
   `en_content` LONGTEXT NOT NULL,
   PRIMARY KEY(`id`)
@@ -842,19 +842,19 @@ CREATE TABLE `contatos` (
 
 
 INSERT INTO `contatos` ( pt_endereco, en_endereco, google_maps, telefone, email, pt_secretariado, en_secretariado, pt_deposito, en_deposito, presidente, internacional, publicacoes,facebook, instagram, linkedin ) VALUES
-('Avenida Miguel Bombarda, Nº128 R/Chão Esq. 1050-167 Lisboa','Avenue Miguel Bombarda, Nº128 Floor/Left. 1050-167 Lisboa','https://goo.gl/maps/TGZTgHYotNwLF6wr7','217 938 227','a.g.p@netcabo.pt','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h30','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h30','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h00','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h00','agp.presidente@netcabo.pt','agp.internacional@zonmail.pt','agp.publicacoes@gmail.com', '#', '#', '#');
+('Avenida Miguel Bombarda, Nº128 R/Chão Esq. 1050-167 Lisboa','Avenue Miguel Bombarda, Nº128 Floor/Left. 1050-167 Lisboa','https://goo.gl/maps/TGZTgHYotNwLF6wr7','217 938 227','publicacoes@guiasdeportugal.org','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h30','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h30','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h00','Aberto de 2ª a 6ª das 10h00 às 12h30 e das 13h30 às 17h00','publicacoes@guiasdeportugal.org','agp.internacional@zonmail.pt','agp.publicacoes@gmail.com', '#', '#', '#');
 
 
 
 -- DROP TABLE IF EXISTS `files`;
 
 CREATE TABLE `files` (
-  `estatutos` VARCHAR (1000),
-  `livro_especialidades` VARCHAR (1000),
-  `regulamentos` VARCHAR (1000),
-  `cartao_associada` VARCHAR (1000),
-  `politica_de_privacidade` VARCHAR (1000),
-  `politica_de_dados` VARCHAR (1000)
+  `estatutos` TEXT,
+  `livro_especialidades` TEXT,
+  `regulamentos` TEXT,
+  `cartao_associada` TEXT,
+  `politica_de_privacidade` TEXT,
+  `politica_de_dados` TEXT
 );
 
 INSERT INTO `files` (estatutos, livro_especialidades, regulamentos, cartao_associada, politica_de_privacidade, politica_de_dados ) VALUES
@@ -870,7 +870,7 @@ INSERT INTO `files` (estatutos, livro_especialidades, regulamentos, cartao_assoc
 -- DROP TABLE IF EXISTS `palavraaospais`;
 
 CREATE TABLE `palavraaospais` (
-  `image` VARCHAR (1000),
+  `image` TEXT,
   `pt_title` VARCHAR (1000),
   `en_title` VARCHAR (1000),
   `pt_text_title` LONGTEXT,
@@ -899,7 +899,7 @@ CREATE TABLE `palavraaospais2` (
   `position` INTEGER NOT NULL,
   `pt_title` VARCHAR (1000),
   `en_title` VARCHAR (1000),
-  `image` VARCHAR (1000),
+  `image` TEXT,
   `pt_text` LONGTEXT,
   `en_text` LONGTEXT,
   `publish` BOOL NOT NULL,
@@ -942,7 +942,7 @@ CREATE TABLE `recursos` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `pt_label` VARCHAR(50),
   `en_label` VARCHAR(50),
-  `link` VARCHAR(500),
+  `link` TEXT,
   PRIMARY KEY(`id`)
 );
 
@@ -956,8 +956,8 @@ INSERT INTO `recursos` (pt_label, en_label, link) VALUES
 -- DROP TABLE IF EXISTS `worldAssociation`;
 
 CREATE TABLE worldAssociation (
-            `banner`VARCHAR(150) NOT NULL,
-            `logoWAGGGS` VARCHAR(150) NOT NULL,
+            `banner`TEXT NOT NULL,
+            `logoWAGGGS` TEXT NOT NULL,
             `section1_pt`MEDIUMTEXT NOT NULL,
             `section1_en` MEDIUMTEXT,
             `section2_pt`MEDIUMTEXT NOT NULL,
@@ -990,15 +990,15 @@ CREATE TABLE worldAssociation (
             `section4_title_en` VARCHAR(150),
             `section4_pt` MEDIUMTEXT NOT NULL,
             `section4_en` MEDIUMTEXT,
-            `section4_thumbnail` VARCHAR(150) NOT NULL,
+            `section4_thumbnail` TEXT NOT NULL,
             `section5_column1_title_pt`VARCHAR (200) NOT NULL,
             `section5_column1_title_en`VARCHAR (200) NOT NULL,
-            `section5_column1_thumbnail` VARCHAR (150) NOT NULL,
+            `section5_column1_thumbnail` TEXT NOT NULL,
             `section5_column1_pt` MEDIUMTEXT NOT NULL,
             `section5_column1_en` MEDIUMTEXT,
             `section5_column2_title_pt`VARCHAR (200) NOT NULL,
             `section5_column2_title_en`VARCHAR (200) NOT NULL,
-            `section5_column2_thumbnail` VARCHAR (150) NOT NULL,
+            `section5_column2_thumbnail` TEXT NOT NULL,
             `section5_column2_pt` MEDIUMTEXT NOT NULL,
             `section5_column2_en` MEDIUMTEXT
 );
@@ -1104,7 +1104,7 @@ INSERT INTO `worldAssociation`
 -- DROP TABLE `historia_guidismo`;
 
 CREATE TABLE `historia_guidismo` (
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_title_text1` VARCHAR(500) NOT NULL,
   `en_title_text1` VARCHAR(500) NOT NULL,
   `pt_text_text1` LONGTEXT NOT NULL,
@@ -1126,7 +1126,7 @@ Founder and World Chief Robert and Olave Baden-Powell', 'Guias porquê?', 'Why G
 CREATE TABLE `historia_guidismo_timeline_one` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `position` INTEGER NOT NULL, 
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_text` LONGTEXT NOT NULL,
   `en_text` LONGTEXT NOT NULL,
   `publish` BOOL NOT NULL,
@@ -1150,7 +1150,7 @@ INSERT INTO `historia_guidismo_timeline_one`(position, image, pt_text, en_text, 
 CREATE TABLE `historia_guidismo_timeline_two` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `position` INTEGER NOT NULL, 
-  `image` VARCHAR(500) NOT NULL,
+  `image` TEXT NOT NULL,
   `pt_text` LONGTEXT NOT NULL,
   `en_text` LONGTEXT NOT NULL,
   `publish` BOOL NOT NULL,
@@ -1174,7 +1174,7 @@ Saber mais sobre a Lady Olave aqui.', 1);
 
 CREATE TABLE `ligacoes_uteis` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `link` VARCHAR(200) NOT NULL,
+  `link` TEXT NOT NULL,
   `pt_text` VARCHAR(200) NOT NULL,
   `en_text` VARCHAR(200),
    PRIMARY KEY(`id`)

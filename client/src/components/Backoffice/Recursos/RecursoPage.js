@@ -68,7 +68,6 @@ class RecursoPage extends React.Component {
                 value={link}
                 onChange={this.handleChange}
                 placeholder="Link do ficheiro PDF"
-                maxLength="500"
                 required
               />
             </div>
