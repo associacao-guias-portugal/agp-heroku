@@ -23,6 +23,14 @@ const Homepage = (props) => {
   }, [i18n.language, selectedLanguage]);
 
   useEffect(() => {
+    // GCSE - Se vier da página pesquisa tem que se apagar a search query do url
+    if (window.location.search && !window.location.hash.includes("search")) {
+      const query = window.location.search;
+      let href = window.location.href;
+      href = href.replaceAll(query, '');    
+      window.location.href = href;
+    }
+
     window.scrollTo(0, 0);
     axios.get('/homepage/all')
       .then((res) => {
