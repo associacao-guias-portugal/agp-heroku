@@ -70,6 +70,14 @@ function App() {
 
   const currentPath = history.location.pathname;
 
+  // GCSE - Se vier da página pesquisa tem que se apagar a search query do url
+  if (window.location.search && !window.location.hash.includes("search")) {
+    const query = window.location.search;
+    let href = window.location.href;
+    href = href.replaceAll(query, '');    
+    window.location.href = href;
+  }
+
   const [locationPath, setLocationPath] = useState('/');
 
   useEffect(() => {

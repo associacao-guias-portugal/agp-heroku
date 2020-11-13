@@ -28,10 +28,10 @@ const Header = (props) => {
     localStorage.setItem('searchBy', JSON.stringify(searchBy));
     props.history.push({
       pathname: '/search',
-      search: `?q=${searchBy}`,
-      state: { searchBy },
+      // state: { searchBy },
+      // search: `?q=${searchBy}`,
     });
-    window.location.reload();
+    window.location.search =`q=${searchBy}/`;
   };
 
   useEffect(() => {
@@ -99,7 +99,7 @@ const Header = (props) => {
           <div className="search-languages">
             <Form inline className="search-fields" onSubmit={handleSearch}>
               <FontAwesomeIcon icon={faSearch} className="search-icon" />
-              <FormControl name="q" type="text" placeholder={t('header.pesquisa')} className="mr-sm-2 search-input" onChange={handleInputSearch} autoComplete="off" />
+              <FormControl class="gcse-searchbox" name="q" type="text" placeholder={t('header.pesquisa')} className="mr-sm-2 search-input" onChange={handleInputSearch} autoComplete="off" />
             </Form>
             <LanguageSelector />
           </div>
