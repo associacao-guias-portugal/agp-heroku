@@ -25,6 +25,17 @@ function RamosDirigente(props) {
   const defineRamo = () => {
     if (getBranch !== branchName) {
       window.scrollTo(0, 0);
+      if (getBranch === 'ramo-avezinha') {
+        document.title = "Ramo Avezinha";
+      } else if (getBranch === 'ramo-aventura') {
+        document.title = "Ramo Aventura";
+      } else if (getBranch === 'ramo-caravela') {
+        document.title = "Ramo Caravela";
+      } else if (getBranch === 'ramo-moinho') {
+        document.title = "Ramo Moinho";
+      } else if (getBranch === 'dirigente') {
+        document.title = "Dirigente";
+      }
     }
     setBranchName(getBranch);
     if (getBranch === 'ramo-avezinha') {

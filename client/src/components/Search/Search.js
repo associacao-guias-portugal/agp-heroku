@@ -8,6 +8,7 @@ const Search = () => {
   const [searchItem, setSearchItem] = useState('');
 
   useEffect(() => {
+    document.title = "Pesquisa";
     window.scrollTo(0, 0);
   }, []);
 

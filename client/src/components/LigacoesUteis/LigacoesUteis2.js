@@ -21,6 +21,7 @@ const LigacoesUteis2 = (props) => {
   };
 
   useEffect(() => {
+    document.title = "Ligações Úteis";
     window.scrollTo(0, 0);
     getData();
   }, []);

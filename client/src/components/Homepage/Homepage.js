@@ -23,6 +23,7 @@ const Homepage = (props) => {
   }, [i18n.language, selectedLanguage]);
 
   useEffect(() => {
+    document.title = "Associação Guias de Portugal - Home"
     // GCSE - Se vier da página pesquisa tem que se apagar a search query do url
     if (window.location.search && !window.location.hash.includes("search")) {
       const query = window.location.search;

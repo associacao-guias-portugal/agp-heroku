@@ -13,6 +13,7 @@ const Contactos = (props) => {
   const mode = match.params.modo;
 
   useEffect(() => {
+    document.title = "Contactos";
     window.scrollTo(0, 0);
     if (mode !== 'sede') {
       setShowSedeNacional(false);
