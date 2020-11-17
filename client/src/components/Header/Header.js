@@ -32,7 +32,7 @@ const Header = (props) => {
       // search: `?q=${searchBy}`,
     });
     window.location.reload();
-    window.location.search =`q=${searchBy}/`;
+    window.location.search =`q=${searchBy}`;
   };
 
   useEffect(() => {
