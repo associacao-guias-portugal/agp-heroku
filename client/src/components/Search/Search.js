@@ -17,12 +17,13 @@ const Search = () => {
 
   return (
     <div className="Search">
-
+    
       <div className="search-title-section">
         <div className="search-main-title">{t('search.mainTitle')}</div>
+        <div className="search-main-input">{search}</div>
       </div>
 
-      <div class="gcse-search"></div>
+      {/* <div class="gcse-search"></div> */}
 
       <script async src="https://cse.google.com/cse.js?cx=830615148521d9b86" />
       <div class="gcse-searchresults-only" />
