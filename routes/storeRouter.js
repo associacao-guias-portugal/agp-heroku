@@ -95,4 +95,31 @@ router.delete("/deleteItem/:id", jwtMiddleware, (req, res) => {
   );
 });
 
+router.get('/header/header', (req, res) => {
+  connection.query('SELECT * FROM store_header',
+    (err, results) => {
+      if (err) {
+        res.status(400).send('Error')
+      } else {
+        res.status(200).json(results)
+      }
+    }
+  )
+})
+
+router.put('/header/header_edit', jwtMiddleware, (req, res) => {
+  connection.query('UPDATE store_header SET ? ',
+      [req.body],
+      (err, results) => {
+          if (err) {
+              console.log(err.message)
+              res.status(400).json({ flash: 'Ocorreu um erro' })
+          } else {
+              res.status(200).json({ flash: 'Alterado com sucesso' })
+          }
+      }
+  )
+})
+
+
 module.exports = router;

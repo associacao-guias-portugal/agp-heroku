@@ -7,6 +7,8 @@ const jwt = require('jsonwebtoken');
 const connection = require('../config');
 const jwtMiddleware = require('../services/jwtMiddleware');
 
+
+
 router.get('/', (req, res) => {
     connection.query('SELECT * FROM ligacoes_uteis',
         (err, results) => {
@@ -19,6 +21,20 @@ router.get('/', (req, res) => {
         }
     )
 })
+
+router.get('/header/header', (req, res) => {
+    connection.query('SELECT * FROM ligacoes_uteis_Header',
+        (err, results) => {
+            if (err) {
+                res.status(400).send('Error')
+            } else {
+                res.status(200).json(results)
+            }
+
+        }
+    )
+})
+
 
 router.get('/:id', (req, res) => {
     connection.query('SELECT * FROM ligacoes_uteis WHERE id=?',
@@ -33,6 +49,8 @@ router.get('/:id', (req, res) => {
         }
     )
 })
+
+
 
 
 router.put('/:id', jwtMiddleware, (req, res) => {
@@ -70,6 +88,21 @@ router.delete('/deleteLink/:id', jwtMiddleware, (req, res) => {
                 res.status(400).send('Error deleting link')
             } else {
                 res.status(200).send('Link deleted')
+            }
+        }
+    )
+})
+
+
+router.put('/header/header_edit', jwtMiddleware, (req, res) => {
+    connection.query('UPDATE ligacoes_uteis_Header SET ? ',
+        [req.body],
+        (err, results) => {
+            if (err) {
+                console.log(err.message)
+                res.status(400).json({ flash: 'Ocorreu um erro' })
+            } else {
+                res.status(200).json({ flash: 'Alterado com sucesso' })
             }
         }
     )

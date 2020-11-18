@@ -3,7 +3,7 @@ const router = express.Router();
 const connection = require('../config');
 const jwtMiddleware = require('../services/jwtMiddleware');
 
-router.get('/',(req, res) => {
+router.get('/', (req, res) => {
   connection.query('SELECT * FROM journal WHERE publish="1" ORDER BY edition DESC',
     (err, results) => {
       if (err) {
@@ -16,7 +16,7 @@ router.get('/',(req, res) => {
     });
 });
 
-router.get('/all',(req, res) => {
+router.get('/all', (req, res) => {
   connection.query('SELECT * FROM journal ORDER BY edition DESC',
     (err, results) => {
       if (err) {
@@ -29,7 +29,7 @@ router.get('/all',(req, res) => {
     });
 });
 
-router.get('/:edition',(req, res) => {
+router.get('/:edition', (req, res) => {
   connection.query('SELECT * FROM journal WHERE edition=?',
     [req.params.edition], (err, results) => {
       if (err) {
@@ -42,7 +42,7 @@ router.get('/:edition',(req, res) => {
     });
 });
 
-router.get('/:edition',(req, res) => {
+router.get('/:edition', (req, res) => {
   connection.query('SELECT * FROM journal WHERE edition=?',
     [req.params.edition], (err, results) => {
       if (err) {
@@ -70,7 +70,7 @@ router.post('/publish', jwtMiddleware, (req, res) => {
   });
 });
 
-router.put('/editPublication', jwtMiddleware,  (req, res) => {
+router.put('/editPublication', jwtMiddleware, (req, res) => {
   connection.query('UPDATE journal SET ? WHERE id=?', [req.body, req.body.id], (err, results) => {
     if (err) {
       res.status(400).send('Newspaper not updated');
@@ -132,5 +132,34 @@ router.delete('/:edition', jwtMiddleware, (req, res) => {
     }
   )
 });
+
+router.get('/headers/headers', (req, res) => {
+  connection.query('SELECT * FROM jornal_Header',
+    (err, results) => {
+      if (err) {
+        res.status(400).send('Query Error');
+      } else {
+        res.status(200).json(results);
+      }
+    });
+});
+
+router.put('/headers/headers_edit', jwtMiddleware, (req, res) => {
+  connection.query('UPDATE jornal_Header SET ? ',
+    [req.body],
+    (err, results) => {
+      if (err) {
+        res.status(400).json({ flash: 'Ocorreu um erro' })
+        console.log(err)
+      } else {
+        res.status(200).json({ flash: 'Alterado com sucesso' })
+
+      }
+    }
+  )
+})
+
+
+
 
 module.exports = router;
