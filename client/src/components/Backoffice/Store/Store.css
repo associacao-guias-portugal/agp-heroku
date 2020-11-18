@@ -1,0 +1,20 @@
+.loja-save {
+  margin: 0px;
+}
+
+.loja-quadro {
+  margin: 0px;
+  align-items: center;
+}
+
+.loja-quadro-title {
+  color: #1aa3db;
+  font-size: 20px;
+  width: 69%;
+  margin: 0px 0px 0px 0px;
+  font-weight: 500;
+}
+
+.extra-padding-bottom {
+  padding-bottom: 40px;
+}

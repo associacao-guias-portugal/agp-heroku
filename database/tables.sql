@@ -1199,3 +1199,36 @@ INSERT INTO `ligacoes_uteis`(link, pt_text, en_text) VALUES
 ('https://www.dgs.pt/', 'Direcção Geral da Saúde', 'en_text' );
 
 
+CREATE TABLE `ligacoes_uteis_Header`(
+  `header_pt` TEXT,
+  `header_en` TEXT
+);
+
+INSERT INTO ligacoes_uteis_Header (header_pt, header_en) VALUES
+('Nesta secção, dedicada a ti, Guia, poderás encontrar vários recursos úteis.','header_en');
+
+CREATE TABLE `jornal_Header`(
+  `header1_pt` TEXT,
+  `header1_en` TEXT,
+  `header2_pt` TEXT,
+  `header2_en` TEXT
+);
+
+INSERT INTO jornal_Header (header1_pt, header1_en, header2_pt, header2_en) VALUES
+('Publicação semestral da AGP que aborda temas da atualidade e divulga as atividades da Associação.',
+'header1_en',
+'Edições disponíveis para download. Edição mais recente à venda na Companhia mais próxima.',
+'header2_en'
+);
+
+CREATE TABLE `store_header`(
+  `header_pt` TEXT,
+  `header_en` TEXT
+);
+
+INSERT INTO store_header (header_pt, header_en) VALUES
+(
+  'Catálogo dos produtos à venda no Depósito de Material e Fardamento. Consultar horários da Loja aqui.',
+  'Catálogo dos produtos à venda no Depósito de Material e Fardamento. Check the store schedule here.'
+);
+

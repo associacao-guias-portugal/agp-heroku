@@ -137,7 +137,7 @@ class LigacoesUteis extends React.Component {
                     <div className="NoticiaInput-section-button">
                         <button className="login-button" type="submit">
                             GUARDAR
-            </button>
+                        </button>
                     </div>
                 </form>
                 <PopUp
