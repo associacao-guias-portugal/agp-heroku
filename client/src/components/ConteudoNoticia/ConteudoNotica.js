@@ -22,6 +22,7 @@ const ConteudoNoticia = (props) => {
           (element) => element.id === Number(id)
         );
         setContNoticiasData(noticiasConteudo[0]);
+        document.title = `${noticiasConteudo[0].pt_title}`;
       });
   };
 

@@ -15,6 +15,7 @@ const ProjetoGuidista = () => {
     axios.get(`/metodo-guidista/projetos/${id}`)
       .then((res) => {
         setProjeto(res.data[0]);
+        document.title = `Método Guidista - Projecto ${res.data[0].pt_title}`;
       });
   }, []);
 

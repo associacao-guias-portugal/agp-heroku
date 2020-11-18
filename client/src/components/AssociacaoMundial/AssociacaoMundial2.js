@@ -23,6 +23,7 @@ const AssociacaoMundial2 = (props) => {
     }
 
     useEffect(() => {
+        document.title = "Associação Mundial";
         window.scrollTo(0, 0)
         getData()
     }, [])

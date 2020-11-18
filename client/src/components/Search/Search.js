@@ -8,10 +8,13 @@ const Search = () => {
   const [searchItem, setSearchItem] = useState('');
 
   useEffect(() => {
+    document.title = "Pesquisa";
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
+    console.log("search:", search)
+    console.log("search:", window.location.search);
     setSearchItem(search);
   }, [search, searchItem]);
 
@@ -23,10 +26,10 @@ const Search = () => {
         <div className="search-main-input">{search}</div>
       </div>
 
-      <div class="gcse-search"></div>
+      {/* <div className="gcse-search"></div> */}
 
-      {/* <script async src="https://cse.google.com/cse.js?cx=830615148521d9b86" />
-      <div class="gcse-searchresults-only" /> */}
+      <script async src="https://cse.google.com/cse.js?cx=830615148521d9b86" />
+      <div className="gcse-searchresults-only" /> 
 
     </div>
   );
