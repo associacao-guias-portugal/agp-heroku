@@ -42,6 +42,7 @@ const AssociacaoFront2 = (props) => {
   };
 
   useEffect(() => {
+    document.title = "A Associação";
     window.scrollTo(0, 0);
     fetchAssociationHeader();
     fetchAssociationSections();

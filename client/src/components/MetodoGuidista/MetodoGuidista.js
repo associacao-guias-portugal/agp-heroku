@@ -19,6 +19,7 @@ const MetodoGuidista = () => {
   const [atividadeInternacional, setAtividadeInternacional] = useState([]);
 
   useEffect(() => {
+    document.title = "Método Guidista"
     window.scrollTo(0, 0);
 
     axios.get('/metodo-guidista')

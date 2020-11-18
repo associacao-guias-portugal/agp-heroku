@@ -22,6 +22,7 @@ const PalavraAosPais = () => {
   );
 
   useEffect(() => {
+    document.title = "Palavra aos Pais";
     window.scrollTo(0, 0);
     axios.get('/palavra-aos-pais').then((res) => {
       console.log('resultsPalavraAosPaisTable1', res);

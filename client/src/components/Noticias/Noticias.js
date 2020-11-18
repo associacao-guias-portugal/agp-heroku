@@ -19,6 +19,7 @@ const Noticias = () => {
   };
 
   useEffect(() => {
+    document.title = "Notícias";
     window.scrollTo(0, 0);
     getData();
   }, []);
