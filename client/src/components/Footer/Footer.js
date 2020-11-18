@@ -22,15 +22,15 @@ const Footer = () => {
 
   useEffect(() => {
     axios.get("/files").then((res) => {
-      console.log("filesData", res);
+      // console.log("filesData", res);
       const resultsFiles = res.data[0];
-      console.log(resultsFiles);
+      // console.log(resultsFiles);
       setResultsFiles(resultsFiles);
     });
     axios.get("/contato").then((res) => {
-      console.log("ContatosData", res);
+      // console.log("ContatosData", res);
       const resultsContatos = res.data[0];
-      console.log(resultsContatos);
+      // console.log(resultsContatos);
       setResultsContato(resultsContatos);
     });
   }, []);
