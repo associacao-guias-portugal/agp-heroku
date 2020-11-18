@@ -56,20 +56,14 @@ const LojaMaster = (props) => {
     <div className="Body">
       <div className="Body-Loja">
         <h2 className="app-second-title tituloLoja">{itemCategory}</h2>
-        {/* <p className="app-main-text">{t('loja.texto1')}</p>
         <p className="app-main-text">
-          {t('loja.texto2')}
-          <Link to="/contactos/sede" style={{ textDecoration: "none" }}>
-            {t('loja.texto3')}
-          </Link>
-        </p> */}
-        {
-          selectedLanguage === 'pt' ?
-            <p>{ReactHtmlParser(header_pt)}</p>
-            :
-            <p>{ReactHtmlParser(header_en)}</p>
-        }
-
+          {
+            selectedLanguage === 'pt' ?
+              <p>{ReactHtmlParser(header_pt)}</p>
+              :
+              <p>{ReactHtmlParser(header_en)}</p>
+          }
+        </p>
         <div className="loja">
           {items.map((item) => {
             return item.publish === 1 && <Livros key={item.id} item={item} />;

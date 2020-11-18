@@ -174,35 +174,33 @@ class TableJournal extends Component {
       },
     };
     return (
-      <div>
-        <div className='body'>
-          <form className="NoticiaInput-section" onSubmit={event => this.handleSubmit(event)}>
-            <div className="NoticiaInput-title">Edição textos iniciais Jornal</div>
-            <div className="input">
-              <div className="input-section-label">Título 1 PT </div>
-              <input type='text' name='header1_pt' value={this.state.header1_pt} onChange={event => this.handleChange(event)} />
-            </div>
-            <div className="input">
-              <div className="input-section-label">Título 1 EN </div>
-              <input type='text' name='header1_en' value={this.state.header1_en} onChange={event => this.handleChange(event)} />
-            </div>
-            <div className="input">
-              <div className="input-section-label">Título 2 PT </div>
-              <input type='text' name='header2_pt' value={this.state.header2_pt} onChange={event => this.handleChange(event)} />
-            </div>
-            <div className="input">
-              <div className="input-section-label">Título 2 EN </div>
-              <input type='text' name='header2_en' value={this.state.header2_en} onChange={event => this.handleChange(event)} />
-            </div>
-            <div className="NoticiaInput-section-button">
-              <button className="login-button" type='submit'>Submeter</button>
-            </div>
-          </form>
-        </div>
+      <div className="NoticiasPainel">
+        <form className="NoticiaInput-section" onSubmit={event => this.handleSubmit(event)}>
+          <div className="NoticiaInput-title">Jornal "O Trevo"</div>
+          <div className="input">
+            <div className="input-section-label">Intro 1 PT </div>
+            <input type='text' name='header1_pt' value={this.state.header1_pt} onChange={event => this.handleChange(event)} />
+          </div>
+          <div className="input">
+            <div className="input-section-label">Intro 1 EN </div>
+            <input type='text' name='header1_en' value={this.state.header1_en} onChange={event => this.handleChange(event)} />
+          </div>
+          <div className="input">
+            <div className="input-section-label">Intro 2 PT </div>
+            <input type='text' name='header2_pt' value={this.state.header2_pt} onChange={event => this.handleChange(event)} />
+          </div>
+          <div className="input">
+            <div className="input-section-label">Intro 2 EN </div>
+            <input type='text' name='header2_en' value={this.state.header2_en} onChange={event => this.handleChange(event)} />
+          </div>
+          <div className="NoticiaInput-section-button">
+            <button className="login-button" type='submit'>GUARDAR</button>
+          </div>
+        </form>
         <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
         <div className="NoticiasPainel">
-          <div className="NoticiasPainel-title">Quadro Jornal</div>
-          <div className="JornalPainel-section-button">
+          <div className="JornalPainel-section-button loja-quadro">
+            <div className="loja-quadro-title">Edições do Jornal</div>
             <Link to={link}>
               <button className="NoticiasPainel-button" type="submit">
                 Criar Edição

@@ -7,7 +7,6 @@ import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
 import "../Noticias/NoticiasPainel.css";
 import ModalPopup from "../Noticias/PopUpDeleteNoticias";
 import PopUp from "../PopUp/PopUp";
-import ReactHtmlParser from "react-html-parser";
 import {
   EditorState,
   ContentState,
@@ -18,7 +17,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
 import "rc-datepicker/lib/style.css";
-//import './AssociationBack.css';
+import './Store.css';
 
 class TableStore extends Component {
   constructor(props) {
@@ -251,7 +250,7 @@ class TableStore extends Component {
     return (
       <div>
         <div className="ContatoInput">
-        <div className="NoticiasPainel-title">Jornal - Edição texto inicial</div>
+        <div className="NoticiasPainel-title">Loja</div>
           <form className="NoticiaInput-section" onSubmit={this.handleSubmit}>
             <div className="input-section-label">Intro Texto PT</div>
             <div className="input input-block">
@@ -346,7 +345,7 @@ class TableStore extends Component {
                 }}
               />
             </div>
-            <div className="NoticiaInput-section-button">
+            <div className="NoticiaInput-section-button loja-save">
               <button className="login-button" type="submit">
                 GRAVAR
               </button>
@@ -358,12 +357,14 @@ class TableStore extends Component {
           />
         </div>
         <div className="NoticiasPainel">
-          <div className="NoticiasPainel-title">Quadro Loja</div>
-          <div className="JornalPainel-section-button">
+          <div className="JornalPainel-section-button loja-quadro">
+            <div className="loja-quadro-title">
+              Artigos da Loja
+            </div>
             <Link to={link}>
               <button className="NoticiasPainel-button" type="submit">
                 Criar Artigo
-            </button>
+              </button>
             </Link>
           </div>
           <div className="NoticiasPainel-Table">

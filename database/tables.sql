@@ -1228,7 +1228,7 @@ CREATE TABLE `store_header`(
 
 INSERT INTO store_header (header_pt, header_en) VALUES
 (
-  'header_pt',
-  'header_en'
+  'Catálogo dos produtos à venda no Depósito de Material e Fardamento. Consultar horários da Loja aqui.',
+  'Catálogo dos produtos à venda no Depósito de Material e Fardamento. Check the store schedule here.'
 );
 
