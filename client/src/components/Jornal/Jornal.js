@@ -18,6 +18,7 @@ const Jornal = (props) => {
   };
 
   useEffect(() => {
+    document.title = "Jornal";
     window.scrollTo(0, 0);
     fetchJournal();
   }, []);

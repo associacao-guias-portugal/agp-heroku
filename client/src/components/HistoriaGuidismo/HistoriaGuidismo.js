@@ -13,6 +13,7 @@ const HistoriaGuidismo = () => {
   const [historiaGuidismo, setHistoriaGuidismo] = useState([]);
 
   useEffect(() => {
+    document.title = "História do Guidismo"
     window.scrollTo(0, 0);
 
     axios.get("/historia-guidismo").then((res) => {

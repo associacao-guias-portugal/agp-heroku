@@ -29,6 +29,8 @@ const LojaMaster = (props) => {
   useEffect(() => {
     const match = props.match;
     const getCategory = match.params.itemCategory;
+    const title = getCategory.charAt(0).toUpperCase() + getCategory.slice(1);
+    document.title = `Loja - ${title}`;
     if (getCategory !== itemCategory) {
       getData(getCategory);
     }
