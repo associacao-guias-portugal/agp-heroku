@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ReactHtmlParser from "react-html-parser";
-import { Helmet } from "react-helmet";
 
 const AssociacaoMundial2 = (props) => {
     const { t, i18n } = useTranslation();
@@ -24,6 +23,7 @@ const AssociacaoMundial2 = (props) => {
     }
 
     useEffect(() => {
+        document.title = "Associação Guias de Portugal - Associação Mundial"
         window.scrollTo(0, 0)
         getData()
     }, [])
@@ -36,10 +36,6 @@ const AssociacaoMundial2 = (props) => {
 
     return (
         <div>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Associação Mundial</title>
-            </Helmet>
             <div className="world-girls-banner">
                 <img src={worldAssociationData.banner} alt="picture WAGGGS" />
             </div>
