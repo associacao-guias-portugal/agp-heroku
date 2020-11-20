@@ -19,7 +19,7 @@ const MetodoGuidista = () => {
   const [atividadeInternacional, setAtividadeInternacional] = useState([]);
 
   useEffect(() => {
-    document.title = "Método Guidista"
+    document.title = "Associação Guias de Portugal - Método Guidista"
     window.scrollTo(0, 0);
 
     axios.get('/metodo-guidista')
@@ -151,7 +151,7 @@ const MetodoGuidista = () => {
         <div className="atividades-section-img" style={{ backgroundImage: `url(${atividadeInternacional.image})` }} />
       </div>
       <div className="associacao-button-section">
-        <Link to="/contactos/formulário">
+        <Link to="/contactos/formulario">
           <button type="submit" className="ser-guia-button associacao-button">{t('buttons.queresSerGuia')}</button>
         </Link>
       </div>

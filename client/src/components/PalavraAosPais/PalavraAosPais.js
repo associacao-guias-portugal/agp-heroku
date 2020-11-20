@@ -22,7 +22,7 @@ const PalavraAosPais = () => {
   );
 
   useEffect(() => {
-    document.title = "Palavra aos Pais";
+    document.title = "Associação Guias de Portugal - Palavra aos Pais";
     window.scrollTo(0, 0);
     axios.get('/palavra-aos-pais').then((res) => {
       console.log('resultsPalavraAosPaisTable1', res);
@@ -135,7 +135,7 @@ const PalavraAosPais = () => {
           ))}
         </div>
         <div className="PalavraPais-button-section">
-          <Link to="/contactos/formulário">
+          <Link to="/contactos/formulario">
             <button
               type="submit"
               className="ser-guia-button PalavraPais-button"
