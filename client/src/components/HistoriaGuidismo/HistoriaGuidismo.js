@@ -13,7 +13,7 @@ const HistoriaGuidismo = () => {
   const [historiaGuidismo, setHistoriaGuidismo] = useState([]);
 
   useEffect(() => {
-    document.title = "História do Guidismo"
+    document.title = "Associação Guias de Portugal - História do Guidismo"
     window.scrollTo(0, 0);
 
     axios.get("/historia-guidismo").then((res) => {
@@ -64,7 +64,7 @@ const HistoriaGuidismo = () => {
           </div>
         </div>
         <div className="PalavraPais-button-section">
-          <Link to="/contactos/formulário">
+          <Link to="/contactos/formulario">
             <button
               type="submit"
               className="ser-guia-button PalavraPais-button"

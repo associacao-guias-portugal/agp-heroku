@@ -23,7 +23,7 @@ const AssociacaoMundial2 = (props) => {
     }
 
     useEffect(() => {
-        document.title = "Associação Mundial";
+        document.title = "Associação Guias de Portugal - Associação Mundial"
         window.scrollTo(0, 0)
         getData()
     }, [])
@@ -164,7 +164,7 @@ const AssociacaoMundial2 = (props) => {
                             </div>
                         </div>
                         <div className="associacao-button-section">
-                            <Link to="/contactos/formulário">
+                            <Link to="/contactos/formulario">
                                 <button type="submit" className="ser-guia-button associacao-button">
                                     {t('buttons.queresSerGuia')}
                                 </button>
@@ -276,7 +276,7 @@ const AssociacaoMundial2 = (props) => {
                             </div>
                         </div>
                         <div className="associacao-button-section">
-                            <Link to="/contactos/formulário">
+                            <Link to="/contactos/formulario">
                                 <button type="submit" className="ser-guia-button associacao-button">
                                     {t('buttons.queresSerGuia')}
                                 </button>
