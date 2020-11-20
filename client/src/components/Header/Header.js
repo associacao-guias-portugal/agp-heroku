@@ -93,7 +93,7 @@ const Header = (props) => {
               <NavDropdown.Item eventKey="20" className="dropdown-item"><Link to="/loja/diversos">{t('header.diversos')}</Link></NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title={t('header.contactos')} id="basic-nav-dropdown" className="nav-header">
-              <NavDropdown.Item eventKey="21" className="dropdown-item"><Link to="/contactos/formulário">{t('header.queresSerGuia')}</Link></NavDropdown.Item>
+              <NavDropdown.Item eventKey="21" className="dropdown-item"><Link to="/contactos/formulario">{t('header.queresSerGuia')}</Link></NavDropdown.Item>
               <NavDropdown.Item eventKey="22" className="dropdown-item"><Link to="/contactos/sede">{t('header.sedeNacional')}</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>

@@ -26,15 +26,15 @@ function RamosDirigente(props) {
     if (getBranch !== branchName) {
       window.scrollTo(0, 0);
       if (getBranch === 'ramo-avezinha') {
-        document.title = "Ramo Avezinha";
+        document.title = "Associação Guias de Portugal - Ramo Avezinha";
       } else if (getBranch === 'ramo-aventura') {
-        document.title = "Ramo Aventura";
+        document.title = "Associação Guias de Portugal - Ramo Aventura";
       } else if (getBranch === 'ramo-caravela') {
-        document.title = "Ramo Caravela";
+        document.title = "Associação Guias de Portugal - Ramo Caravela";
       } else if (getBranch === 'ramo-moinho') {
-        document.title = "Ramo Moinho";
+        document.title = "Associação Guias de Portugal - Ramo Moinho";
       } else if (getBranch === 'dirigente') {
-        document.title = "Dirigente";
+        document.title = "Associação Guias de Portugal - Dirigente";
       }
     }
     setBranchName(getBranch);
@@ -99,7 +99,7 @@ function RamosDirigente(props) {
               </div>
             ) : '' }
           <div>
-            <Link to="/contactos/formulário"><button type="submit" className={`ramos-button ${branchName} ${buttonBorder}`}>{t('buttons.queresSerGuia')}</button></Link>
+            <Link to="/contactos/formulario"><button type="submit" className={`ramos-button ${branchName} ${buttonBorder}`}>{t('buttons.queresSerGuia')}</button></Link>
           </div>
         </div>
       </div>

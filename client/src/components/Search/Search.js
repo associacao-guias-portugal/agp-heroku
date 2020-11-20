@@ -8,7 +8,7 @@ const Search = () => {
   const [searchItem, setSearchItem] = useState('');
 
   useEffect(() => {
-    document.title = "Pesquisa";
+    document.title = "Associação Guias de Portugal - Pesquisa";
     window.scrollTo(0, 0);
   }, []);
 

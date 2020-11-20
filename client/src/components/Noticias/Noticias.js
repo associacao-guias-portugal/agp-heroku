@@ -19,7 +19,7 @@ const Noticias = () => {
   };
 
   useEffect(() => {
-    document.title = "Notícias";
+    document.title = "Associação Guias de Portugal - Notícias";
     window.scrollTo(0, 0);
     getData();
   }, []);

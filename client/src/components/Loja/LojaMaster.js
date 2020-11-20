@@ -43,7 +43,7 @@ const LojaMaster = (props) => {
     const match = props.match;
     const getCategory = match.params.itemCategory;
     const title = getCategory.charAt(0).toUpperCase() + getCategory.slice(1);
-    document.title = `Loja - ${title}`;
+    document.title = `Associação Guias de Portugal - Loja`;
     if (getCategory !== itemCategory) {
       getData(getCategory);
     }
