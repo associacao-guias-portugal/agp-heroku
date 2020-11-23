@@ -35,26 +35,25 @@ const QueresSerGuia = ({ politicaDeDados, email }) => {
       <div className="guia-text-section">
         <img src={megafone} className="guia-megafone" alt="Megafone" />
         <div className="app-main-title guia-title">{t('contactosForm.queresSerGuiaTexto')}</div>
-        <div className="app-main-text guia-text">{t('contactosForm.maisInformacoesTexto')}</div>
       </div>
       <div className="guia-form-section">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="guia-label">{t('contactosForm.nome')}</div>
+          <div className="guia-label">{t('contactosForm.idade')}</div>
           <input
             type="text"
-            name="nome"
+            name="idade"
             className="form-control"
-            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 2 })}
+            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 1 })}
           />
-          {errors.nome && <div className="form-error">{errors.nome.message}</div>}
-          <div className="guia-label">{t('contactosForm.assunto')}</div>
+          {errors.idade && <div className="form-error">{errors.idade.message}</div>}
+          <div className="guia-label">{t('contactosForm.concelho')}</div>
           <input
             type="text"
-            name="assunto"
+            name="concelho"
             className="form-control"
             ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 5 })}
           />
-          {errors.assunto && <div className="form-error">{errors.assunto.message}</div>}
+          {errors.concelho && <div className="form-error">{errors.concelho.message}</div>}
           <div className="guia-label">{t('contactosForm.email')}</div>
           <input
             type="email"
@@ -70,15 +69,14 @@ const QueresSerGuia = ({ politicaDeDados, email }) => {
             })}
           />
           {errors.email && <div className="form-error">{errors.email.message}</div>}
-          <div className="guia-label">{t('contactosForm.mensagem')}</div>
-          <textarea
-            type="textarea"
-            name="mensagem"
-            rows="3"
+          <div className="guia-label">{t('contactosForm.telefone')}</div>
+          <input
+            type="text"
+            name="telefone"
             className="form-control"
-            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 2 })}
+            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 1 })}
           />
-          {errors.mensagem && <div className="message-error">{errors.mensagem.message}</div>}
+          {errors.telefone && <div className="form-error">{errors.telefone.message}</div>}
           <div className="recolha-dados-text">
             {ReactHtmlParser(t('contactosForm.recolhaDadosTexto'))}
             <span>

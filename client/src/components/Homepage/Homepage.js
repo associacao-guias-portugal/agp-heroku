@@ -67,7 +67,7 @@ const Homepage = (props) => {
       </span>
 
       <div className="home-ramos">
-        <div className="home-modelo-title">{homepageData[`${selectedLanguage}_modelo_title`]}</div>
+        <div className="home-section-title home-modelo-title">{homepageData[`${selectedLanguage}_modelo_title`]}</div>
         <div className="home-ramos-section">
           <Link to="/pedagogia/ramo-avezinha">
             <div className="home-ramos-card">
@@ -140,10 +140,7 @@ const Homepage = (props) => {
             <div className="home-section-text">
               {t('homepage.infoJornal')}
               <br />
-              O Trevo -
-              {' '}
-              {jornalData.edition}
-              {t('homepage.edicaoJornal')}
+              O Trevo - {jornalData.edition} {t('homepage.edicaoJornal')} - {jornalData.year}
             </div>
             <div>
               <Link to="/publicações/jornal-trevo">

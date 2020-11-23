@@ -72,6 +72,9 @@
   "contactosForm": {
     "queresSerGuiaTexto": "Queres ser Guia ?",
     "maisInformacoesTexto": "Para mais informações, entre em contacto connosco.",
+    "idade": "Idade",
+    "concelho": "Concelho",
+    "telefone": "Telefone",
     "nome": "Nome",
     "assunto": "Assunto",
     "email": "Email",

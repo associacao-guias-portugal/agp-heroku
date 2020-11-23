@@ -13,12 +13,15 @@ const LojaMaster = (props) => {
   const [itemCategory, setItemCategory] = useState('');
   const [header_pt, set_header_pt] = useState([]);
   const [header_en, set_header_en] = useState([]);
-
+  const [titlePT, setTitlePT] = useState('');
+  const [titleEN, setTitleEN] = useState('');
 
   const getData = (category) => {
     axios.get(`/store/${category}`).then((res) => {
       setItems(res.data);
       setItemCategory(category);
+      setTitlePT(res.data[0].category_pt);
+      setTitleEN(res.data[0].category_en);
     });
   };
 
@@ -55,7 +58,14 @@ const LojaMaster = (props) => {
   return (
     <div className="Body">
       <div className="Body-Loja">
-        <h2 className="app-second-title tituloLoja">{itemCategory}</h2>
+        <h2 className="app-second-title tituloLoja">
+          {
+            selectedLanguage === 'pt' ?
+              <p>{ReactHtmlParser(titlePT)}</p>
+              :
+              <p>{ReactHtmlParser(titleEN)}</p>
+          }
+        </h2>
         <p className="app-main-text">
           {
             selectedLanguage === 'pt' ?
