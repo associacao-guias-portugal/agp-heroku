@@ -11,15 +11,13 @@ const smtpTransporter = nodemailer.createTransport({
 });
 
 const sendNodemailer = (req, res, next) => {
-  // Alterar o TO quando trocarem de endereço de email !
   const data = req.body;
   const mailOptions = {
-    from: `${data.nome} <${process.env.DB_EMAIL}>`,
+    from: `${data.email} <${process.env.DB_EMAIL}>`,
     to: 'publicacoes@guiasdeportugal.org',
     replyTo: `${data.email}`,
-    subject: `Contactos Site - ${data.assunto}`,
-    text: `${data.mensagem}`,
-    html: `<p><b>Recebeu uma mensagem  através do formulário do site da AGP, pode consultar essa mensagem nas informações abaixo.</b></p><div>Enviado por: ${data.nome}</div><div>Assunto: ${data.assunto}</div><div>Email: ${data.email}</div><div>Mensagem: ${data.mensagem}</div>`,
+    subject: `Pedido de Contacto - Queres ser Guia ?`,
+    html: `<p><b>Recebeu um pedido de contacto através do formulário do site da AGP, pode consultar as informações abaixo.</b></p><div>Email: ${data.email}</div><div>Idade: ${data.idade}</div><div>Concelho: ${data.concelho}</div><div>Telefone: ${data.telefone}</div>`,
   };
 
   smtpTransporter.sendMail(mailOptions, (error, response) => {
