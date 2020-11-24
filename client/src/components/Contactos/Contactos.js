@@ -9,6 +9,8 @@ const Contactos = (props) => {
   const [showSedeNacional, setShowSedeNacional] = useState(false);
   const [resultsFile, setResultsFile] = useState(false);
   const [resultsContato, setResultsContato] = useState(false);
+  const [morada, setMorada] = useState([]);
+  
   const { match } = props;
   const mode = match.params.modo;
 
@@ -34,13 +36,14 @@ const Contactos = (props) => {
       .then((res) => {
         const contato = res.data[0];
         setResultsContato(contato);
+        setMorada(contato.pt_endereco.split(","));
       });
   }, []);
 
   return (
     <div className="Contactos">
       {showSedeNacional
-        ? <SedeNacional resultsContato={resultsContato} />
+        ? <SedeNacional resultsContato={resultsContato} morada={morada}/>
         : '' }
       <QueresSerGuia
         politicaDeDados={resultsFile.politica_de_dados}

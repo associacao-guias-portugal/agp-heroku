@@ -19,7 +19,6 @@ router.put('/', jwtMiddleware, (req, res) => {
   const newData = req.body;
   connection.query('UPDATE metodo_guidista SET ? ', [newData], (err, results) => {
     if (err) {
-      console.log(err);
       res.status(500).send('Data not found');
     } else {
       res.status(200).json(results);

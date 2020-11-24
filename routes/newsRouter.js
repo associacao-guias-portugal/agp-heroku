@@ -49,7 +49,6 @@ router.post('/', jwtMiddleware, (req, res) => {
   connection.query('INSERT INTO news SET ?', formData, (err, results) => {
     if (err) {
       res.status(500).json({ flash: err.message });
-      console.log(err);
     } else {
       res.status(200).json({ flash: 'Gravado com Sucesso' });
     }
@@ -79,7 +78,6 @@ router.put('/:id', jwtMiddleware, (req, res) => {
 
 router.delete('/:id', jwtMiddleware, (req, res) => {
   const idNews = req.params.id;
-  console.log(idNews);
   connection.query(
     'DELETE FROM news WHERE id = ?', idNews,
     (err, results) => {

@@ -16,7 +16,6 @@ class PalavraAosPaisPainelCards extends Component {
     axios
       .get("/palavra-aos-pais/palavraaospaiscards-withunpublish")
       .then((response) => {
-        console.log(response);
         return response.data;
       })
       .then((dataresult) => {

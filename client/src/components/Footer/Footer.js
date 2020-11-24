@@ -12,6 +12,7 @@ const Footer = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
   const [resultsContato, setResultsContato] = useState([]);
   const [resultsFiles, setResultsFiles] = useState([]);
+  const [morada, setMorada] = useState([]);
   const date = new Date();
 
   useEffect(() => {
@@ -22,16 +23,14 @@ const Footer = () => {
 
   useEffect(() => {
     axios.get("/files").then((res) => {
-      // console.log("filesData", res);
       const resultsFiles = res.data[0];
-      // console.log(resultsFiles);
       setResultsFiles(resultsFiles);
     });
     axios.get("/contato").then((res) => {
-      // console.log("ContatosData", res);
       const resultsContatos = res.data[0];
-      // console.log(resultsContatos);
       setResultsContato(resultsContatos);
+      const moradaDivs = resultsContatos.pt_endereco.split(',');
+      setMorada(moradaDivs);
     });
   }, []);
 
@@ -48,9 +47,13 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {ReactHtmlParser(
-                    resultsContato[`${selectedLanguage}_endereco`]
-                  )}
+                  {morada.map((item, index) => {
+                    if (index === morada.length - 1) {
+                      return <div key={index}>{item}</div>
+                    } else {
+                      return <div key={index}>{item},</div>
+                    }
+                  })}
                 </a>
               </li>
           </ul>
@@ -128,16 +131,16 @@ const Footer = () => {
                 {t("footer.legal3")}
               </a>
             </li>
+            <li>
+              <a
+                href={resultsFiles.politica_de_dados}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("footer.dados")}
+              </a>
+            </li>
           </ul>
-          <h5 className="Dados">
-            <a
-              href={resultsFiles.politica_de_dados}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("footer.dados")}
-            </a>
-          </h5>
         </div>
       </div>
       <div className="footer-copyright">

@@ -27,7 +27,6 @@ class PalavraAosPaisCard extends Component {
     const getId = match.params.id;
 
     axios.get(`/palavra-aos-pais/palavraaospaiscards/${getId}`).then((res) => {
-      console.log("data", res);
       const results = res.data[0];
       this.setState({
         pt_text: results.pt_text,
