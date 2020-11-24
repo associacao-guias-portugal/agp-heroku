@@ -37,7 +37,6 @@ class HistoriaDoGuidismo extends Component {
   componentDidMount = () => {
     window.scrollTo(0, 0);
     axios.get("/historia-guidismo").then((res) => {
-      console.log("data", res);
       const results = res.data[0];
 
       const contentBlockText1PT = htmlToDraft(results.pt_text_text1);

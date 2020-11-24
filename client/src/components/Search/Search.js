@@ -13,8 +13,6 @@ const Search = () => {
   }, []);
 
   useEffect(() => {
-    console.log("search:", search)
-    console.log("search:", window.location.search);
     setSearchItem(search);
   }, [search, searchItem]);
 

@@ -78,7 +78,6 @@ router.post("/palavraaospais2", jwtMiddleware, (req, res) => {
     (err, results) => {
       if (err) {
         res.status(500).json({ flash: err.message });
-        console.log(err);
       } else {
         res.status(200).json({ flash: "Gravado com Sucesso" });
       }

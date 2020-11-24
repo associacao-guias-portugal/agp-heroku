@@ -117,7 +117,6 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
 
     const rowEvents = {
       onClick: (e, row) => {
-        console.log(row.id);
         this.setState({ timeline_id: row.id });
       },
     };

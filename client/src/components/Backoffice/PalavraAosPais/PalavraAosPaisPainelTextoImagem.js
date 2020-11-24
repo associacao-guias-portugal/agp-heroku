@@ -19,7 +19,6 @@ class PalavraAosPaisPainelTextoImagem extends Component {
     axios
       .get("/palavra-aos-pais/palavraaospais2-withunpublish")
       .then((response) => {
-        console.log(response);
         return response.data;
       })
       .then((dataresult) => {
@@ -119,7 +118,6 @@ class PalavraAosPaisPainelTextoImagem extends Component {
 
     const rowEvents = {
       onClick: (e, row) => {
-        console.log(row.id);
         this.setState({ texto_imagem_id: row.id });
       },
     };

@@ -30,7 +30,8 @@
   margin-bottom: 10px;
 }
 
-.contactos-text {
+.contactos-text,
+.contactos-text a {
   width: 280px;
   font-weight: 500;
   font-size: 15px;

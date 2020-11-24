@@ -17,9 +17,7 @@ const HistoriaGuidismo = () => {
     window.scrollTo(0, 0);
 
     axios.get("/historia-guidismo").then((res) => {
-      console.log("data", res);
       const resultsHistoriaGuidismo = res.data[0];
-      console.log(resultsHistoriaGuidismo);
       setHistoriaGuidismo(resultsHistoriaGuidismo);
     });
   }, []);

@@ -18,7 +18,6 @@ class Files extends Component {
   componentDidMount = () => {
     window.scrollTo(0, 0);
     axios.get("/files").then((res) => {
-      console.log("data", res);
       const results = res.data[0];
       this.setState({
         estatutos: results.estatutos,

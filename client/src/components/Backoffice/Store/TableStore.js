@@ -40,7 +40,6 @@ class TableStore extends Component {
       .get("/store")
       .then((response) => response.data)
       .then((dataResult) => {
-        console.log(dataResult);
         this.setState({ storeInput: dataResult });
       });
   };

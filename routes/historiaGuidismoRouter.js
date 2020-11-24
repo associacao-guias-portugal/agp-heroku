@@ -78,7 +78,6 @@ router.post("/timeline-one", jwtMiddleware, (req, res) => {
     (err, results) => {
       if (err) {
         res.status(500).json({ flash: err.message });
-        console.log(err);
       } else {
         res.status(200).json({ flash: "Gravado com Sucesso" });
       }
@@ -172,7 +171,6 @@ router.post("/timeline-two", jwtMiddleware, (req, res) => {
     (err, results) => {
       if (err) {
         res.status(500).json({ flash: err.message });
-        console.log(err);
       } else {
         res.status(200).json({ flash: "Gravado com Sucesso" });
       }

@@ -22,7 +22,6 @@ class NoticiaPainel extends Component {
     axios
       .get("/news")
       .then((response) => {
-        console.log(response);
         return response.data;
       })
       .then((dataresult) => {
@@ -125,7 +124,6 @@ class NoticiaPainel extends Component {
 
     const rowEvents = {
       onClick: (e, row) => {
-        console.log(row.id);
         this.setState({ noticiaId: row.id });
       },
     };

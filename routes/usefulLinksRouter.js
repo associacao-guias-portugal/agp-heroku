@@ -58,7 +58,6 @@ router.put('/:id', jwtMiddleware, (req, res) => {
         [req.body, req.params.id],
         (err, results) => {
             if (err) {
-                console.log(err.message)
                 res.status(400).json({ flash: 'Ocorreu um erro' })
             } else {
                 res.status(200).json({ flash: 'Alterado com sucesso' })
@@ -68,7 +67,6 @@ router.put('/:id', jwtMiddleware, (req, res) => {
 })
 
 router.post("/newLink", jwtMiddleware, (req, res) => {
-    console.log(req.body)
     connection.query("INSERT INTO ligacoes_uteis SET ?",
         [req.body],
         (err, results) => {
@@ -99,7 +97,6 @@ router.put('/header/header_edit', jwtMiddleware, (req, res) => {
         [req.body],
         (err, results) => {
             if (err) {
-                console.log(err.message)
                 res.status(400).json({ flash: 'Ocorreu um erro' })
             } else {
                 res.status(200).json({ flash: 'Alterado com sucesso' })
