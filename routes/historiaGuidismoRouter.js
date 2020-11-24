@@ -28,7 +28,7 @@ router.put("/", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-one", jwtMiddleware, (req, res) => {
+router.get("/timeline-one", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_one WHERE publish = 1 ORDER BY position ASC;",
     (err, results) => {
@@ -41,7 +41,7 @@ router.get("/timeline-one", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-one-withunpublished", jwtMiddleware, (req, res) => {
+router.get("/timeline-one-withunpublished", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_one ORDER BY position ASC;",
     (err, results) => {
@@ -54,7 +54,7 @@ router.get("/timeline-one-withunpublished", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-one/:id", jwtMiddleware, (req, res) => {
+router.get("/timeline-one/:id", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_one WHERE id=?",
     [req.params.id],
@@ -88,10 +88,8 @@ router.post("/timeline-one", jwtMiddleware, (req, res) => {
 router.put("/timeline-one/:id", jwtMiddleware, (req, res) => {
   // We get the ID from the url:
   const idTimelineOne = req.params.id;
-
   // We get the data from the req.body
   const newTimelineOne = req.body;
-
   // We send a UPDATE query to the DB
   connection.query(
     "UPDATE historia_guidismo_timeline_one SET ? WHERE id = ?",
@@ -121,7 +119,7 @@ router.delete("/timeline-one/:id", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-two", jwtMiddleware, (req, res) => {
+router.get("/timeline-two", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_two WHERE publish = 1 ORDER BY position ASC;",
     (err, results) => {
@@ -134,7 +132,7 @@ router.get("/timeline-two", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-two-withunpublished", jwtMiddleware, (req, res) => {
+router.get("/timeline-two-withunpublished", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_two ORDER BY position ASC;",
     (err, results) => {
@@ -147,7 +145,7 @@ router.get("/timeline-two-withunpublished", jwtMiddleware, (req, res) => {
   );
 });
 
-router.get("/timeline-two/:id", jwtMiddleware, (req, res) => {
+router.get("/timeline-two/:id", (req, res) => {
   connection.query(
     "SELECT * FROM historia_guidismo_timeline_two WHERE id=?",
     [req.params.id],
@@ -181,10 +179,8 @@ router.post("/timeline-two", jwtMiddleware, (req, res) => {
 router.put("/timeline-two/:id", jwtMiddleware, (req, res) => {
   // We get the ID from the url:
   const idTimelineTwo = req.params.id;
-
   // We get the data from the req.body
   const newTimelineTwo = req.body;
-
   // We send a UPDATE query to the DB
   connection.query(
     "UPDATE historia_guidismo_timeline_two SET ? WHERE id = ?",
