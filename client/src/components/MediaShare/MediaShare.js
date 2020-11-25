@@ -13,8 +13,9 @@ const MediaShare = (props) => {
   const { currentPath } = props;
   const pageURL = window.location.href;
   const mainText = 'Veja esta página da AGP:';
-  const emailSubject = 'Associação Guias de Portugal';
   let pageTitle = 'Associação Guias de Portugal';
+  let getTitle = JSON.parse(localStorage.getItem('title'));
+  const emailSubject = getTitle ? `Associação Guias de Portugal - ${getTitle}`: 'Associação Guias de Portugal';
   // const facebookAppId = '12345';
 
   // Definição dos titulos de cada página na partilha
@@ -25,7 +26,7 @@ const MediaShare = (props) => {
   } else if (window.location.hash.includes("historia-guidismo")) {
     pageTitle = "História do Guidismo"
   } else if (window.location.hash.includes("metodo-guidista")) {
-    pageTitle = "Método Guidista"
+    pageTitle = `${getTitle}`;
   } else if (window.location.hash.includes("avezinha")) {
     pageTitle = "Ramo Avezinha"
   } else if (window.location.hash.includes("aventura")) {
@@ -39,7 +40,7 @@ const MediaShare = (props) => {
   } else if (window.location.hash.includes("palavra-pais")) {
     pageTitle = "Palavra aos Pais"
   } else if (window.location.hash.includes("noticias")) {
-    pageTitle = "Notícias"
+    pageTitle = `${getTitle}`;
   } else if (window.location.hash.includes("jornal-trevo")) {
     pageTitle = `Jornal 'O Trevo'`
   } else if (window.location.hash.includes("ligacoes-uteis")) {
@@ -57,6 +58,8 @@ const MediaShare = (props) => {
   } else {
     pageTitle = 'Associação Guias de Portugal'
   }
+
+  console.log(pageTitle);
 
   return (
     <div className="MediaShare">

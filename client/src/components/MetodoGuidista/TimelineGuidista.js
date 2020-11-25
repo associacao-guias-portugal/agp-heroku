@@ -31,6 +31,7 @@ const TimelineGuidista = () => {
 
   const storageID = (event) => {
     localStorage.setItem('item', event.target.id);
+    localStorage.setItem('itemTitle', JSON.stringify(`${event.target.name}`));
   };
 
   return (
@@ -49,7 +50,7 @@ const TimelineGuidista = () => {
                 <div className="timeline-date">{timeline[`${selectedLanguage}_date`]}</div>
                 <div className="timeline-title">
                   { timeline.image
-                    ? <Link to={timeline.link} id={timeline.id} onClick={storageID}>{timeline[`${selectedLanguage}_title`]}</Link>
+                    ? <Link to={timeline.link} id={timeline.id} name={timeline.pt_title} onClick={storageID}>{timeline[`${selectedLanguage}_title`]}</Link>
                     : `${timeline[`${selectedLanguage}_title`]}` }
                 </div>
                 <div className="timeline-text">{timeline[`${selectedLanguage}_intro`]}</div>
