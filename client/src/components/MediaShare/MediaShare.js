@@ -15,7 +15,7 @@ const MediaShare = (props) => {
   const mainText = 'Veja esta página da AGP:';
   let pageTitle = 'Associação Guias de Portugal';
   let getTitle = JSON.parse(localStorage.getItem('title'));
-  const emailSubject = getTitle ? `Associação Guias de Portugal - ${getTitle}`: 'Associação Guias de Portugal';
+  let emailSubject = 'Associação Guias de Portugal';
   // const facebookAppId = '12345';
 
   // Definição dos titulos de cada página na partilha
@@ -60,6 +60,9 @@ const MediaShare = (props) => {
   }
 
   console.log(pageTitle);
+  if (pageTitle !== "Associação Guias de Portugal") {
+    emailSubject = `Associação Guias de Portugal - ${pageTitle}`;
+  }
 
   return (
     <div className="MediaShare">
@@ -114,7 +117,7 @@ const MediaShare = (props) => {
         <EmailShareButton
           className="share-button"
           url={pageURL}
-          subject={`${emailSubject} -  ${pageTitle}`}
+          subject={emailSubject}
           body={mainText}
         >
           <EmailIcon className="share-icon" round size={30} />
@@ -124,8 +127,8 @@ const MediaShare = (props) => {
   );
 };
 
-MediaShare.propTypes = {
-  currentPath: PropTypes.string.isRequired,
-};
+// MediaShare.propTypes = {
+//   currentPath: PropTypes.string.isRequired,
+// };
 
 export default MediaShare;
