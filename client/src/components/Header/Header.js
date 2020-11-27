@@ -84,7 +84,7 @@ const Header = (props) => {
                     {item[`${selectedLanguage}_label`]}
                   </NavDropdown.Item>
                 ))}
-                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligações-úteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
+                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligacoes-uteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
               </NavDropdown>
             </NavDropdown>
             <NavDropdown title={t('header.loja')} id="basic-nav-dropdown" className="nav-header">
@@ -93,7 +93,7 @@ const Header = (props) => {
               <NavDropdown.Item eventKey="20" className="dropdown-item"><Link to="/loja/diversos">{t('header.diversos')}</Link></NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title={t('header.contactos')} id="basic-nav-dropdown" className="nav-header">
-              <NavDropdown.Item eventKey="21" className="dropdown-item"><Link to="/contactos/formulário">{t('header.queresSerGuia')}</Link></NavDropdown.Item>
+              <NavDropdown.Item eventKey="21" className="dropdown-item"><Link to="/contactos/formulario">{t('header.queresSerGuia')}</Link></NavDropdown.Item>
               <NavDropdown.Item eventKey="22" className="dropdown-item"><Link to="/contactos/sede">{t('header.sedeNacional')}</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>

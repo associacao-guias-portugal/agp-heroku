@@ -24,7 +24,6 @@ const ForgotPassword = () => {
         }
       })
       .catch((error) => {
-        console.log(error.response.data.message)
         if (error.response.data.message === 'user not found') {
           setEmailNotFound(true);
         }

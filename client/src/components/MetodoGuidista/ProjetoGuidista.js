@@ -9,13 +9,16 @@ const ProjetoGuidista = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
   const [projeto, setProjeto] = useState([]);
 
+  let itemTitle = JSON.parse(localStorage.getItem('itemTitle'));
+  localStorage.setItem('title', JSON.stringify(`Projecto ${itemTitle}`));
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const id = localStorage.getItem('item');
     axios.get(`/metodo-guidista/projetos/${id}`)
       .then((res) => {
         setProjeto(res.data[0]);
-        document.title = `Método Guidista - Projecto ${res.data[0].pt_title}`;
+        document.title = `Associação Guias de Portugal - Projecto ${res.data[0].pt_title}`;
       });
   }, []);
 

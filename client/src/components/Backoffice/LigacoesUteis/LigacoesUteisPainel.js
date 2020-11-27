@@ -35,7 +35,6 @@ class LigacoesUteis extends React.Component {
 
   getDataHeader = () => {
     axios
-
       .get("/ligacoes-uteis/header/header")
       .then((res) => {
         let results = res.data[0]
@@ -74,12 +73,22 @@ class LigacoesUteis extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { ligacoesUteisData, showModal, id, flash, messageStatus, ...newLigacoesUteis } = this.state
+    const { history } = this.props;
+    const { ligacoesUteisData, showModal, id, flash, messageStatus, ...newLigacoesUteis } = this.state;
     axios
       .put('/ligacoes-uteis/header/header_edit', newLigacoesUteis)
       .then((res) => {
-        this.setState({ flash: 'Guardado com sucesso', messageStatus: 'Success' })
+        this.setState({ messageStatus: 'success' }, () => {
+          setTimeout(() => history.push({ pathname: '/backoffice/ligacoesUteis/Painel' }), 1500)
+        });
+        this.setState({ flash: 'Guardado com sucesso.' })
       })
+      .catch((err) => {
+        this.setState({
+          messageStatus: 'error',
+          flash: 'Ocorreu um erro, por favor tente outra vez.',
+        });
+      });
   }
 
   render() {
@@ -139,54 +148,49 @@ class LigacoesUteis extends React.Component {
       },
     };
     return (
-      <div>
-        <div className='body'>
-          <div className="NoticiaInput-title">Edição texto Ligações Úteis</div>
-          <form className="NoticiaInput-section" onSubmit={event => this.handleSubmit(event)}>
-            <div className="input">
-              <div className="input-section-label">Título PT</div>
-              <input type='text' value={this.state.header_pt} name='header_pt' onChange={event => this.eventHandler(event)} />
-            </div>
-            <div className="input">
-              <div className="input-section-label">Título EN</div>
-              <input type='text' value={this.state.header_en} name='header_en' onChange={event => this.eventHandler(event)} />
-            </div>
-            <div className="NoticiaInput-section-button">
-              <button className="login-button" type='submit'>Submeter</button>
-            </div>
-          </form>
-          <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
+      <div className="NoticiasPainel extra-padding-bottom">
+        <div className="NoticiaInput-title">Ligações Úteis</div>
+        <form className="NoticiaInput-section" onSubmit={event => this.handleSubmit(event)}>
+          <div className="input">
+            <div className="input-section-label">Título PT</div>
+            <input type='text' value={this.state.header_pt} name='header_pt' onChange={event => this.eventHandler(event)} />
+          </div>
+          <div className="input">
+            <div className="input-section-label">Título EN</div>
+            <input type='text' value={this.state.header_en} name='header_en' onChange={event => this.eventHandler(event)} />
+          </div>
+          <div className="NoticiaInput-section-button">
+            <button className="login-button" type='submit'>GUARDAR</button>
+          </div>
+        </form>
+        <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
+        <div className="JornalPainel-section-button loja-quadro">
+          <div className="loja-quadro-title">Lista Ligações Úteis</div>
+          <Link to={link}>
+            <button className="NoticiasPainel-button" type="submit">
+              Criar Link
+          </button>
+          </Link>
         </div>
-        <div className="NoticiasPainel">
-          <div className="NoticiasPainel-title">Quadro Ligações Úteis</div>
-          <div className="JornalPainel-section-button">
-            <Link to={link}>
-              <button className="NoticiasPainel-button" type="submit">
-                Criar Link
-            </button>
-            </Link>
-          </div>
-          <div className="NoticiasPainel-Table">
-            <BootstrapTable
-              className="BootstrapTable"
-              bootstrap4
-              keyField="id"
-              data={ligacoesUteisData}
-              columns={columns}
-              pagination={paginationFactory()}
-              filter={filterFactory()}
-              filterPosition="top"
-              rowEvents={rowEvents}
-            />
-          </div>
-          <ModalPopup
-            show={showModal}
-            handleDelete={this.handleModalDelete}
-            handleClose={this.handleModal}
+        <div className="NoticiasPainel-Table">
+          <BootstrapTable
+            className="BootstrapTable"
+            bootstrap4
+            keyField="id"
+            data={ligacoesUteisData}
+            columns={columns}
+            pagination={paginationFactory()}
+            filter={filterFactory()}
+            filterPosition="top"
+            rowEvents={rowEvents}
           />
         </div>
-
-      </div>
+        <ModalPopup
+          show={showModal}
+          handleDelete={this.handleModalDelete}
+          handleClose={this.handleModal}
+        />
+    </div>
     );
   }
 }

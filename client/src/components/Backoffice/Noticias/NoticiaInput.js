@@ -43,7 +43,6 @@ class NoticiaInput extends Component {
       axios
         .get(`/news/${getId}`)
         .then((res) => {
-          console.log("data", res);
           const results = res.data[0];
           const formatDate = results.date.substr(0, 10);
 
@@ -101,7 +100,6 @@ class NoticiaInput extends Component {
     );
     const HtmlContentPT = draftToHtml(rawContentState);
     this.setState({ pt_content: HtmlContentPT });
-    //console.log('update', pt_content);
   };
 
   onEditorStateChangeEN = (editorStateEN) => {

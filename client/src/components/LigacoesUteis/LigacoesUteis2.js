@@ -34,7 +34,7 @@ const LigacoesUteis2 = (props) => {
   }
 
   useEffect(() => {
-    document.title = "Ligações Úteis";
+    document.title = "Associação Guias de Portugal - Ligações Úteis";
     window.scrollTo(0, 0);
     getData();
     getDataHeader();

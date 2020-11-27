@@ -23,7 +23,9 @@ const Homepage = (props) => {
   }, [i18n.language, selectedLanguage]);
 
   useEffect(() => {
-    document.title = "Associação Guias de Portugal - Home"
+    document.title = "Associação Guias de Portugal - Home";
+    localStorage.setItem('title', JSON.stringify(`Home`));
+
     // GCSE - Se vier da página pesquisa tem que se apagar a search query do url
     if (window.location.search && !window.location.hash.includes("search")) {
       const query = window.location.search;
@@ -67,7 +69,7 @@ const Homepage = (props) => {
       </span>
 
       <div className="home-ramos">
-        <div className="home-modelo-title">{homepageData[`${selectedLanguage}_modelo_title`]}</div>
+        <div className="home-section-title home-modelo-title">{homepageData[`${selectedLanguage}_modelo_title`]}</div>
         <div className="home-ramos-section">
           <Link to="/pedagogia/ramo-avezinha">
             <div className="home-ramos-card">
@@ -140,10 +142,7 @@ const Homepage = (props) => {
             <div className="home-section-text">
               {t('homepage.infoJornal')}
               <br />
-              O Trevo -
-              {' '}
-              {jornalData.edition}
-              {t('homepage.edicaoJornal')}
+              O Trevo - {jornalData.edition} {t('homepage.edicaoJornal')} - {jornalData.year}
             </div>
             <div>
               <Link to="/publicações/jornal-trevo">

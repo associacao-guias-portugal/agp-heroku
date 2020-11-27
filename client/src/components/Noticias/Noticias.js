@@ -8,6 +8,8 @@ const Noticias = () => {
   const { t } = useTranslation();
   const [noticiasData, setNoticiasData] = useState([]);
 
+  localStorage.setItem('title', JSON.stringify(`Notícias`));
+
   const getData = () => {
     axios.get('/news/published')
       .then((response) => {
@@ -19,10 +21,15 @@ const Noticias = () => {
   };
 
   useEffect(() => {
-    document.title = "Notícias";
+    document.title = "Associação Guias de Portugal - Notícias";
     window.scrollTo(0, 0);
     getData();
   }, []);
+
+  const getTitle = (id) => {
+    const noticia = noticiasData.filter(noticia => noticia.id === id);
+    localStorage.setItem('title', JSON.stringify(`Notícias - ${noticia[0].pt_title}`));
+  }
 
   return (
     <div className="Noticias">
@@ -30,7 +37,7 @@ const Noticias = () => {
       <div className="MapNoticias">
         {noticiasData.map((noticia) => (
           noticia.publish === 1
-            && <NoticiasCard key={noticia.id} noticia={noticia} />
+            && <NoticiasCard key={noticia.id} noticia={noticia} setTitle={()=> getTitle(noticia.id)} />
         ))}
       </div>
     </div>

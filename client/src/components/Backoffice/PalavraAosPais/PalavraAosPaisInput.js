@@ -26,7 +26,6 @@ class PalavraAosPaisInput extends Component {
   componentDidMount = () => {
     window.scrollTo(0, 0);
     axios.get("/palavra-aos-pais").then((res) => {
-      console.log("data", res);
       const results = res.data[0];
       this.setState({
         image: results.image,

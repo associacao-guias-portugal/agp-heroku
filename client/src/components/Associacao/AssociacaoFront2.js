@@ -23,7 +23,7 @@ const AssociacaoFront2 = (props) => {
 
   const fetchAssociationSections = () => {
     axios.get("/association").then((res) => {
-      set_seccoes(res.data);
+      set_seccoes(res.data)
     });
   };
 
@@ -42,7 +42,7 @@ const AssociacaoFront2 = (props) => {
   };
 
   useEffect(() => {
-    document.title = "A Associação";
+    document.title = "Associação Guias de Portugal - A Associação";
     window.scrollTo(0, 0);
     fetchAssociationHeader();
     fetchAssociationSections();
@@ -98,7 +98,7 @@ const AssociacaoFront2 = (props) => {
         );
       })}
       <div className="associacao-button-section">
-        <Link to="/contactos/formulário">
+        <Link to="/contactos/formulario">
           <button type="submit" className="ser-guia-button associacao-button">
             {t('buttons.queresSerGuia')}
           </button>

@@ -6,7 +6,7 @@ import './Noticias.css';
 import { Link } from 'react-router-dom';
 
 const NoticiasCard = (props) => {
-  const { noticia } = props;
+  const { noticia, setTitle } = props;
   const link = `/publicações/noticias/${noticia.id}`;
 
   const { t, i18n } = useTranslation();
@@ -17,6 +17,10 @@ const NoticiasCard = (props) => {
       setSelectedLanguage(i18n.language);
     }
   }, [i18n.language, selectedLanguage]);
+
+  const getTitle = () => {
+    setTitle();
+  }
 
   return (
     <div className="CardsNoticias">
@@ -36,7 +40,7 @@ const NoticiasCard = (props) => {
           {noticia[`${selectedLanguage}_intro_text`]}
         </Card.Text>
         <Link to={link}>
-          <Button className="ButtonCardNoticias" variant="primary">
+          <Button className="ButtonCardNoticias" variant="primary" onClick={getTitle}>
             {t('noticiasCard.lermais')}
           </Button>
         </Link>

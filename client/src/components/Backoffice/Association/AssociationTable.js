@@ -133,9 +133,6 @@ class AssociationTable extends Component {
       ...headerData
     } = this.state;
     const { history } = this.props;
-
-    console.log("edit!", this.state.text1_pt);
-    console.log("edit!", this.state.editorState_text1_pt);
     
     axios.put("/association/editHeader", headerData)
       .then((res) => {
@@ -164,7 +161,6 @@ class AssociationTable extends Component {
   };
 
   onEditorStateChangetext1_pt = (editorState_text1_pt) => {
-    console.log("what", this.state.editorState_text1_pt)
     this.setState({ editorState_text1_pt });
     const rawContentState = convertToRaw(
       this.state.editorState_text1_pt.getCurrentContent()

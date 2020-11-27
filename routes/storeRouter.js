@@ -112,7 +112,6 @@ router.put('/header/header_edit', jwtMiddleware, (req, res) => {
       [req.body],
       (err, results) => {
           if (err) {
-              console.log(err.message)
               res.status(400).json({ flash: 'Ocorreu um erro' })
           } else {
               res.status(200).json({ flash: 'Alterado com sucesso' })

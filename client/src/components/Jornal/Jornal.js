@@ -28,7 +28,7 @@ const Jornal = (props) => {
   }
 
   useEffect(() => {
-    document.title = "Jornal";
+    document.title = "Associação Guias de Portugal - Jornal";
     window.scrollTo(0, 0);
     fetchJournal();
     getDataHeader();

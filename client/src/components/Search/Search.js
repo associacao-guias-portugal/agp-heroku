@@ -8,13 +8,11 @@ const Search = () => {
   const [searchItem, setSearchItem] = useState('');
 
   useEffect(() => {
-    document.title = "Pesquisa";
+    document.title = "Associação Guias de Portugal - Pesquisa";
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    console.log("search:", search)
-    console.log("search:", window.location.search);
     setSearchItem(search);
   }, [search, searchItem]);
 
