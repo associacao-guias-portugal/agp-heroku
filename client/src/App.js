@@ -102,7 +102,7 @@ function App() {
           <Route exact path="/publicações/jornal-trevo" component={Jornal} />
           <Route exact path="/publicações/noticias" component={Noticias} />
           <Route exact path="/publicações/noticias/:id" component={ConteudoNoticia} />
-          <Route exact path="/publicações/recursos/ligações-úteis" component={LigacoesUteis} />
+          <Route exact path="/publicações/recursos/ligacoes-uteis" component={LigacoesUteis} />
           <Route exact path="/loja/:itemCategory" component={LojaMaster} />
           <Route exact path="/contactos/:modo" component={Contactos} />
           <Route exact path="/search" component={Search} />

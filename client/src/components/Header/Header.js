@@ -84,7 +84,7 @@ const Header = (props) => {
                     {item[`${selectedLanguage}_label`]}
                   </NavDropdown.Item>
                 ))}
-                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligações-úteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
+                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligacoes-uteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
               </NavDropdown>
             </NavDropdown>
             <NavDropdown title={t('header.loja')} id="basic-nav-dropdown" className="nav-header">

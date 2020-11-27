@@ -6,7 +6,7 @@ import axios from 'axios';
 import ReactHtmlParser from "react-html-parser";
 
 const LojaMaster = (props) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   const [items, setItems] = useState([]);
@@ -45,7 +45,6 @@ const LojaMaster = (props) => {
   useEffect(() => {
     const match = props.match;
     const getCategory = match.params.itemCategory;
-    const title = getCategory.charAt(0).toUpperCase() + getCategory.slice(1);
     document.title = `Associação Guias de Portugal - Loja`;
     if (getCategory !== itemCategory) {
       getData(getCategory);
