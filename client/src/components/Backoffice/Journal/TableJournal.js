@@ -193,8 +193,8 @@ class TableJournal extends Component {
         </form>
         <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
         <div className="NoticiasPainel">
-          <div className="JornalPainel-section-button loja-quadro">
-            <div className="loja-quadro-title">Edições do Jornal</div>
+          <div className="JornalPainel-section-button main-quadro">
+            <div className="main-quadro-title">Edições do Jornal</div>
             <Link to={link}>
               <button className="NoticiasPainel-button" type="submit">
                 Criar Edição

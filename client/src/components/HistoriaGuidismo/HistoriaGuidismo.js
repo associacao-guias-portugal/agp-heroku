@@ -39,9 +39,8 @@ const HistoriaGuidismo = () => {
         {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_text_text1`])}
         </p>
         <div className="HistoriaFundadores">
-          <p className="app-second-title Fundadores">
-          {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_timeline_title`])}
-          </p>
+          <p className="app-second-title Fundadores">{t('historia.fundadoresTitle1')}</p>
+          <p className="app-second-title Fundadores">{t('historia.fundadoresTitle2')}</p>
         </div>
         <div className="Timeline">
           <div className="TimelineBP">

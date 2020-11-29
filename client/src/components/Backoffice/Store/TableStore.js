@@ -356,8 +356,8 @@ class TableStore extends Component {
           />
         </div>
         <div className="NoticiasPainel">
-          <div className="JornalPainel-section-button loja-quadro">
-            <div className="loja-quadro-title">
+          <div className="JornalPainel-section-button main-quadro">
+            <div className="main-quadro-title">
               Artigos da Loja
             </div>
             <Link to={link}>
