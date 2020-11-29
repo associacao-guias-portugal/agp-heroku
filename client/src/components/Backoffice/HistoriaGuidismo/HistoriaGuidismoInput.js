@@ -9,6 +9,7 @@ import "rc-datepicker/lib/style.css";
 import PopUp from "../PopUp/PopUp";
 import HistoriaGuidismoTimelineOneInputPainel from "./HistoriaGuidismoTimelineOneInputPainel";
 import HistoriaGuidismoTimelineTwoInputPainel from "./HistoriaGuidismoTimelineTwoInputPainel";
+import './HistoriaGuidismoBack.css';
 
 class HistoriaDoGuidismo extends Component {
   constructor(props) {
@@ -311,8 +312,8 @@ class HistoriaDoGuidismo extends Component {
                 }}
               />
             </div>
-            <div className="input">
-              <div className="input-section-label-subtitle">Timeline</div>
+            {/* <div className="input">
+              <div className="input-section-label-subtitle">Fundador e Chefe Mundial Robert e Olave Baden-Powell</div>
               <div className="input-section-label">Título Timeline PT:</div>
               <input
                 type="text"
@@ -331,15 +332,11 @@ class HistoriaDoGuidismo extends Component {
                 onChange={this.updateField}
                 required
               />
-            </div>
+            </div> */}
             <div className="input-painel">
-              <div className="input-section-label-subtitle">
-                Timeline Robert
-              </div>
               <HistoriaGuidismoTimelineOneInputPainel />
             </div>
             <div className="input-painel">
-              <div className="input-section-label-subtitle">Timeline Olave</div>
               <HistoriaGuidismoTimelineTwoInputPainel />
             </div>
             <div className="input">

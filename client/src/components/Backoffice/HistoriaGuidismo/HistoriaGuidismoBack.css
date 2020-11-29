@@ -1,0 +1,10 @@
+
+.Historia-section-button {
+  display: flex;
+  margin: 50px 0px 20px 0px;
+  justify-content: space-between;
+}
+
+.Historia-button {
+  margin: 0px;
+}

@@ -164,8 +164,8 @@ class LigacoesUteis extends React.Component {
           </div>
         </form>
         <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
-        <div className="JornalPainel-section-button loja-quadro">
-          <div className="loja-quadro-title">Lista Ligações Úteis</div>
+        <div className="JornalPainel-section-button main-quadro">
+          <div className="main-quadro-title">Lista Ligações Úteis</div>
           <Link to={link}>
             <button className="NoticiasPainel-button" type="submit">
               Criar Link

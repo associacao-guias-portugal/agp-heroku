@@ -41,6 +41,10 @@
     "idadesMoinho": "17 to 21 years",
     "edicaoJornal": "th Edition",
     "infoJornal": "Official Magazine of the Association"
+  },  
+  "historia": {
+    "fundadoresTitle1": "Founder and World Chief",
+    "fundadoresTitle2": "Robert and Olave Baden-Powell"
   },
   "metodoGuidista": {
     "voltar": "Back"
@@ -60,9 +64,9 @@
     "texto3": " here."
   },
   "contactos": {
-    "sedeNacionalTitulo": "National Administrative Services",
+    "sedeNacionalTitulo": "National Headquarters",
     "horariosTitulo": "Opening Hours",
-    "secretariadoTitulo": "National Secretariat",
+    "secretariadoTitulo": "National Administrative Services",
     "lojaTitulo": "Uniform and Equipment Shop",
     "outrosContactosTitulo": "Other Contacts",
     "presidenteTitulo": "Chair:",

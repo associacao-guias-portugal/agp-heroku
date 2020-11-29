@@ -27,16 +27,17 @@
 
 .HistoriaFundadores {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .Fundadores {
   line-height: 1.3;
-  width: 30%;
+  margin: 0px;
 }
 
 .Timeline {
@@ -90,11 +91,10 @@
     margin-left: 50px;
     margin-right: 50px;
   }
-  .Fundadores {
-    margin-bottom: 0px;
-    width: 65%;
+  .HistoriaFundadores {
+    margin-bottom: 50px;
   }
-
+  
   .GuiasPorque {
     padding-top: 10px;
     padding-bottom: 10px;
