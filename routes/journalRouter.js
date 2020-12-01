@@ -63,7 +63,6 @@ router.post('/publish', jwtMiddleware, (req, res) => {
   connection.query('INSERT INTO journal SET ?', [formData], (err, results) => {
     if (err) {
       res.status(400).json({ flash: 'Something went wrong' });
-      console.log(err)
     } else {
       res.status(200).json({ flash: 'Gravado com Sucesso' });
     }
@@ -150,7 +149,6 @@ router.put('/headers/headers_edit', jwtMiddleware, (req, res) => {
     (err, results) => {
       if (err) {
         res.status(400).json({ flash: 'Ocorreu um erro' })
-        console.log(err)
       } else {
         res.status(200).json({ flash: 'Alterado com sucesso' })
 

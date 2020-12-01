@@ -44,13 +44,17 @@
   flex-wrap: wrap-reverse;
 }
 
+.PalavraAosPais2-text p {
+  margin: 0px;
+}
+
 .PalavraAosPais2-side-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
   background-color: white !important;
-  padding: 70px 100px 70px 100px;
+  padding: 80px 100px 70px 100px;
 }
 
 .PalavraAosPais2-info {

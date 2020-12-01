@@ -68,7 +68,6 @@ router.put('/editHeader', jwtMiddleware, (req, res) => {
         (err, results) => {
             if (err) {
                 res.status(400).json({ flash: 'Ocorreu um erro' })
-                console.log(err)
             } else {
                 res.status(200).json({ flash: 'Alterado com sucesso' })
             }

@@ -10,6 +10,9 @@ const FerramentasGuidista = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
   const [ferramenta, setFerramenta] = useState([]);
 
+  let itemTitle = JSON.parse(localStorage.getItem('itemTitle'));
+  localStorage.setItem('title', JSON.stringify(`Ferramenta ${itemTitle}`));
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const id = localStorage.getItem('item');

@@ -117,16 +117,16 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
 
     const rowEvents = {
       onClick: (e, row) => {
-        console.log(row.id);
         this.setState({ timeline_id: row.id });
       },
     };
 
     return (
       <div className="PalavraAosPais-Painel-Cards">
-        <div className="PalavraAosPais-section-button">
+        <div className="Historia-section-button main-quadro">
+          <div className="main-quadro-title">Timeline Robert Baden-Powell</div>
           <Link to={link}>
-            <button className="PalavraAosPais-button" type="submit">
+            <button className="PalavraAosPais-button Historia-button" type="submit">
               Criar Nova Secção
             </button>
           </Link>

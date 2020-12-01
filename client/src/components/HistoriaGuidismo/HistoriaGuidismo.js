@@ -17,9 +17,7 @@ const HistoriaGuidismo = () => {
     window.scrollTo(0, 0);
 
     axios.get("/historia-guidismo").then((res) => {
-      console.log("data", res);
       const resultsHistoriaGuidismo = res.data[0];
-      console.log(resultsHistoriaGuidismo);
       setHistoriaGuidismo(resultsHistoriaGuidismo);
     });
   }, []);
@@ -34,16 +32,15 @@ const HistoriaGuidismo = () => {
     <div className="HistoriaGuidismo">
       <div className="HistoriaGuidismo-banner" style={{ backgroundImage: `url(${historiaGuidismo.image})` }}/>
       <div className="HistoriaGuidismo1">
-        <p className="app-main-title ComoTudoComecou">
-        {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_title_text1`])}
-        </p>
-        <p className="app-main-text MovimentoGuidista">
-        {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_text_text1`])}
-        </p>
+        <span className="app-main-title ComoTudoComecou">
+          {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_title_text1`])}
+        </span>
+        <span className="app-main-text MovimentoGuidista">
+          {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_text_text1`])}
+        </span>
         <div className="HistoriaFundadores">
-          <p className="app-second-title Fundadores">
-          {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_timeline_title`])}
-          </p>
+          <p className="app-second-title Fundadores">{t('historia.fundadoresTitle1')}</p>
+          <p className="app-second-title Fundadores">{t('historia.fundadoresTitle2')}</p>
         </div>
         <div className="Timeline">
           <div className="TimelineBP">
@@ -54,13 +51,13 @@ const HistoriaGuidismo = () => {
           </div>
         </div>
         <div className="GuiasPorque">
-          <p className="app-second-title GuiasPorqueTitle">
-          {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_title_text2`])}
-          </p>
+          <span className="app-second-title GuiasPorqueTitle">
+            {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_title_text2`])}
+          </span>
           <div className="GuiasPorqueTextDiv">
-            <p className="app-main-text GuiasPorqueText">
-            {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_text_text2`])}
-            </p>
+            <span className="app-main-text GuiasPorqueText">
+              {ReactHtmlParser(historiaGuidismo[`${selectedLanguage}_text_text2`])}
+            </span>
           </div>
         </div>
         <div className="PalavraPais-button-section">

@@ -6,7 +6,7 @@ import sedeIcon from '../../assets/images/Contactos/casa1.png';
 import arrobaIcon from '../../assets/images/Contactos/arroba1.png';
 import relogioIcon from '../../assets/images/Contactos/relogio1.png';
 
-const SedeNacional = ({ resultsContato }) => {
+const SedeNacional = ({ resultsContato, morada }) => {
   const { t, i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
@@ -28,11 +28,18 @@ const SedeNacional = ({ resultsContato }) => {
           </div>
           <div className="contactos-text">
             <div className="sede-margin">
-              <div className="sede-text-bold-address">{resultsContato[`${selectedLanguage}_endereco`]}</div>
+              {/* <div className="sede-text-bold-address">{resultsContato[`${selectedLanguage}_endereco`]}</div> */}
+              {morada.map((item,index) => {
+                if (index === morada.length - 1) {
+                  return <div className="sede-text-bold-address" key={index}>{item}</div>
+                } else {
+                  return <div className="sede-text-bold-address" key={index}>{item},</div>
+                }
+              })}
             </div>
-            <div>{resultsContato.telefone}</div>
+            <div className="sede-text-bold-address">{resultsContato.telefone}</div>
             <div>
-              <u>{resultsContato.email}</u>
+              <u><a href="mailto:geral@guiasdeportugal.org">{resultsContato.email}</a></u>
             </div>
           </div>
         </div>

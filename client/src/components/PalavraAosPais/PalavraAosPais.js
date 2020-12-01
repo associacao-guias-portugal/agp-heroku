@@ -25,21 +25,15 @@ const PalavraAosPais = () => {
     document.title = "Associação Guias de Portugal - Palavra aos Pais";
     window.scrollTo(0, 0);
     axios.get('/palavra-aos-pais').then((res) => {
-      console.log('resultsPalavraAosPaisTable1', res);
       const resultsTabele1 = res.data[0];
-      console.log(resultsTabele1);
       setResultsPalavraAosPaisTable1(resultsTabele1);
     });
     axios.get('/palavra-aos-pais/palavraaospais2').then((res) => {
-      console.log('resultsPalavraAosPaisTable2', res);
       const resultsTabele2 = res.data;
-      console.log(resultsTabele2);
       setResultsPalavraAosPaisTable2(resultsTabele2);
     });
     axios.get('/palavra-aos-pais/palavraaospaiscards').then((res) => {
-      console.log('resultsCards', res);
       const resultsCards = res.data;
-      console.log(resultsCards);
       setResultsPalavraAosPaisCards(resultsCards);
     });
   }, []);

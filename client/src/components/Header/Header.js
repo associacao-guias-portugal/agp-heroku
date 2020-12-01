@@ -6,9 +6,9 @@ import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
-// import PropTypes from 'prop-types';
 import axios from 'axios';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import logoSample from '../../assets/logo/logo_NEG_RGB.png';
 import './Header.css';
 
 const Header = (props) => {
@@ -17,6 +17,7 @@ const Header = (props) => {
   const [searchBy, setSearchBy] = useState('');
   const [pdfFiles, setPdfFiles] = useState([]);
   const [recursosPDFS, setRecursosPDFS] = useState([]);
+  const [logo, setLogo] = useState(logoSample);
 
   const handleInputSearch = (event) => {
     const input = event.target.value;
@@ -45,6 +46,13 @@ const Header = (props) => {
       .then((res) => {
         setRecursosPDFS(res.data);
       });
+
+    axios.get('/homepage/all')
+    .then((res) => {
+      const results = res.data[0];
+      setLogo(results.logo);
+    });
+
   }, []);
 
   useEffect(() => {
@@ -56,7 +64,11 @@ const Header = (props) => {
   return (
     <div>
       <Navbar fixed="top" expand="lg" className="navbar" collapseOnSelect>
-        <Link to="/"><Navbar.Brand className="header-logo" /></Link>
+        <Link to="/">
+          <Navbar.Brand>
+            <img src={logo} className="header-logo-image" alt="Logo" />
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="header-toggler" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
@@ -84,7 +96,7 @@ const Header = (props) => {
                     {item[`${selectedLanguage}_label`]}
                   </NavDropdown.Item>
                 ))}
-                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligações-úteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
+                <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligacoes-uteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
               </NavDropdown>
             </NavDropdown>
             <NavDropdown title={t('header.loja')} id="basic-nav-dropdown" className="nav-header">

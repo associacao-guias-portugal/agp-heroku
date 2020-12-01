@@ -15,7 +15,7 @@ function Livros(props) {
 
     return (
         <div>
-            <div class="artigosLoja">
+            <div className="artigosLoja">
                 <img className="fotoArtigos"
                     alt={props.item[`${selectedLanguage}_description`]}
                     src={props.item['thumbnail']}

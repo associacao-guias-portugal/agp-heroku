@@ -16,6 +16,7 @@ INSERT INTO `users` (email, password) VALUES
 -- DROP TABLE IF EXISTS `homepage`;
 
 CREATE TABLE `homepage` (
+  `logo` TEXT NOT NULL,
   `teaser` TEXT NOT NULL,
   `journal_edition`	INT NOT NULL,
   `article_1`	INT NOT NULL,
@@ -49,14 +50,14 @@ VALUES ('https://drive.google.com/uc?export=view&id=1J8tvbQeSA499BzfMSVJsyuZp3No
 'https://drive.google.com/uc?export=view&id=1vn8OLbLbUrIukwoqoWhkTlEsrJoETyvD',
 'https://drive.google.com/uc?export=view&id=1X42LIhogN8dDkG4xADJMFSx2Q4KvZ-7b',
 'Palavra aos Pais',
-'Palavra aos Pais',
+'Advice for Parents',
 'Ter uma filha nas Guias, porque sim?',
-'Ter uma filha nas Guias, porque sim?',
+'Why should your daughter be a Girl Guide?',
 'Nas Guias ajudamos as crianças e jovens a desenvolverem plenamente o seu potencial como cidadãs universais responsáveis...',
-'Nas Guias ajudamos as crianças e jovens a desenvolverem plenamente o seu potencial como cidadãs universais responsáveis...',
+'In Guias we help children and young girls to fully develop their potential as responsible universal citizens...',
 'https://drive.google.com/uc?export=view&id=19-JO2ACYloLXijYZpsW5pVkaIFIgMOZK',
 'Jornal "O Trevo"',
-'Journal "O Trevo"',
+'"O Trevo" Magazine',
 'https://drive.google.com/uc?export=view&id=1bAyNcu9xFh3mcTwxT4Bc8oBEscgqarnM'
 );
  
@@ -631,13 +632,13 @@ INSERT INTO `Association_Header` ( banner, title_pt, title_en, text1_pt, text1_e
 (
   'https://drive.google.com/uc?export=view&id=1FSI241W2jjJmY_SSLrVfhXVhsir4FbVs',
   'A ASSOCIAÇÃO',
-  'title_en',
+  'THE ASSOCIATION',
   '<p>A Associação Guias de Portugal (AGP) é uma associação de utilidade pública,  assente no voluntariado e que promove o Guidismo – movimento de educação não formal, baseado no método criado por Robert Baden-Powell.</p><p>Tem como missão proporcionar às raparigas e jovens mulheres a oportunidade de desenvolverem plenamente o seu potencial como cidadãs universais responsáveis,  através de um método próprio: atribuição gradual de responsabilidade, fomentando o trabalho de grupo e a sua autonomia, comprometendo-se com a comunidade onde estão inseridas, tendo como espaço privilegiado de formação o ar livre.</p><p>A AGP é membro da Associação Mundial das Guias - WAGGGS (World Association of Girl Guides and Girl Scouts), a que pertencem 10 milhões de Guias espalhadas por 150 países.</p>',
   'text1_en',
   'O Guidismo procura contribuir para a formação de carácter, através de uma pedagogia ativa,  baseada no jogo, desenvolvendo capacidades e atitudes e promovendo a vivência de valores fundamentais.',
-  'text2_en',
+  'Girl Guiding aims at developing character, through an active approach based on playing and the development of skills, attitudes and experiencing fundamental values.',
   'História do Guidismo em Portugal',
-  'title_sections_en'
+  'History of Guiding in Portugal'
 );
 
 

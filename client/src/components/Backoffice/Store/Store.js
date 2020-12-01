@@ -116,7 +116,7 @@ class Store extends React.Component {
     const getId = match.params.id;
 
     return (
-      <div class="body">
+      <div className="body">
         <form
           className="NoticiaInput-section"
           onSubmit={(event) => this.handleSubmit(event)}

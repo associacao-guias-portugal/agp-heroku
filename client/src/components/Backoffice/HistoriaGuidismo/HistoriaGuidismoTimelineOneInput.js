@@ -33,7 +33,6 @@ class HistoriaDoGuidismoTimelineOne extends Component {
 
     if (getId) {
       axios.get(`/historia-guidismo/timeline-one/${getId}`).then((res) => {
-        console.log("data", res);
         const results = res.data[0];
 
         let getPublish = results.publish;

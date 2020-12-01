@@ -96,7 +96,6 @@ class Association extends Component {
         );
         const HtmlContentPT = draftToHtml(rawContentState);
         this.setState({ section_text_pt: HtmlContentPT });
-        console.log(HtmlContentPT)
     };
 
     onEditorStateChangeEN = (editorStateEN) => {

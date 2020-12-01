@@ -18,6 +18,8 @@ const MetodoGuidista = () => {
   const [atividadeComunitario, setAtividadeComunitario] = useState([]);
   const [atividadeInternacional, setAtividadeInternacional] = useState([]);
 
+  localStorage.setItem('title', JSON.stringify(`Método Guidista`));
+
   useEffect(() => {
     document.title = "Associação Guias de Portugal - Método Guidista"
     window.scrollTo(0, 0);
@@ -53,8 +55,9 @@ const MetodoGuidista = () => {
     }
   }, [i18n.language, selectedLanguage]);
 
-  const storageItem = (id) => {
+  const storageItem = (id, name) => {
     localStorage.setItem('item', id);
+    localStorage.setItem('itemTitle', JSON.stringify(`${name}`));
   };
 
   return (
@@ -73,7 +76,7 @@ const MetodoGuidista = () => {
             <Link
               to={ferramenta.link}
               key={ferramenta.id}
-              onClick={() => storageItem(ferramenta.id)}
+              onClick={() => storageItem(ferramenta.id, ferramenta.pt_title)}
             >
               <div className="metodo-box">
                 <div className="metodo-box-title">{ferramenta[`${selectedLanguage}_title`]}</div>

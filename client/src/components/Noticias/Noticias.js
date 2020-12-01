@@ -8,6 +8,8 @@ const Noticias = () => {
   const { t } = useTranslation();
   const [noticiasData, setNoticiasData] = useState([]);
 
+  localStorage.setItem('title', JSON.stringify(`Notícias`));
+
   const getData = () => {
     axios.get('/news/published')
       .then((response) => {
@@ -24,13 +26,18 @@ const Noticias = () => {
     getData();
   }, []);
 
+  const getTitle = (id) => {
+    const noticia = noticiasData.filter(noticia => noticia.id === id);
+    localStorage.setItem('title', JSON.stringify(`Notícias - ${noticia[0].pt_title}`));
+  }
+
   return (
     <div className="Noticias">
       <p className="app-second-title NoticiasTitle">{t('noticias.noticias')}</p>
       <div className="MapNoticias">
         {noticiasData.map((noticia) => (
           noticia.publish === 1
-            && <NoticiasCard key={noticia.id} noticia={noticia} />
+            && <NoticiasCard key={noticia.id} noticia={noticia} setTitle={()=> getTitle(noticia.id)} />
         ))}
       </div>
     </div>

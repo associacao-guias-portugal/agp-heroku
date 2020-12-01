@@ -31,7 +31,6 @@ class TableJournal extends Component {
         return response.data;
       })
       .then((dataresult) => {
-        console.log(dataresult);
         this.setState({ journalInput: dataresult });
       });
   };
@@ -59,8 +58,6 @@ class TableJournal extends Component {
 
   handleModalDelete = () => {
     const { editionId } = this.state;
-    console.log("publicação", editionId);
-
     axios.delete(`/journal/${editionId}`).then((response) => {
       this.setState({
         showModal: false,
@@ -71,7 +68,6 @@ class TableJournal extends Component {
   };
 
   handleModal = () => {
-    console.log("handleModal");
     const { showModal } = this.state;
     this.setState({ showModal: !showModal });
   };
@@ -168,9 +164,7 @@ class TableJournal extends Component {
     ];
     const rowEvents = {
       onClick: (e, row) => {
-        console.log(row.edition);
         this.setState({ editionId: row.edition });
-        console.log(this.state.editionId);
       },
     };
     return (
@@ -199,8 +193,8 @@ class TableJournal extends Component {
         </form>
         <PopUp flashInput={this.state.flash} typeMessage={this.state.messageStatus} />
         <div className="NoticiasPainel">
-          <div className="JornalPainel-section-button loja-quadro">
-            <div className="loja-quadro-title">Edições do Jornal</div>
+          <div className="JornalPainel-section-button main-quadro">
+            <div className="main-quadro-title">Edições do Jornal</div>
             <Link to={link}>
               <button className="NoticiasPainel-button" type="submit">
                 Criar Edição

@@ -20,7 +20,6 @@ const TimelineHistoria = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     axios.get("/historia-guidismo/timeline-one").then((res) => {
-      console.log(res);
       const resultsTimelineRobert = res.data;
       setTimelineHistoriaRobert(resultsTimelineRobert);
     });
@@ -38,7 +37,7 @@ const TimelineHistoria = () => {
     <div className="TimelineHistoria">
       <Timeline align="right">
         {timelineHistoriaRobert.map((timeline, index) => (
-          <TimelineItem>
+          <TimelineItem key={timeline.id}>
             <TimelineSeparator>
               <TimelineDot>
                 <img
