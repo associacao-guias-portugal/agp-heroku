@@ -83,11 +83,11 @@ const AssociacaoMundial2 = (props) => {
                                     }
                                     {
                                         worldAssociationData.section3_column1_text5_pt !== '' &&
-                                        <ul className="objectives-text">
-                                            <li>
-                                                {worldAssociationData.section3_column1_text5_pt}
-                                            </li>
-                                        </ul>
+            
+                                        <li>
+                                            {worldAssociationData.section3_column1_text5_pt}
+                                        </li>
+    
                                     }
                                 </ul>
                             </div>
@@ -175,38 +175,42 @@ const AssociacaoMundial2 = (props) => {
                     <div className="AssociacaoMundial">
                         <div className="world-association">
                             <img className="world-logo" src={worldAssociationData.logoWAGGGS} alt='World Association Logo' />
-                            <p className='world-text'>
+                            <p className='app-main-text world-text'>
                                 {ReactHtmlParser(worldAssociationData.section1_en)}
                             </p>
                         </div>
-                        <div className="voice-sentence">
-                            {worldAssociationData.section2_en}
+                        <div className="app-blue-banner-title voice-sentence">
+                            {ReactHtmlParser(worldAssociationData.section2_en)}
                         </div>
                         <div className="world-objectives">
+                        
+                        
                             <div className="objectives-side">
                                 <div className="objectives-title">
                                     {worldAssociationData.section3_column1_title_en}
                                 </div>
-                                {
-                                    worldAssociationData.section3_column1_text1_en !== '' &&
-                                    <li>{worldAssociationData.section3_column1_text1_en}</li>
-                                }
-                                {
-                                    worldAssociationData.section3_column1_text2_en !== '' &&
-                                    <li>{worldAssociationData.section3_column1_text2_en}</li>
-                                }
-                                {
-                                    worldAssociationData.section3_column1_text3_en !== '' &&
-                                    <li>{worldAssociationData.section3_column1_text3_en}</li>
-                                }
-                                {
-                                    worldAssociationData.section3_column1_text4_en !== '' &&
-                                    <li>{worldAssociationData.section3_column1_text4_en}</li>
-                                }
-                                {
-                                    worldAssociationData.section3_column1_text5_en !== '' &&
-                                    <li>{worldAssociationData.section3_column1_text5_en}</li>
-                                }
+                                <ul className="objectives-text">
+                                    {
+                                        worldAssociationData.section3_column1_text1_en !== '' &&
+                                        <li>{worldAssociationData.section3_column1_text1_en}</li>
+                                    }
+                                    {
+                                        worldAssociationData.section3_column1_text2_en !== '' &&
+                                        <li>{worldAssociationData.section3_column1_text2_en}</li>
+                                    }
+                                    {
+                                        worldAssociationData.section3_column1_text3_en !== '' &&
+                                        <li>{worldAssociationData.section3_column1_text3_en}</li>
+                                    }
+                                    {
+                                        worldAssociationData.section3_column1_text4_en !== '' &&
+                                        <li>{worldAssociationData.section3_column1_text4_en}</li>
+                                    }
+                                    {
+                                        worldAssociationData.section3_column1_text5_en !== '' &&
+                                        <li>{worldAssociationData.section3_column1_text5_en}</li>
+                                    }
+                                </ul>
                             </div>
                             <div className="objectives-side">
                                 <div className="objectives-title">

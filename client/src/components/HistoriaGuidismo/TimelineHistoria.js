@@ -37,7 +37,7 @@ const TimelineHistoria = () => {
     <div className="TimelineHistoria">
       <Timeline align="right">
         {timelineHistoriaRobert.map((timeline, index) => (
-          <TimelineItem>
+          <TimelineItem key={timeline.id}>
             <TimelineSeparator>
               <TimelineDot>
                 <img

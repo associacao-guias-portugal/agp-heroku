@@ -16,6 +16,7 @@ INSERT INTO `users` (email, password) VALUES
 -- DROP TABLE IF EXISTS `homepage`;
 
 CREATE TABLE `homepage` (
+  `logo` TEXT NOT NULL,
   `teaser` TEXT NOT NULL,
   `journal_edition`	INT NOT NULL,
   `article_1`	INT NOT NULL,

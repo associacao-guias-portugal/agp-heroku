@@ -37,7 +37,7 @@ const TimelineHistoriaLady = () => {
     <div className="TimelineHistoria">
       <Timeline align="left">
         {timelineHistoriaOlave.map((timeline, index) => (
-          <TimelineItem>
+          <TimelineItem key={timeline.id}>
             <TimelineSeparator>
               <TimelineDot>
                 <img
