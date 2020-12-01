@@ -7,6 +7,7 @@ class HomepageBackoffice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      logo: '',
       teaser: '',
       journal_edition: 0,
       article_1: 0, 
@@ -50,6 +51,7 @@ class HomepageBackoffice extends React.Component {
       .then((res) => {
         const results = res.data[0];
         this.setState({
+          logo: results.logo,
           teaser: results.teaser,
           journal_edition: results.journal_edition,
           article_1: results.article_1, 
@@ -106,6 +108,7 @@ class HomepageBackoffice extends React.Component {
 
   render() {
     const { journalData, flash, messageStatus, newsData, 
+      logo,
       teaser,
       article_1, 
       article_2, 
@@ -134,6 +137,18 @@ class HomepageBackoffice extends React.Component {
         <div className="homepage-title">Homepage</div>
         <div className="homepage-section">
           <form onSubmit={this.handleSubmit}>
+            <div className="homepage-section-title">Logo</div>
+            <div className="back-metodo-input">
+              <div className="homepage-section-label">Image Link:</div>
+              <input
+                type="text"
+                name="logo"
+                value={logo}
+                onChange={this.handleChange}
+                placeholder="Link da imagem/logo"
+                required
+              />
+            </div>
             <div className="homepage-section-title">Teaser</div>
             <div className="back-metodo-input">
               <div className="homepage-section-label">Video Link:</div>
