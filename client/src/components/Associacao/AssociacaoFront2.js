@@ -78,9 +78,9 @@ const AssociacaoFront2 = (props) => {
               <div className="app-main-text-links">{ReactHtmlParser(text1_en)}</div>
             </div>
             <br />
-            <div className="guidismo">
-              <p>{text2_en}</p>
-            </div>
+            <div className="app-blue-banner-text guidismo">
+            <p>{text2_en}</p>
+          </div>
             <h2 className="app-second-title historiaGuidismoH2">Girls Guides History in Portugal</h2>
           </div>
         )}
