@@ -55,13 +55,11 @@
 
 .TextCardNoticias {
     font-size: 16px !important;
-    margin-top: 40px !important;
-    margin-left: 10px !important;
-    margin-right: 5px !important;
+    margin: 20px 10px 10px 10px !important;
     font-weight: 400 !important;
     font-family: 'Poppins' !important;
     line-height: 1.5 !important;
-    min-height: 73px !important;
+    min-height: 115px !important;
     font-style: italic;
 }
 
@@ -91,7 +89,7 @@
     }
     .TextCardNoticias {
         font-size: 14px !important;
-        margin-top: 20px !important;
+        margin: 0px 0px 0px 0px !important;
     }
     .ImgCardNoticias{
         height: 200px;

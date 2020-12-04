@@ -131,7 +131,7 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
             </button>
           </Link>
         </div>
-        <div className="PalavraAosPais-Painel-Cards-Table">
+        <div className="PalavraAosPais-Painel-Cards-Table HistoriaQuadro">
           <BootstrapTable
             className="BootstrapTable"
             bootstrap4

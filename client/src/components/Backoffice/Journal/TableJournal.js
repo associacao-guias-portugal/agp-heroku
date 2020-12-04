@@ -201,7 +201,7 @@ class TableJournal extends Component {
             </button>
             </Link>
           </div>
-          <div className="NoticiasPainel-Table">
+          <div className="NoticiasPainel-Table JornalTable">
             <BootstrapTable
               className="BootstrapTable"
               bootstrap4

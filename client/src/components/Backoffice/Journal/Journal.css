@@ -27,6 +27,10 @@
     width: 1060px;
     justify-content: flex-end;
   }
+
+  .JornalTable {
+    max-width: 900px;
+  }
   .NoticiaInput-section {
     display: flex;
     flex-wrap: wrap;
