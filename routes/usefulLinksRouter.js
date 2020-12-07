@@ -10,7 +10,7 @@ const jwtMiddleware = require('../services/jwtMiddleware');
 
 
 router.get('/', (req, res) => {
-    connection.query('SELECT * FROM ligacoes_uteis',
+    connection.query('SELECT * FROM ligacoes_uteis ORDER BY pt_text',
         (err, results) => {
             if (err) {
                 res.status(400).send('Error')

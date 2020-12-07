@@ -11,30 +11,18 @@ const LigacoesUteis2 = (props) => {
 
 
   const getData = () => {
-    axios
-      .get("/ligacoes-uteis")
-      .then((result) => {
-        return result.data;
-      })
-
-      .then((dataresult) => {
-        console.log(dataresult)
-        set_usefulLinksData(dataresult);
+    axios.get("/ligacoes-uteis")
+      .then(result => {
+        set_usefulLinksData(result.data);
       });
   };
 
   const getDataHeader = () => {
-    axios
-      .get("ligacoes-uteis/header/header")
-      .then((result => {
-        return result.data[0]
-      }))
-      .then((dataresult) => {
-        set_usefulLinksDataHeader(dataresult)
+    axios.get("ligacoes-uteis/header/header")
+      .then(result => {
+        set_usefulLinksDataHeader(result.data[0])
       })
-    console.log(usefulLinksData_pt)
-
-  }
+  };
 
   useEffect(() => {
     document.title = "Associação Guias de Portugal - Ligações Úteis";
@@ -48,26 +36,27 @@ const LigacoesUteis2 = (props) => {
       set_selectedLanguage(i18n.language);
   }, [i18n.language, selectedLanguage]);
 
-  if (selectedLanguage === 'en') { usefulLinksData.sort((a, b) => a.en_text.localeCompare(b.en_text)); }
+  if (selectedLanguage === 'en') {
+    usefulLinksData.sort((a, b) => a.en_text.localeCompare(b.en_text));
+  } else {
+    usefulLinksData.sort((a, b) => a.pt_text.localeCompare(b.pt_text));
+  }
+
   return (
     <div className="LigacoesUteis">
       <div className="ligacoes-title">{t("ligacoesUteis.title")}</div>
-      {
-        selectedLanguage === 'pt' ?
-          <div className="ligacoes-text">{usefulLinksDataHeader.header_pt}</div>
-          :
-          <div className="ligacoes-text">{usefulLinksDataHeader.header_en}</div>
-      }
-      <div className="ligacoes-list">
-        <ul className='ligacoes-uteis'>
-          {
 
-            usefulLinksData.map((link) => {
-              return (
-                <li><a href={link.link} target='_blank' rel='noopener noreferrer'>{link[`${selectedLanguage}_text`]}</a></li>
-              )
-            })
-          }
+      <div className="ligacoes-text">{usefulLinksDataHeader[`header_${selectedLanguage}`]}</div>
+
+      <div className="ligacoes-list">
+        <ul className="ligacoes-items">
+          {usefulLinksData.map((link, index) => (
+            <li key={index}>
+              <a href={link.link} target="_blank" rel="noopener noreferrer">
+                {link[`${selectedLanguage}_text`]}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
