@@ -305,7 +305,7 @@ class WorldAssociation extends React.Component {
                     </div>
                     <div className="input">
                         <div className="input-section-label">Logo WAGGGS</div>
-                        <input type="text" name="banner" value={this.state.logoWAGGGS} onChange={(event) => this.handleChange(event)} />
+                        <input type="text" name="logoWAGGGS" value={this.state.logoWAGGGS} onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div className="input input-block">
                         <div className="input-section-label">Intro Texto PT</div>
@@ -518,11 +518,11 @@ class WorldAssociation extends React.Component {
 
                     <div className="input">
                         <div className="input-section-label">Título PT</div>
-                        <input type="text" name="section4_thumbnail" value={this.state.section4_title_pt} onChange={(event) => this.handleChange(event)} />
+                        <input type="text" name="section4_title_pt" value={this.state.section4_title_pt} onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div className="input">
                         <div className="input-section-label">Título EN</div>
-                        <input type="text" name="section4_thumbnail" value={this.state.section4_title_en} onChange={(event) => this.handleChange(event)} />
+                        <input type="text" name="section4_title_en" value={this.state.section4_title_en} onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div className="input">
                         <div className="input-section-label">Imagem</div>

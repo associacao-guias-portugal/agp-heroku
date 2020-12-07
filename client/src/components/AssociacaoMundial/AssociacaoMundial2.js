@@ -83,11 +83,11 @@ const AssociacaoMundial2 = (props) => {
                                     }
                                     {
                                         worldAssociationData.section3_column1_text5_pt !== '' &&
-            
+
                                         <li>
                                             {worldAssociationData.section3_column1_text5_pt}
                                         </li>
-    
+
                                     }
                                 </ul>
                             </div>
@@ -183,8 +183,6 @@ const AssociacaoMundial2 = (props) => {
                             {ReactHtmlParser(worldAssociationData.section2_en)}
                         </div>
                         <div className="world-objectives">
-                        
-                        
                             <div className="objectives-side">
                                 <div className="objectives-title">
                                     {worldAssociationData.section3_column1_title_en}
@@ -243,7 +241,7 @@ const AssociacaoMundial2 = (props) => {
                         <div className="centers">
                             <div className="centers-side">
                                 <div className="centers-left">
-                                    <div className="centers-title">
+                                    <div className="app-main-title centers-title">
                                         {ReactHtmlParser(worldAssociationData.section4_title_en)}
                                     </div>
                                     <div className="centers-text">
@@ -258,26 +256,31 @@ const AssociacaoMundial2 = (props) => {
                         <div className="thought-section">
                             <div className="left-section">
                                 <div className="clover-section">
-                                    <img className="clover" src={worldAssociationData.section5_column1_thumbnail} src="Guias de Portugal World Thought" />
+                                    <img className="clover" src={worldAssociationData.section5_column1_thumbnail} alt="Guias de Portugal World Thought" />
                                 </div>
-                                <div className="penny-title">
-                                    {worldAssociationData.section5_column1_title_en}
-                                </div>
-                                <div className="penny-text">
-                                    {ReactHtmlParser(worldAssociationData.section5_column1_en)}
+                                <div>
+                                    <div className="penny-title">
+                                        {worldAssociationData.section5_column1_title_en}
+                                    </div>
+                                    <div className="penny-text">
+                                        <p>{ReactHtmlParser(worldAssociationData.section5_column1_en)}</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="right-section">
                                 <div className="piggy-section">
                                     <img className="piggy" src={worldAssociationData.section5_column2_thumbnail} alt="Guias de Portugal World Penny" />
                                 </div>
-                                <div className="penny-title">
-                                    {worldAssociationData.section5_column2_title_en}
-                                </div>
-                                <div className="penny-text">
-                                    {ReactHtmlParser(worldAssociationData.section5_column2_en)}
+                                <div>
+                                    <div className="penny-title">
+                                        <p>{worldAssociationData.section5_column2_title_en}</p>
+                                    </div>
+                                    <div className="penny-text">
+                                        <p>{ReactHtmlParser(worldAssociationData.section5_column2_en)}</p>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                         <div className="associacao-button-section">
                             <Link to="/contactos/formulario">
