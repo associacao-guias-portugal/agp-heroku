@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import ModalPopup from "../Noticias/PopUpDeleteNoticias";
+import ReactHtmlParser from "react-html-parser";
 
 class HistoriaGuidismoTimelineOneInputPainel extends Component {
   constructor(props) {
@@ -58,14 +59,12 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
         dataField: "position",
         text: "Posição",
         sort: true,
-        headerStyle: () => ({ width: "15%" }),
         align: "center",
       },
       {
         dataField: "publish",
         text: "Status",
         sort: true,
-        headerStyle: () => ({ width: "15%" }),
         formatter: function dateFormatter(publish) {
           if (publish === 1) {
             return "Publicado";
@@ -80,6 +79,9 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
         sort: true,
         headerStyle: () => ({ width: "50%" }),
         align: "center",
+        formatter: (pt_text) => (
+          <span className="historia-table-info">{ReactHtmlParser(pt_text)}</span>
+        ),
       },
       {
         dataField: "id",
@@ -94,7 +96,6 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
             </span>
           </Link>
         ),
-        headerStyle: () => ({ width: "5%" }),
         align: "center",
       },
       {
@@ -110,7 +111,6 @@ class HistoriaGuidismoTimelineOneInputPainel extends Component {
             </span>
           </a>
         ),
-        headerStyle: () => ({ width: "5%" }),
         align: "center",
       },
     ];

@@ -156,6 +156,7 @@
   .DraftEditor-editorContainer {
     padding: 0px 10px;
     width: 100%;
+    word-break: break-word;
   }
   
   @media(max-width: 768px) {
