@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import facebookImage from "../../assets/images/SocialMedia/facebook_white_round.png";
 import instagramImage from "../../assets/images/SocialMedia/instagram_white_round.png";
 import linkedinImage from "../../assets/images/SocialMedia/linkedin_white_round.png";
-import ReactHtmlParser from "react-html-parser";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();

@@ -224,8 +224,8 @@ class NoticiaInput extends Component {
                 name="pt_intro_text"
                 value={pt_intro_text}
                 onChange={this.updateField}
-                placeholder="Máximo de 100 caracteres"
-                maxLength="100"
+                placeholder="Máximo de 150 caracteres"
+                maxLength="150"
                 required
               />
             </div>
@@ -236,8 +236,8 @@ class NoticiaInput extends Component {
                 name="en_intro_text"
                 value={en_intro_text}
                 onChange={this.updateField}
-                placeholder="Maximum of 100 characters"
-                maxLength="100"
+                placeholder="Maximum of 150 characters"
+                maxLength="150"
                 required
               />
             </div>

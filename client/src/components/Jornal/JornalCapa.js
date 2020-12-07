@@ -5,9 +5,6 @@ import New from '../../assets/images/Outros/new.png';
 import downLoad from '../../assets/images/Outros/download.png';
 
 
-
-
-
 const JornalCapa = (props) => {
 
     const { i18n } = useTranslation();
@@ -19,8 +16,6 @@ const JornalCapa = (props) => {
         }
     }, [i18n.language, selectedLanguage]);
 
-
-
     return (
 
         selectedLanguage === 'pt' ?
@@ -28,8 +23,7 @@ const JornalCapa = (props) => {
                 <h4 className='titulo'>{props.titulo_pt}</h4>
                 <h4 className='anoEdicao'>{`${props.ano} - ${props.edicao}ª edição`}</h4>
                 <div className='capaDownload'>
-                    <img className='capa' alt={props.alt} src={props.src}
-                    />
+                    <img className='capa' alt={props.alt} src={props.src}/>
                     <a className='download' href={props.pdf_pt} target="_blank" download title={props.titulo_pt} rel="noopener noreferrer">
                         <img className='downloadImage' alt={'download Jornal O Trevo Guias de Portugal'}
                             src={props.index === 0 ? New : downLoad} />

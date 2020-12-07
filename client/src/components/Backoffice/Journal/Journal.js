@@ -153,8 +153,8 @@ class Journal extends React.Component {
               name="pt_title"
               value={this.state.pt_title}
               onChange={(event) => this.updateField(event)}
-              placeholder="Máximo de 60 caracteres"
-              maxLength="60"
+              placeholder="Máximo de 85 caracteres"
+              maxLength="85"
               required
             />
           </div>
@@ -165,8 +165,8 @@ class Journal extends React.Component {
               name="en_title"
               value={this.state.en_title}
               onChange={(event) => this.updateField(event)}
-              placeholder="Maximum of 60 characters"
-              maxLength="60"
+              placeholder="Maximum of 85 characters"
+              maxLength="85"
               required
             />
           </div>

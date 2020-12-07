@@ -51,7 +51,7 @@ const ConteudoNoticia = (props) => {
           <div className="TitleCardConteudoNoticia">
             <h3>{contNoticiasData[`${selectedLanguage}_title`]}</h3>
           </div>
-          <div className="TextCardNoticias noticias-main-text">
+          <div className="TextContentNoticias noticias-main-text">
             {ReactHtmlParser(contNoticiasData[`${selectedLanguage}_content`])}
           </div>
         </div>

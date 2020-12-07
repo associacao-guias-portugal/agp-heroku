@@ -173,14 +173,6 @@ class TableStore extends Component {
         },
         align: "center",
       },
-      // {
-      //   dataField: "id",
-      //   text: "ID",
-      //   filter: textFilter(),
-      //   sort: true,
-      //   headerStyle: () => ({ width: "10%" }),
-      //   align: "center",
-      // },
       {
         dataField: "category_pt",
         text: "Categoria",
