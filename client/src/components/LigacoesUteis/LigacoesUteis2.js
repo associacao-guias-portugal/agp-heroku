@@ -6,7 +6,8 @@ import { useTranslation } from "react-i18next";
 const LigacoesUteis2 = (props) => {
   const { t, i18n } = useTranslation();
   const [selectedLanguage, set_selectedLanguage] = useState(i18n.language);
-  const [usefulLinksData, set_usefulLinksData] = useState([]);
+  const [usefulLinksData_pt, set_usefulLinksData_pt] = useState([]);
+  const [usefulLinksData_en, set_usefulLinksData_en] = useState([]);
   const [usefulLinksDataHeader, set_usefulLinksDataHeader] = useState([]);
 
 
@@ -18,7 +19,13 @@ const LigacoesUteis2 = (props) => {
       })
 
       .then((dataresult) => {
-        set_usefulLinksData(dataresult);
+        console.log(dataresult)
+        let ptOrdered = dataresult.sort((a, b) => a.pt_text.localeCompare(b.pt_text))
+        let enOrdered = dataresult.sort((a, b) => a.en_text.localeCompare(b.en_text))
+        console.log(ptOrdered)
+        console.log(enOrdered)
+        set_usefulLinksData_pt(ptOrdered);
+        set_usefulLinksData_en(enOrdered);
       });
   };
 
@@ -31,6 +38,8 @@ const LigacoesUteis2 = (props) => {
       .then((dataresult) => {
         set_usefulLinksDataHeader(dataresult)
       })
+      console.log(usefulLinksData_pt)
+
   }
 
   useEffect(() => {
@@ -55,15 +64,22 @@ const LigacoesUteis2 = (props) => {
           <div className="ligacoes-text">{usefulLinksDataHeader.header_en}</div>
       }
       <div className="ligacoes-list">
-        <ul className="ligacoes-items">
-          {usefulLinksData.map((link) => (
-            <li>
-              {" "}
-              <a href={link.link} target="_blank" rel="noopener noreferrer">
-                {selectedLanguage === "pt" ? link.pt_text : link.en_text}
-              </a>
-            </li>
-          ))}
+        <ul className='ligacoes-uteis'>
+          {
+            selectedLanguage === 'pt' ?
+              usefulLinksData_pt.map((ptOrder) => {
+                return (
+                  <li><a href={ptOrder.link} target='_blank' rel='noopener noreferrer'></a></li>
+                )
+              })
+              :
+              usefulLinksData_en.map((enOrder) => {
+                return (
+                  <li><a href={enOrder.link} target='_blank' rel='noopener noreferrer'></a></li>
+                )
+              })
+          }
+
         </ul>
       </div>
     </div>
