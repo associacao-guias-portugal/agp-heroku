@@ -18,6 +18,7 @@ const LigacoesUteis2 = (props) => {
       })
 
       .then((dataresult) => {
+        console.log(dataresult)
         set_usefulLinksData(dataresult);
       });
   };
@@ -31,6 +32,8 @@ const LigacoesUteis2 = (props) => {
       .then((dataresult) => {
         set_usefulLinksDataHeader(dataresult)
       })
+    console.log(usefulLinksData_pt)
+
   }
 
   useEffect(() => {
@@ -45,6 +48,7 @@ const LigacoesUteis2 = (props) => {
       set_selectedLanguage(i18n.language);
   }, [i18n.language, selectedLanguage]);
 
+  if (selectedLanguage === 'en') { usefulLinksData.sort((a, b) => a.en_text.localeCompare(b.en_text)); }
   return (
     <div className="LigacoesUteis">
       <div className="ligacoes-title">{t("ligacoesUteis.title")}</div>
@@ -55,15 +59,15 @@ const LigacoesUteis2 = (props) => {
           <div className="ligacoes-text">{usefulLinksDataHeader.header_en}</div>
       }
       <div className="ligacoes-list">
-        <ul className="ligacoes-items">
-          {usefulLinksData.map((link) => (
-            <li>
-              {" "}
-              <a href={link.link} target="_blank" rel="noopener noreferrer">
-                {selectedLanguage === "pt" ? link.pt_text : link.en_text}
-              </a>
-            </li>
-          ))}
+        <ul className='ligacoes-uteis'>
+          {
+
+            usefulLinksData.map((link) => {
+              return (
+                <li><a href={link.link} target='_blank' rel='noopener noreferrer'>{link[`${selectedLanguage}_text`]}</a></li>
+              )
+            })
+          }
         </ul>
       </div>
     </div>
