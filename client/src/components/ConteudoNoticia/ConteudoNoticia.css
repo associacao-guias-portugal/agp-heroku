@@ -43,12 +43,11 @@
 }
 
 .ImagemConteudo {
-  height: 100%;
+  height: 425px;
   width: 100%;
 }
 
-.TextCardNoticias {
-  /* text-align: justify; */
+.TextContentNoticias {
   margin: 30px;
 }
 
@@ -56,7 +55,7 @@
   font-style: normal;
 }
 
-.TextCardNoticias img {
+.TextContentNoticias img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -76,7 +75,7 @@
     text-align: center;
     margin-top: 40px;
   }
-  .TextCardNoticias {
+  .TextContentNoticias {
     font-size: 15px;
     text-align: justify;
     margin: 20px;
@@ -97,7 +96,7 @@
     text-align: center;
     margin-top: 20px;
   }
-  .TextCardNoticias {
+  .TextContentNoticias {
     font-size: 12px;
     text-align: justify;
     margin: 10px;
@@ -117,7 +116,7 @@
     text-align: center;
     margin-top: 20px;
   }
-  .TextCardNoticias {
+  .TextContentNoticias {
     font-size: 12px;
     text-align: justify;
     margin: 10px;

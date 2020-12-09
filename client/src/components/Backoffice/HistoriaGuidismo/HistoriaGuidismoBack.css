@@ -8,3 +8,19 @@
 .Historia-button {
   margin: 0px;
 }
+
+.HistoriaQuadro {
+  max-width: 930px;
+}
+.HistoriaQuadro .react-bootstrap-table .table-bordered {
+  table-layout: fixed;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.historia-table-info,
+.historia-table-info p,
+.historia-table-info p span {
+  font-size: 13px !important;
+  margin-bottom: 0px !important;
+}

@@ -51,9 +51,17 @@ const QueresSerGuia = ({ politicaDeDados, email }) => {
             type="text"
             name="concelho"
             className="form-control"
-            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 5 })}
+            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 1 })}
           />
           {errors.concelho && <div className="form-error">{errors.concelho.message}</div>}
+          <div className="guia-label">{t('contactosForm.freguesia')}</div>
+          <input
+            type="text"
+            name="freguesia"
+            className="form-control"
+            ref={register({ required: `*${t('contactosForm.campoObrigatorio')}`, minLeght: 1 })}
+          />
+          {errors.freguesia && <div className="form-error">{errors.freguesia.message}</div>}
           <div className="guia-label">{t('contactosForm.email')}</div>
           <input
             type="email"

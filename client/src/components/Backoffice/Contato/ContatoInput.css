@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.back-contato-input-textarea .nota {
+  font-size: 11px;
+  color: rgb(85, 85, 85);
+}
+
 .ContatoInput {
   display: flex;
   flex-wrap: wrap;

@@ -65,7 +65,6 @@ const Jornal = (props) => {
       <div className="edicoesJornal">
         {edicoes.map((edicao, index) => (
           <>
-            {" "}
             {edicao.publish === 1 && (
               <JornalCapa
                 titulo_pt={edicao.pt_title}

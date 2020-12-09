@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import {
   FacebookMessengerShareButton, FacebookMessengerIcon, TwitterShareButton, TwitterIcon,
@@ -59,7 +58,6 @@ const MediaShare = (props) => {
     pageTitle = 'Associação Guias de Portugal'
   }
 
-  console.log(pageTitle);
   if (pageTitle !== "Associação Guias de Portugal") {
     emailSubject = `Associação Guias de Portugal - ${pageTitle}`;
   }
@@ -126,9 +124,5 @@ const MediaShare = (props) => {
     </div>
   );
 };
-
-// MediaShare.propTypes = {
-//   currentPath: PropTypes.string.isRequired,
-// };
 
 export default MediaShare;

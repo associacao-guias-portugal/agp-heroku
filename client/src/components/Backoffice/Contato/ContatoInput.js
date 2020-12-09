@@ -121,6 +121,7 @@ class ContatoInput extends Component {
                 onChange={this.updateField}
                 required
               />
+              <div className="nota">Nota: A vírgula provoca quebra de linha. </div>
             </div>
             <div className="back-contato-input-textarea">
               <div className="input-section-label">Endereço EN:</div>
@@ -129,6 +130,7 @@ class ContatoInput extends Component {
                 value={en_endereco}
                 onChange={this.updateField}
               />
+              <div className="nota">Nota: A vírgula provoca quebra de linha.</div>
             </div>
             <div className="input">
               <div className="input-section-label">Link Google Maps:</div>
