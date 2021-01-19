@@ -90,7 +90,7 @@ class HomepageBackoffice extends React.Component {
     event.preventDefault();
     const { history } = this.props;
     const { flash, messageStatus, journalData, newsData, ...homepageData } = this.state;
-    
+    console.log("submit");
     axios.put('/homepage', homepageData)
       .then((res) => {
         this.setState({ messageStatus: 'success' }, () => {
@@ -99,6 +99,7 @@ class HomepageBackoffice extends React.Component {
         this.setState({ flash: 'Guardado com sucesso.' })
       })
       .catch((err) => {
+        console.log("ERRO", err);
         this.setState({ messageStatus: 'error' }, () => {
           setTimeout(() => history.push({ pathname: '/backoffice/homepage' }), 1500)
         });
