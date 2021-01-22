@@ -11,6 +11,27 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import logoSample from '../../assets/logo/logo_NEG_RGB.png';
 import './Header.css';
 
+const pdfInitial = [
+  {
+    id: 0,
+    pt_label: "Regulamentos",
+    en_label: "Regulations",
+    link: "https://drive.google.com/file/d/1YIAKkmg6IFNwkxBnPB-KOTOsn6ISq0Oz/view?usp=sharing"
+  },
+  {
+    id: 1,
+    pt_label: "Livro de Especialidades",
+    en_label: "Badge Book",
+    link: "https://drive.google.com/file/d/1x7nByFv5sOGRWCwRB2UzTTE4y3l9TS-o/view?usp=sharing"
+  },
+  {
+    id: 2,
+    pt_label: "Cartão de Associada",
+    en_label: "Membership Card",
+    link: "https://drive.google.com/file/d/1S5w9UL0mcfvbz64NGykMas-LosrvnMiu/view?usp=sharing"
+  }
+];
+
 const Header = (props) => {
   const { t, i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -37,16 +58,11 @@ const Header = (props) => {
   };
 
   useEffect(() => {
+    getPDFs();
     axios.get('/files')
       .then((res) => {
         setPdfFiles(res.data[0]);
       });
-
-    axios.get('/recursos')
-      .then((res) => {
-        setRecursosPDFS(res.data);
-      });
-
     axios.get('/homepage/all')
     .then((res) => {
       const results = res.data[0];
@@ -54,6 +70,16 @@ const Header = (props) => {
     });
 
   }, []);
+
+  const getPDFs = async () => {
+    await axios.get('/recursos')
+    .then((res) => {
+      setRecursosPDFS(res.data);
+    })
+    .catch((err) => {
+      setRecursosPDFS(["Error"])
+    });
+  };
 
   useEffect(() => {
     if (i18n.language !== selectedLanguage) {
@@ -91,11 +117,12 @@ const Header = (props) => {
               <NavDropdown.Item eventKey="12" className="dropdown-item"><Link to="/publicações/noticias">{t('header.noticias')}</Link></NavDropdown.Item>
               <NavDropdown.Item eventKey="13" className="dropdown-item"><Link to="/publicações/jornal-trevo">{t('header.jornal')}</Link></NavDropdown.Item>
               <NavDropdown bsPrefix="dropdown-item" title={t('header.recursos')} className="dropright">
-                { recursosPDFS.map((item) => (
-                  <NavDropdown.Item key={item.id} className="dropdown-item" href={item.link} target="_blank">
-                    {item[`${selectedLanguage}_label`]}
-                  </NavDropdown.Item>
-                ))}
+                {recursosPDFS.map((item) => (
+                    <NavDropdown.Item key={item.id} className="dropdown-item" href={item.link} target="_blank">
+                      {item[`${selectedLanguage}_label`]}
+                    </NavDropdown.Item>
+                  ))
+                }
                 <NavDropdown.Item eventKey="17" className="dropdown-item"><Link to="/publicações/recursos/ligacoes-uteis">{t('header.ligacoesUteis')}</Link></NavDropdown.Item>
               </NavDropdown>
             </NavDropdown>

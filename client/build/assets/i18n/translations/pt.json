@@ -1,0 +1,125 @@
+{
+  "header": {
+    "sobre": "Sobre",
+    "pedagogia": "Pedagogia",
+    "publicacoes": "Publicações",
+    "loja": "Loja",
+    "contactos": "Contactos",
+    "associacao": "A Associação",
+    "historiaGuidismo": "História do Guidismo",
+    "estatutos": "Estatutos",
+    "associacaoMundial": "Associação Mundial",
+    "metodoGuidista": "Método Guidista",
+    "ramoAvezinha": "Ramo Avezinha",
+    "ramoAventura": "Ramo Aventura",
+    "ramoCaravela": "Ramo Caravela",
+    "ramoMoinho": "Ramo Moinho",
+    "dirigente": "Dirigente",
+    "palavrasPais": "Palavra aos Pais",
+    "pesquisa": "Pesquisa...",
+    "noticias": "Notícias",
+    "jornal": "Jornal O Trevo",
+    "recursos": "Recursos",
+    "livroEspecialidades": "Livro de Especialidades",
+    "regulamentos": "Regulamentos",
+    "cartaoAssociada": "Cartão de Associada",
+    "ligacoesUteis": "Ligações Úteis",
+    "fardas": "Fardas",
+    "livros": "Livros",
+    "diversos": "Diversos",
+    "queresSerGuia": "Queres ser Guia ?",
+    "sedeNacional": "Sede Nacional"
+  },
+  "homepage": {
+    "tituloAvezinha": "Ramo Avezinha",
+    "idadesAvezinha": "6 aos 10 anos",
+    "tituloAventura": "Ramo Aventura",
+    "idadesAventura": "10 aos 14 anos",
+    "tituloCaravela": "Ramo Caravela",
+    "idadesCaravela": "14 aos 17 anos",
+    "tituloMoinho": "Ramo Moinho",
+    "idadesMoinho": "17 aos 21 anos",
+    "edicaoJornal": "ª Edição",
+    "infoJornal": "Jornal Oficial da Associação"
+  },
+  "historia": {
+    "fundadoresTitle1": "Fundador e Chefe Mundial",
+    "fundadoresTitle2": "Robert e Olave Baden-Powell"
+  },
+  "metodoGuidista": {
+    "voltar": "Voltar"
+  },
+  "jornal": {
+    "TituloHomepage": "Jornal 'O Trevo'",
+    "P1Introducao": "Publicação semestral da AGP que aborda temas da<br />atualidade e divulga as atividades da Associação.",
+    "P2Introducao": "Edições disponíveis para download. Edição mais<br />recente à venda na Companhia mais próxima."
+  },
+  "ligacoesUteis": {
+    "title": "Ligações Úteis",
+    "intro": "Nesta secção, dedicada a ti, Guia, poderás encontrar vários recursos úteis."
+  },
+  "loja": {
+    "texto1": "Catálogo dos produtos à venda no Depósito de Material e Fardamento.",
+    "texto2": "Consultar horários da Loja",
+    "texto3": " aqui."
+  },
+  "contactos": {
+    "sedeNacionalTitulo": "Sede Nacional",
+    "horariosTitulo": "Horários",
+    "secretariadoTitulo": "Secretariado Nacional",
+    "lojaTitulo": "Depósito de Material e Fardamento (Loja)",
+    "outrosContactosTitulo": "Outros Contactos",
+    "presidenteTitulo": "Presidente:",
+    "internationalTitulo": "Internacional:",
+    "publicacoesTitulo": "Publicações:"
+  },
+  "contactosForm": {
+    "queresSerGuiaTexto": "Queres ser Guia ?",
+    "maisInformacoesTexto": "Para mais informações, entre em contacto connosco.",
+    "idade": "Idade",
+    "concelho": "Concelho",
+    "freguesia": "Freguesia",
+    "telefone": "Telefone",
+    "nome": "Nome",
+    "assunto": "Assunto",
+    "email": "E-mail",
+    "mensagem": "Mensagem",
+    "recolhaDadosTexto": "A recolha destes dados pessoais tem apenas como finalidade o pedido de contacto por parte da Associação Guias de Portugal. Caso não autorize a recolha dos dados pessoais, poderá contactar-nos através de meios alternativos, nomeadamente utilizando o endereço de email ",
+    "recolhaDadosTexto2": "Para mais informações, consulte a nossa ",
+    "politicaDadosPessoais": "Política de Dados Pessoais.",
+    "campoObrigatorio": "Campo obrigatório",
+    "erroEmailInvalido": "E-mail inválido",
+    "botaoEnviar": "Enviar",
+    "envioSucesso": "Mensagem enviada!",
+    "envioErro": "Ocorreu um erro, por favor tente de novo."
+  },
+  "footer": {
+    "sedeNacional": "Sede Nacional",
+    "contactos": "Contactos",
+    "associaçãoMundial": "Associação Mundial",
+    "WAGGGS": "WAGGGS",
+    "legal": "Legal",
+    "legal1": "Termos de Serviço",
+    "legal2": "Termos de Uso",
+    "legal3": "Política de Privacidade",
+    "dados": "Política de Dados Pessoais"
+  },
+  "search": {
+    "mainTitle": "Pesquisa:"
+  },
+  "buttons": {
+    "queresSerGuia": "Queres ser Guia ?",
+    "palavraAosPais": "Palavra aos Pais",
+    "lerMais": "Ler mais"
+  },
+  "noticias": {
+    "noticias": "Notícias"
+  },
+  "noticiasCard": {
+    "lermais": "Ler mais"
+  },
+  "media": {
+    "partilhaPaginaLabel": "Partilhar esta página:",
+    "partilhaHomepageLabel": "Partilhar este site:"
+  }
+}

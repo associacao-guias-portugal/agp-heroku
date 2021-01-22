@@ -18,7 +18,7 @@ class TableJournal extends Component {
       header1_pt: '',
       header1_en: '',
       header2_pt: '',
-      header1_en: '',
+      header2_en: '',
       flash: '',
       messageStatus: ''
     };
