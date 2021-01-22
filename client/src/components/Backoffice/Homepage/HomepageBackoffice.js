@@ -90,7 +90,6 @@ class HomepageBackoffice extends React.Component {
     event.preventDefault();
     const { history } = this.props;
     const { flash, messageStatus, journalData, newsData, ...homepageData } = this.state;
-    console.log("submit");
     axios.put('/homepage', homepageData)
       .then((res) => {
         this.setState({ messageStatus: 'success' }, () => {
@@ -99,7 +98,6 @@ class HomepageBackoffice extends React.Component {
         this.setState({ flash: 'Guardado com sucesso.' })
       })
       .catch((err) => {
-        console.log("ERRO", err);
         this.setState({ messageStatus: 'error' }, () => {
           setTimeout(() => history.push({ pathname: '/backoffice/homepage' }), 1500)
         });
@@ -344,7 +342,7 @@ class HomepageBackoffice extends React.Component {
               <div className="homepage-select-label">Edição Jornal:</div>
               <select name="journal_edition" value={journal_edition} onChange={this.handleChange}>
                 <option value={0}>Escolher edição a publicar....</option>
-                {journalData.map((journal) => (
+                {journalData && journalData.map((journal) => (
                   <option className="option" key={journal.edition} value={journal.edition}>
                     {`Edição ${journal.edition} - ${journal.pt_title}`}
                   </option>
@@ -368,7 +366,7 @@ class HomepageBackoffice extends React.Component {
                 <div className="homepage-select-label">Notícia 1:</div>
                 <select name="article_1" value={article_1} onChange={this.handleChange}>
                   <option value={0}>Nenhuma</option>
-                  {newsData.map((news) => (
+                  {newsData && newsData.map((news) => (
                     <option key={news.id} value={news.id}>
                       {(news.date.substr(0,10))} - {news.pt_title}
                     </option>
@@ -379,7 +377,7 @@ class HomepageBackoffice extends React.Component {
                 <div className="homepage-select-label">Notícia 2:</div>
                 <select name="article_2" value={article_2} onChange={this.handleChange}>
                   <option className="option-one" value={0}>Nenhuma</option>
-                  {newsData.map((news) => (
+                  {newsData && newsData.map((news) => (
                     <option className="option-more" key={news.id} value={news.id}>
                       {news.date.substr(0,10)} - {news.pt_title}
                     </option>
@@ -390,7 +388,7 @@ class HomepageBackoffice extends React.Component {
                 <div className="homepage-select-label">Notícia 3:</div>
                 <select name="article_3" value={article_3} onChange={this.handleChange}>
                   <option value={0}>Nenhuma</option>
-                  {newsData.map((news) => (
+                  {newsData && newsData.map((news) => (
                     <option key={news.id} value={news.id}>
                       {news.date.substr(0,10)} - {news.pt_title}
                     </option>

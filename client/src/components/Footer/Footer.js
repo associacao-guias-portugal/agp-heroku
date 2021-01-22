@@ -25,13 +25,20 @@ const Footer = () => {
       const resultsFiles = res.data[0];
       setResultsFiles(resultsFiles);
     });
-    axios.get("/contato").then((res) => {
+    getMorada();
+  }, []);
+
+  const getMorada = async () => {
+    await axios.get("/contato").then((res) => {
       const resultsContatos = res.data[0];
       setResultsContato(resultsContatos);
-      const moradaDivs = resultsContatos.pt_endereco.split(',');
-      setMorada(moradaDivs);
+
+      if (resultsContatos.pt_endereco) {
+        const moradaDivs = resultsContatos.pt_endereco.split(',');
+        setMorada(moradaDivs);
+      }
     });
-  }, []);
+  }
 
   return (
     <footer className="footer-wrapper">
@@ -46,7 +53,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {morada.map((item, index) => {
+                  {morada && morada.map((item, index) => {
                     if (index === morada.length - 1) {
                       return <div key={index}>{item}</div>
                     } else {

@@ -42,12 +42,7 @@ const ForgotPassword = () => {
       .catch((error) => {
         if (error.response) {
           setPasswordErr(true);
-        } else if (error.request) {
-          console.log(error.request);
-        } else {
-          console.log('Error', error.message);
         }
-        console.log(error.config);
       });
   };
 
