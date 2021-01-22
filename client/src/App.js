@@ -183,7 +183,6 @@ function App() {
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const { user, auth } = useContext(UserContext);
-  console.log(auth)
   return (
     <Route
       {...rest}

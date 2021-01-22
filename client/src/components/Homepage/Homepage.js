@@ -44,16 +44,26 @@ const Homepage = (props) => {
       .then((res) => {
         setJornalData(res.data[0]);
       });
-
-    axios.get('/homepage/news')
-      .then((res) => {
-        setArticlesData(res.data);
-        const newsLength = Object.keys(res.data).length;
-        if (newsLength !== 0) {
-          setShowNoticias(true);
-        }
-      });
+    
+    getArticlesData();
   }, []);
+
+  const getArticlesData = async () => {
+    await axios.get('/homepage/news')
+    .then((res) => {
+      const newsLength = Object.keys(res.data).length;
+      if (newsLength !== 0) {
+        setArticlesData(res.data);
+        setShowNoticias(true);
+      } else {
+        setShowNoticias(false);
+      }
+    })
+    .catch((err) => {
+      setArticlesData(["Error"]);
+      setShowNoticias(false);
+    });
+  }
 
   const openNoticia = (event) => {
     const newsId = event.target.id;
@@ -168,9 +178,5 @@ const Homepage = (props) => {
     </div>
   );
 };
-
-// Homepage.propTypes = {
-//   history: PropTypes.string.isRequired,
-// };
 
 export default withRouter(Homepage);
