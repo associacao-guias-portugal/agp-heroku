@@ -23,6 +23,9 @@ const ConteudoNoticia = (props) => {
         );
         setContNoticiasData(noticiasConteudo[0]);
         document.title = `Associação Guias de Portugal - ${noticiasConteudo[0].pt_title}`;
+      })
+      .catch((err) => {
+        document.title = `Erro DB`;
       });
   };
 
