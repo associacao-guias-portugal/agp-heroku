@@ -23,7 +23,7 @@
     display:flex;
     height: 200px;
     margin: 20px 0px;
-    background-color: rgba(124, 182, 244, 0.1);
+    background-color: hsla(211, 85%, 72%, 0.102);
     border-radius: 10px;
 }
 
@@ -54,6 +54,7 @@
 .fotoArtigos{
     width: 100%;
     position: relative;
+    border-radius: 10px;
 }
 
 
