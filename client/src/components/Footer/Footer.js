@@ -6,6 +6,8 @@ import facebookImage from "../../assets/images/SocialMedia/facebook_white_round.
 import instagramImage from "../../assets/images/SocialMedia/instagram_white_round.png";
 import linkedinImage from "../../assets/images/SocialMedia/linkedin_white_round.png";
 
+const moradaIni = ["Av. Miguel Bombara", "Nº128 R/c Esq.", "1050-167 Lisboa"];
+
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
@@ -37,7 +39,10 @@ const Footer = () => {
         const moradaDivs = resultsContatos.pt_endereco.split(',');
         setMorada(moradaDivs);
       }
-    });
+    })
+    .catch((err) => {
+      setMorada(moradaIni);
+    });;
   }
 
   return (
