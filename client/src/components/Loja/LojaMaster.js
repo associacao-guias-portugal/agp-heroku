@@ -4,6 +4,8 @@ import './LojaMaster.css';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import ReactHtmlParser from "react-html-parser";
+import metaInfo from '../../assets/info/metaInfo.json';
+import Metadata from '../Metadata/Metadata';
 
 const LojaMaster = (props) => {
   const { i18n } = useTranslation();
@@ -15,6 +17,8 @@ const LojaMaster = (props) => {
   const [header_en, set_header_en] = useState([]);
   const [titlePT, setTitlePT] = useState('');
   const [titleEN, setTitleEN] = useState('');
+
+  //document.title = `Associação Guias de Portugal - Loja`;
 
   const getData = (category) => {
     axios.get(`/store/${category}`).then((res) => {
@@ -45,7 +49,7 @@ const LojaMaster = (props) => {
   useEffect(() => {
     const match = props.match;
     const getCategory = match.params.itemCategory;
-    document.title = `Associação Guias de Portugal - Loja`;
+  
     if (getCategory !== itemCategory) {
       getData(getCategory);
     }
@@ -54,8 +58,13 @@ const LojaMaster = (props) => {
     }
   });
 
+  console.log(window.location.href)
+
+  const metaURL = window.location.href;
+
   return (
     <div className="Body">
+      <Metadata url={metaURL} title={`${metaInfo.loja.title} - ${itemCategory}`} description={metaInfo.loja.description} imageUrl={metaInfo.loja[itemCategory]} imageAlt="fardas" />
       <div className="Body-Loja">
         <h2 className="app-second-title tituloLoja">
           {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { hydrate, render } from "react-dom";
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import UserContextProvider from './context/UserContext';
@@ -28,19 +28,19 @@ axios.defaults.headers.common = { 'Authorization': `Bearer ${Cookies.get('token'
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
   hydrate(
-    <HashRouter>
+    <Router>
       <UserContextProvider>
         <App />
       </UserContextProvider>
-    </HashRouter>
+    </Router>
     , rootElement);
 } else {
   render(
-    <HashRouter>
+    <Router>
       <UserContextProvider>
         <App />
       </UserContextProvider>
-    </HashRouter>
+    </Router>
     ,rootElement);
 }
 

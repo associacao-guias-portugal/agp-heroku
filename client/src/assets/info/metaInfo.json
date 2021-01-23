@@ -1,0 +1,13 @@
+{
+  "loja": {
+    "title": "Loja",
+    "description": "Catálogo dos produtos à venda no Depósito de Material e Fardamento",
+    "fardas": "https://drive.google.com/uc?export=view&id=1KD4obbOkoS8oKn09LVlFYTushZ8IafTh",
+    "diversos": "https://drive.google.com/uc?export=view&id=1O9vIVUNuZczvXkp3AcffI20JY6Wc3HKg",
+    "livros": "https://drive.google.com/uc?export=view&id=1iRpd9eWjkFPoeuDpzyuQ-vkHmG3cnO5T"
+  },
+  "jornal": {
+    "title": "Jornal 'O Trevo'",
+    "description": "Publicação semestral da AGP que aborda temas da atualidade e divulga as atividades da Associação. Edições disponíveis para download"
+  }
+}
