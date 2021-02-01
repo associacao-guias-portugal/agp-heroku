@@ -1,6 +1,8 @@
 import React from 'react';
-import { hydrate, render } from "react-dom";
-import { HashRouter, BrowserRouter as Router } from 'react-router-dom';
+/* import { hydrate, render } from "react-dom"; */
+import ReactDOM from 'react-dom'; 
+import { HashRouter, BrowserRouter } from 'react-router-dom';
+/* import { browserHistory } from 'react-router'; */
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import UserContextProvider from './context/UserContext';
@@ -15,34 +17,33 @@ axios.defaults.withCredentials = true;
 
 axios.defaults.headers.common = { 'Authorization': `Bearer ${Cookies.get('token')}` };
 
-
-/* ReactDOM.render(
-  <HashRouter>
+ReactDOM.render(
+  <BrowserRouter>
     <UserContextProvider>
       <App />
     </UserContextProvider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root'),
-); */
+);
 
-const rootElement = document.getElementById('root');
+/* const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
   hydrate(
-    <Router>
+    <HashRouter>
       <UserContextProvider>
         <App />
       </UserContextProvider>
-    </Router>
+    </HashRouter>
     , rootElement);
 } else {
   render(
-    <Router>
+    <HashRouter>
       <UserContextProvider>
         <App />
       </UserContextProvider>
-    </Router>
+    </HashRouter>
     ,rootElement);
-}
+} */
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
