@@ -18,11 +18,11 @@ axios.defaults.withCredentials = true;
 axios.defaults.headers.common = { 'Authorization': `Bearer ${Cookies.get('token')}` };
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter basename="/">
     <UserContextProvider>
       <App />
     </UserContextProvider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
