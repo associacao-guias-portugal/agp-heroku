@@ -6,12 +6,12 @@ const fs = require('fs');
 
 // use your website root address here. Optimally you can
 // include dev and production enviorenments with variable
-const hostname = 'http://localhost:3000';
+const hostname = 'https://agp-projecto-deploy.herokuapp.com/#/';
 
 // define our destination folder and sitemap file name
 const dest = path.resolve('./public', 'sitemap.xml');
 
-const config = {
+/* const config = {
 	'/pedagogia/:tipo': [
     	{ tipo: [
         "ramo-avezinha", 
@@ -52,13 +52,13 @@ const config = {
     	{ modo: [ 'sede', 'formulario'] },
     ],
 };
-	
+	 */
 // Merge our route paths with config pattern    
-const paths = paramsApplier(routes, config);
+//const paths = paramsApplier(routes, config);
 
 // Generate sitemap and return Sitemap instance
 // paste new paths constant with hostname
-const sitemap = sitemapBuilder(hostname, paths);
+const sitemap = sitemapBuilder(hostname, routes);
 
 // write sitemap.xml file in /public folder
 // Access the sitemap content by converting it with .toString() method
